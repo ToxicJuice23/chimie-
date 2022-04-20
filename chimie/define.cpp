@@ -8,8 +8,6 @@ using namespace std::this_thread;
 using namespace std::chrono;
 using namespace std;
 
-// MAKE A CLASS FOR ALL NON ELEMENT OR COMPOSE FUNCTIONS CALLED: Chimie::_____();
-
 string Chimie::boolToFrench(bool ibool) {
   if (ibool) {
     return "Oui";
@@ -360,6 +358,7 @@ string Chimie::getOsName()
 }   
 
 /*
+Version: 1.0.0
 Copyright: No-one
 Licence: None
 Dev team: Julien Renaud
