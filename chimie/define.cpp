@@ -8,6 +8,8 @@ using namespace std::this_thread;
 using namespace std::chrono;
 using namespace std;
 
+// MAKE A CLASS FOR ALL NON ELEMENT OR COMPOSE FUNCTIONS CALLED: Chimie::_____();
+
 string boolToFrench(bool ibool) {
   if (ibool) {
     return "Oui";
