@@ -4,7 +4,7 @@
 #include "chimie/define.cpp"
 using namespace std;
 
-
+// welcome to chimie++!
 int main() {
   Init();
   // Begining dialog
