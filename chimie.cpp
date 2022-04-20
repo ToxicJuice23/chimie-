@@ -72,7 +72,7 @@ int main() {
           cout << "Incapable de trouver l'element \n";
         }
       } else if (type == "symbole") {
-        cout << "entre le symbole atomique (pas d'accents ex: Co)\n \n";
+        cout << "entre le symbole atomique ( pas d'accents ex: Co )\n \n";
         string symbole;cin >> symbole;
         cout << endl;
         try {
