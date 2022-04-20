@@ -1,0 +1,9 @@
+Nom: Dysporsium
+Symbole: Dy
+Electrons: 66
+Protons: 69
+Neutrons: 94
+Charge: 3
+Numero atomique: 66
+Masse atomique: 160
+Electrons de valence: 0

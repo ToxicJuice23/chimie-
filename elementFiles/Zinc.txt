@@ -1,0 +1,9 @@
+Nom: Zinc
+Symbole: Zn
+Electrons: 30
+Protons: 32
+Neutrons: 35
+Charge: 2
+Numero atomique: 30
+Masse atomique: 65
+Electrons de valence: 2

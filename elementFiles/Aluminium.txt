@@ -1,0 +1,9 @@
+Nom: Aluminium
+Symbole: Al
+Electrons: 13
+Protons: 16
+Neutrons: 14
+Charge: 3
+Numero atomique: 13
+Masse atomique: 27
+Electrons de valence: 3

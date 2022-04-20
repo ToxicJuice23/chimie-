@@ -1,0 +1,9 @@
+Nom: Ununpentium
+Symbole: Uup
+Electrons: 0
+Protons: 0
+Neutrons: 288
+Charge: 0
+Numero atomique: 115
+Masse atomique: 288
+Electrons de valence: 5

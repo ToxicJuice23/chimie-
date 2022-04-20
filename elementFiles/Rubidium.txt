@@ -1,0 +1,9 @@
+Nom: Rubidium
+Symbole: Rb
+Electrons: 37
+Protons: 38
+Neutrons: 48
+Charge: 1
+Numero atomique: 37
+Masse atomique: 85
+Electrons de valence: 1

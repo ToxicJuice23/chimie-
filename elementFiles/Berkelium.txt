@@ -1,0 +1,9 @@
+Nom: Berkelium
+Symbole: Bk
+Electrons: 97
+Protons: 101
+Neutrons: 150
+Charge: 4
+Numero atomique: 97
+Masse atomique: 247
+Electrons de valence: 0

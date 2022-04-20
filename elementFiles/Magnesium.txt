@@ -1,0 +1,9 @@
+Nom: Magnesium
+Symbole: Mg
+Electrons: 12
+Protons: 14
+Neutrons: 12
+Charge: 2
+Numero atomique: 12
+Masse atomique: 24
+Electrons de valence: 2

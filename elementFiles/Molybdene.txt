@@ -1,0 +1,9 @@
+Nom: Molybdene
+Symbole: Mo
+Electrons: 42
+Protons: 45
+Neutrons: 54
+Charge: 3
+Numero atomique: 42
+Masse atomique: 96
+Electrons de valence: 6

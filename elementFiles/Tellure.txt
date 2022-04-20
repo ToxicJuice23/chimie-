@@ -1,0 +1,9 @@
+Nom: Tellure
+Symbole: Te
+Electrons: 52
+Protons: 50
+Neutrons: 76
+Charge: -2
+Numero atomique: 52
+Masse atomique: 128
+Electrons de valence: 6

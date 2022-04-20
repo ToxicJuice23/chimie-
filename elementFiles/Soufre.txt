@@ -1,0 +1,9 @@
+Nom: Soufre
+Symbole: S
+Electrons: 16
+Protons: 14
+Neutrons: 16
+Charge: -2
+Numero atomique: 16
+Masse atomique: 32
+Electrons de valence: 6

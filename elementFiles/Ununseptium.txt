@@ -1,0 +1,9 @@
+Nom: Ununseptium
+Symbole: Uus
+Electrons: 0
+Protons: 0
+Neutrons: 291
+Charge: 0
+Numero atomique: 117
+Masse atomique: 291
+Electrons de valence: 7

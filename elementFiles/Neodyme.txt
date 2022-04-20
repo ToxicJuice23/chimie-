@@ -1,0 +1,9 @@
+Nom: Neodyme
+Symbole: Nd
+Electrons: 60
+Protons: 63
+Neutrons: 84
+Charge: 3
+Numero atomique: 60
+Masse atomique: 144
+Electrons de valence: 0

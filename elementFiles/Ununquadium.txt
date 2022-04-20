@@ -1,0 +1,9 @@
+Nom: Ununquadium
+Symbole: Uuq
+Electrons: 0
+Protons: 0
+Neutrons: 289
+Charge: 0
+Numero atomique: 114
+Masse atomique: 289
+Electrons de valence: 4

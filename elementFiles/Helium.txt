@@ -1,0 +1,9 @@
+Nom: Helium
+Symbole: He
+Electrons: 2
+Protons: 2
+Neutrons: 2
+Charge: 0
+Numero atomique: 2
+Masse atomique: 4
+Electrons de valence: 0

@@ -1,0 +1,9 @@
+Nom: Baryum
+Symbole: Ba
+Electrons: 56
+Protons: 58
+Neutrons: 81
+Charge: 2
+Numero atomique: 56
+Masse atomique: 137
+Electrons de valence: 2

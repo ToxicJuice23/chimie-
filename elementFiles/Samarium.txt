@@ -1,0 +1,9 @@
+Nom: Samarium
+Symbole: Sm
+Electrons: 62
+Protons: 66
+Neutrons: 88
+Charge: 4
+Numero atomique: 62
+Masse atomique: 150
+Electrons de valence: 0

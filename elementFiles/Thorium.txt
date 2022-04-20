@@ -1,0 +1,9 @@
+Nom: Thorium
+Symbole: Th
+Electrons: 90
+Protons: 94
+Neutrons: 142
+Charge: 4
+Numero atomique: 90
+Masse atomique: 232
+Electrons de valence: 0

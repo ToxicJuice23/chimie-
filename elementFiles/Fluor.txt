@@ -1,0 +1,9 @@
+Nom: Fluor
+Symbole: F
+Electrons: 9
+Protons: 8
+Neutrons: 7
+Charge: -1
+Numero atomique: 9
+Masse atomique: 16
+Electrons de valence: 7

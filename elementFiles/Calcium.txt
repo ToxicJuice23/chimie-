@@ -1,0 +1,9 @@
+Nom: Calcium
+Symbole: Ca
+Electrons: 20
+Protons: 22
+Neutrons: 20
+Charge: 2
+Numero atomique: 20
+Masse atomique: 40
+Electrons de valence: 2

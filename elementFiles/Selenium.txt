@@ -1,0 +1,9 @@
+Nom: Selenium
+Symbole: Se
+Electrons: 34
+Protons: 32
+Neutrons: 45
+Charge: -2
+Numero atomique: 34
+Masse atomique: 79
+Electrons de valence: 6

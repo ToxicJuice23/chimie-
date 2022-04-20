@@ -1,0 +1,9 @@
+Nom: Lanthane
+Symbole: La
+Electrons: 57
+Protons: 60
+Neutrons: 82
+Charge: 3
+Numero atomique: 57
+Masse atomique: 139
+Electrons de valence: 3

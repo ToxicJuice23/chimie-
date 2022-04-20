@@ -1,0 +1,9 @@
+Nom: Indium
+Symbole: In
+Electrons: 49
+Protons: 52
+Neutrons: 66
+Charge: 3
+Numero atomique: 49
+Masse atomique: 115
+Electrons de valence: 3

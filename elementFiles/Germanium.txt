@@ -1,0 +1,9 @@
+Nom: Germanium
+Symbole: Ge
+Electrons: 32
+Protons: 36
+Neutrons: 41
+Charge: 4
+Numero atomique: 32
+Masse atomique: 73
+Electrons de valence: 4

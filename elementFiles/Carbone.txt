@@ -1,0 +1,9 @@
+Nom: Carbone
+Symbole: C
+Electrons: 6
+Protons: 2
+Neutrons: 6
+Charge: -4
+Numero atomique: 6
+Masse atomique: 12
+Electrons de valence: 4

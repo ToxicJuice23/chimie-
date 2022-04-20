@@ -1,0 +1,9 @@
+Nom: Holmium
+Symbole: Ho
+Electrons: 67
+Protons: 70
+Neutrons: 98
+Charge: 3
+Numero atomique: 67
+Masse atomique: 165
+Electrons de valence: 0

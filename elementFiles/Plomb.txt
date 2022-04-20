@@ -1,0 +1,9 @@
+Nom: Plomb
+Symbole: Pb
+Electrons: 82
+Protons: 86
+Neutrons: 125
+Charge: 4
+Numero atomique: 82
+Masse atomique: 207
+Electrons de valence: 4

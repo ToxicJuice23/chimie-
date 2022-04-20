@@ -1,0 +1,9 @@
+Nom: Manganese
+Symbole: Mn
+Electrons: 25
+Protons: 28
+Neutrons: 30
+Charge: 3
+Numero atomique: 25
+Masse atomique: 55
+Electrons de valence: 7
