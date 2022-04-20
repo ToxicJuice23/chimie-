@@ -182,4 +182,11 @@ class Chimie {
     static void printValues(Element* element);
     static void init();
     static void createElementFile(Element* element);
+    static void createFiles();
+    static Element* findElementByName(string name);
+    static Element* findElementBySymbol(string symbol);
+    static string crop(string input, int start, int end=0);
+    static Element* importElement(string filename);
+    static void Init();
+    static string getOsName();
 };

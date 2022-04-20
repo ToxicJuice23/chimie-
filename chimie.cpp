@@ -5,10 +5,10 @@
 using namespace std;
 
 // welcome to chimie++!
-int main() {
-  Init();
+void app() {
+  Chimie::Init();
   // Begining dialog
-  Chimie::loading(50);
+  Chimie::loading(25);
   cout << "         .        .   \n";
   cout << "/¯¯ |  | | |\\  /| | |¯¯¯¯      |       |      • \\|/\n";
   cout << "|   |--| | | \\/ | | |----   ---|--- ---|---      c )\n";
@@ -49,10 +49,10 @@ int main() {
           string _nom;cin >> _nom;
           cout << endl;
           // error handling for getting element
-          if (findElementByName(_nom) == nullptr) {
+          if (Chimie::findElementByName(_nom) == nullptr) {
             cout << "Incapable de trouver l'element \n";
           } else {
-            Element* element_ = findElementByName(_nom);
+            Element* element_ = Chimie::findElementByName(_nom);
             Chimie::printValues(element_);
           }
         } catch(...) {
@@ -77,10 +77,10 @@ int main() {
         cout << endl;
         try {
           // error handling for getting element
-          if (findElementBySymbol(symbole) == nullptr) {
+          if (Chimie::findElementBySymbol(symbole) == nullptr) {
             cout << "Incapable de trouver l'element \n";
           } else {
-            Chimie::printValues(findElementBySymbol(symbole));
+            Chimie::printValues(Chimie::findElementBySymbol(symbole));
           }
         } catch(...) {
           cout << "Incapable de trouver l'element \n";
@@ -95,8 +95,8 @@ int main() {
       try {
         string element1; string element2;
         cout << "Element 1: "; cin >> element1; cout << "Element 2: ";  cin >> element2;
-        Element* Element1_ = findElementByName(element1);
-        Element* Element2_ = findElementByName(element2);
+        Element* Element1_ = Chimie::findElementByName(element1);
+        Element* Element2_ = Chimie::findElementByName(element2);
         // error handling
         if (Element1_ == nullptr || Element2_ == nullptr) {
           cout << "Incapable de trouver l'element \n";
@@ -113,20 +113,20 @@ int main() {
       cout << "Entre le chemin vers ton fichier .txt (ex: ~/Chimie-ui-implemented-version/elementFiles/Hydrogene.txt): \n \n";
       
       string path; cin >> path;
-      importElement(path);
+      Chimie::importElement(path);
       cout << "Ton element est maintenant disponible dans la commande: info import \n";
     } else if (command == "trouver_gi") {
       cout << "\nQuel est le nom de l'element? \n\n";
       string elementName; cin >> elementName;
-      if (findElementByName(elementName)) {
-        Element* result = findElementByName(elementName)->trouver_gi_proche();
+      if (Chimie::findElementByName(elementName)) {
+        Element* result = Chimie::findElementByName(elementName)->trouver_gi_proche();
         Chimie::printValues(result);
       } else {
         cout << "\nInacapable de trouver l'element\n\n";
       }
       
     } else if (command == "systeme") {
-      cout << getOsName() << endl << endl;
+      cout << Chimie::getOsName() << endl << endl;
     } else if (command == "temps") {
         auto current = chrono::system_clock::now();
         time_t current_time = chrono::system_clock::to_time_t(current);
@@ -151,3 +151,7 @@ int main() {
     times++;
   } // END OF INFINITE WHILE
 } // END OF MAIN FUNCTION
+
+int main() {
+  app();
+}

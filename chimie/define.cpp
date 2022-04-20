@@ -158,7 +158,7 @@ void Chimie::init() {
   }
 }
 
-void createElementFile(Element* element) {
+void Chimie::createElementFile(Element* element) {
   fstream elementFile;
   elementFile.open("elementFiles/" + element->nom + ".txt", ios::out); // open in write mode
   elementFile << "Nom: " << element->nom << endl;
@@ -173,10 +173,10 @@ void createElementFile(Element* element) {
   elementFile.close();
 }
 
-void createFiles() {
+void Chimie::createFiles() {
   for (Element* element : all) {
     if (element->symboleAtomique != "") {
-      createElementFile(element);
+      Chimie::createElementFile(element);
     }
   }
 }
@@ -212,7 +212,7 @@ void Element::init(Element* element) {
     element->neutrons = element->masseAtomique_ - element->electrons;
 }
 
-Element* findElementByName(string name) {
+Element* Chimie::findElementByName(string name) {
   for (Element* element : all) {
     if (element->nom == name) {
       return element;
@@ -221,7 +221,7 @@ Element* findElementByName(string name) {
   return nullptr;
 }
 
-Element* findElementBySymbol(string symbol) {
+Element* Chimie::findElementBySymbol(string symbol) {
   for (Element* element : all) {
   if (element->symboleAtomique == symbol) {
     return element;
@@ -306,7 +306,7 @@ void Compose::printCompose() {
   cout << "Formule: " << this->formule << endl << endl;
 }
 
-string crop(string input, int start, int end=0) {
+string Chimie::crop(string input, int start, int end) {
   if (end == 0) {
     end=input.length();
   }
@@ -317,7 +317,7 @@ string crop(string input, int start, int end=0) {
   return result;
 }
 
-Element* importElement(string filename) {
+Element* Chimie::importElement(string filename) {
   fstream file;
   file.open(filename, ios::in);
   string line;
@@ -325,22 +325,22 @@ Element* importElement(string filename) {
   while (std::getline(file, line)) {
     text.push_back(line);
   }
-  string nom = crop(text[0], 5);
-  string symbole = crop(text[1], 9);
-  int numeroAtomique = stoi(crop(text[2], 11));
-  int masseAtomique = stoi(crop(text[7], 16));
-  int charge = stoi(crop(text[5], 8));
+  string nom = Chimie::crop(text[0], 5);
+  string symbole = Chimie::crop(text[1], 9);
+  int numeroAtomique = stoi(Chimie::crop(text[2], 11));
+  int masseAtomique = stoi(Chimie::crop(text[7], 16));
+  int charge = stoi(Chimie::crop(text[5], 8));
   imported = new Element(symbole, nom, numeroAtomique, masseAtomique, charge);
   imported->init(imported);
   return imported;
 }
 
-void Init() {
+void Chimie::Init() {
   Chimie::init();
-  createFiles();
+  Chimie::createFiles();
 }
 
-string getOsName()
+string Chimie::getOsName()
 {
     #ifdef _WIN32
     return "Windows 32-bit";
