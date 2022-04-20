@@ -32,7 +32,6 @@ public:
   virtual void init(Element* element);
 };
 
-void printValues(Element* element);
 void setCharge(Element* element) {
   element->charge = element->electrons - element->trouver_gi_proche()->electrons;
 }
@@ -175,3 +174,12 @@ Element* Ununoctium = new Element("Uuo", "Ununoctium", 118, 294, 0);
 // define a vector of all elements :(
 vector<Element*> all = {Useless, Hydrogene, Helium, Lithium, Beryllium, Bore, Carbone, Azote, Oxygene, Fluor, Neon, Sodium, Magnesium, Aluminium, Silicium, Phosphore, Soufre, Chlore, Argon, Potassium, Calcium, Scandium, Titane, Vanadium, Chrome, Manganese, Fer, Cobalt, Nickel, Cuivre, Zinc, Gallium, Germanium, Arsenic, Selenium, Brome, Krypton, Rubidium, Strontium, Yttrium, Zirconium, Niobium, Molybdene, Technetium, Ruthenium, Rhodium, Palladium, Argent, Cadmium, Indium, Etain, Antimoine, Tellure, Iode, Xenon, Cesium, Baryum, Lanthane, Cerium, Praseodyme, Neodyme, Promethium, Samarium, Europium, Gadolinium, Terbium, Dysprosium, Holmium, Erbium, Thulium, Ytterbium, Lutecium, Hafnium, Tantale, Tungstene, Rhenium, Osmium, Iridium, Platine, Or, Mercure, Thallium, Plomb, Bismuth, Polonium, Astate, Radon, Francium, Radium, Radium, Actinium, Thorium, Protactinium, Uranium, Neptunium, Plutonium, Americium, Curium, Berkelium, Californium, Einsteinium, Fermium, Mendelevium, Nobelium, Lawrencium, Rutherfordium, Dubnium, Seaborgium, Bohrium, Hassium, Meithnerium, Darmstadtium, Roentgenium, Copernicium, Ununtrium, Flerovium, Ununpentium, Livermorium, Ununseptium, Ununoctium};
 vector<Element*> gi = {Hydrogene, Neon, Argon, Krypton, Xenon, Radon, Ununoctium};
+
+class Chimie {
+  public:
+    static string boolToFrench(bool ibool);
+    static void loading(int millisecond);
+    static void printValues(Element* element);
+    static void init();
+    static void createElementFile(Element* element);
+};

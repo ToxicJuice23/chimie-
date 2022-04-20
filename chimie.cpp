@@ -8,7 +8,7 @@ using namespace std;
 int main() {
   Init();
   // Begining dialog
-  loading(50);
+  Chimie::loading(50);
   cout << "         .        .   \n";
   cout << "/¯¯ |  | | |\\  /| | |¯¯¯¯      |       |      • \\|/\n";
   cout << "|   |--| | | \\/ | | |----   ---|--- ---|---      c )\n";
@@ -53,7 +53,7 @@ int main() {
             cout << "Incapable de trouver l'element \n";
           } else {
             Element* element_ = findElementByName(_nom);
-            printValues(element_);
+            Chimie::printValues(element_);
           }
         } catch(...) {
           cout << "Incapable de trouver l'element \n";
@@ -66,7 +66,7 @@ int main() {
           if (all[num] == 0) {
             cout << "Incapable de trouver l'element \n";
           } else {
-           printValues(all[num]); 
+           Chimie::printValues(all[num]); 
           }
         } catch(...) {
           cout << "Incapable de trouver l'element \n";
@@ -80,13 +80,13 @@ int main() {
           if (findElementBySymbol(symbole) == nullptr) {
             cout << "Incapable de trouver l'element \n";
           } else {
-            printValues(findElementBySymbol(symbole));
+            Chimie::printValues(findElementBySymbol(symbole));
           }
         } catch(...) {
           cout << "Incapable de trouver l'element \n";
         }
       } else if (type == "import") {
-          printValues(imported);
+          Chimie::printValues(imported);
         }  else {
         cout << "Mode de saisie invalide. \n";
       }
@@ -120,7 +120,7 @@ int main() {
       string elementName; cin >> elementName;
       if (findElementByName(elementName)) {
         Element* result = findElementByName(elementName)->trouver_gi_proche();
-        printValues(result);
+        Chimie::printValues(result);
       } else {
         cout << "\nInacapable de trouver l'element\n\n";
       }

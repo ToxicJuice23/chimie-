@@ -10,7 +10,7 @@ using namespace std;
 
 // MAKE A CLASS FOR ALL NON ELEMENT OR COMPOSE FUNCTIONS CALLED: Chimie::_____();
 
-string boolToFrench(bool ibool) {
+string Chimie::boolToFrench(bool ibool) {
   if (ibool) {
     return "Oui";
   } else if (!ibool) {
@@ -19,7 +19,7 @@ string boolToFrench(bool ibool) {
   return "?";
 }
 
-void loading(int millisecond) {
+void Chimie::loading(int millisecond) {
   long long oneMillisec = 1000000;
   for(int x = 0; x < 101; x++) {
     sleep_for(nanoseconds(millisecond * oneMillisec));
@@ -93,7 +93,7 @@ Element* Element::trouver_gi_proche() {
 }
 
 // define a func to print all values of an element
-void printValues(Element* element) {
+void Chimie::printValues(Element* element) {
   cout << "Nom: " << element->nom << "\n";
   cout << "Symbole atomique: " << element->symboleAtomique << "\n";
   cout << "Numero atomique: " << element->nombreAtomique_ << "\n";
@@ -103,7 +103,7 @@ void printValues(Element* element) {
   cout << "Charge: " << element->charge << "\n";
   cout << "Electrons de valence: " << element->electronsDeValence << "\n";
   cout << "Masse atomique: " << element->masseAtomique_ << "\n";
-  cout << "Metal: " /*<< boolalpha*/ << boolToFrench(element->metal) << "\n" << "\n";
+  cout << "Metal: " /*<< boolalpha*/ << Chimie::boolToFrench(element->metal) << "\n" << "\n";
 
   cout << "|¯¯¯¯¯¯¯¯¯¯¯¯¯¯|\n";
   cout << "| " << element->electrons << "        " << element->charge << "  | \n";
@@ -130,7 +130,7 @@ int Element::getMin(vector<int> v) {
   return final_index;
 }
 
-void init() {
+void Chimie::init() {
   for (Element* element : all) {
     // check if synth
     if (element->nombreAtomique_ > 104) {
@@ -336,7 +336,7 @@ Element* importElement(string filename) {
 }
 
 void Init() {
-  init();
+  Chimie::init();
   createFiles();
 }
 
