@@ -9,7 +9,6 @@ int main() {
   Init();
   // Begining dialog
   loading(50);
-  cout << "\e[38;5;196m Foreground color: red\n";
   cout << "         .        .   \n";
   cout << "/¯¯ |  | | |\\  /| | |¯¯¯¯      |       |      • \\|/\n";
   cout << "|   |--| | | \\/ | | |----   ---|--- ---|---      c )\n";
