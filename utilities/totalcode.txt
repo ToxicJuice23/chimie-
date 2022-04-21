@@ -37,8 +37,15 @@ void app() {
       cout << "creer_compose: cree un compose ionique ou moleculaire equilibre a partire de deux elements \n \n";
       cout << "netoie: efface tout le texte qui est presentement sur l'ecran\n\n"; 
       cout << "trouver_gi: indique quel est le gaz inerte le plus proche de l'element\n\n";
+      cout << "quiz: un outil de pratique pour la chimie\n\n";
       cout << "systeme: retourne le nom de ton OS \n\n";
       cout << "temps: indique l'heure exacte\n\n";
+    } else if (command == "quiz") { 
+      cout << "Quel niveau de difficulte? (facile, medium, difficile)\n\n";
+      string difficulte; cin >> difficulte;
+      if (difficulte == "facile") {
+        cout << Chimie::askQuestion(easy, easy.size()) << "/4 \n \n";
+      }
     } else if (command == "info") {
       // demander quel type de recherche
       string type; cout << "Souhaites-tu trouver par: nom (commande: nom) , symbole atomique (comande: symbole) ou numero atomique (commande: numero) \n \n"; cin >> type;
@@ -164,8 +171,6 @@ using namespace std::this_thread;
 using namespace std::chrono;
 using namespace std;
 
-// MAKE A CLASS FOR ALL NON ELEMENT OR COMPOSE FUNCTIONS CALLED: Chimie::_____();
-
 string Chimie::boolToFrench(bool ibool) {
   if (ibool) {
     return "Oui";
@@ -173,6 +178,15 @@ string Chimie::boolToFrench(bool ibool) {
     return "Non";
   }
   return "?";
+}
+
+bool Chimie::inVector(vector<int> vec, int number) {
+  for (int x : vec) {
+    if (number == x) {
+      return true;
+    }
+  }
+  return false;
 }
 
 void Chimie::loading(int millisecond) {
@@ -515,7 +529,32 @@ string Chimie::getOsName()
     #endif
 }   
 
+int Chimie::askQuestion(vector<pair<string, string>> questions, int times) {
+  int total = 0;
+  vector<int> usedQ;
+  for (int x = 0; x < times; x++) {
+    cout << endl;
+    int index;
+    do {
+      index = rand() % questions.size(); // get random question
+    } while (inVector(usedQ, index));
+    pair<string, string> question = questions[index];
+    cout << question.first << "\n\n"; // ask the question
+    string answer; cin >> answer; // get user answer
+    cout << endl;
+    if (answer == question.second) {
+      total += 1;
+    } else {
+      total += 0;
+    }
+    usedQ.push_back(index);
+    cout << "\n";
+  }
+  return total;
+}
+
 /*
+Version: 1.0.1
 Copyright: No-one
 Licence: None
 Dev team: Julien Renaud
@@ -716,12 +755,16 @@ class Chimie {
     static Element* importElement(string filename);
     static void Init();
     static string getOsName();
-};cd /home/runner/Chimie-CLI
-cat chimie.cpp > /home/runner/Chimie-CLI/utilities/totalcode.txt
+    static int askQuestion(vector<pair<string, string>> questions, int times);
+    static bool inVector(vector<int> vec, int number);
+};
+
+vector<pair<string, string>> easy = {make_pair("Quel est la particule subatomique avec un charge neutre?\n", "neutron"), make_pair("Quel est la propriete qui determine les electrons de valence?\n", "periode"), make_pair("Combiens d'electrons de valence ont les gaz inhertes?\n", "0"), make_pair("Combiens d'element y a-il en total", "118")};# run this from the root directory of the project
+cat chimie.cpp > utilities/totalcode.txt
 cd chimie
-cat define.cpp >> /home/runner/Chimie-CLI/utilities/totalcode.txt
-cat define.h >> /home/runner/Chimie-CLI/utilities/totalcode.txt
-cat /home/runner/Chimie-CLI/utilities/countLines.sh >> /home/runner/Chimie-CLI/utilities/totalcode.txt
+cat define.cpp >> ../utilities/totalcode.txt
+cat define.h >> ../utilities/totalcode.txt
+cat ../utilities/countLines.sh >> ../utilities/totalcode.txt
 cd ..
 cd utilities
 cat totalcode.txt | wc -l 

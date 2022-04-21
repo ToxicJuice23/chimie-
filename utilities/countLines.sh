@@ -1,9 +1,9 @@
-cd /home/runner/Chimie-CLI
-cat chimie.cpp > /home/runner/Chimie-CLI/utilities/totalcode.txt
+# run this from the root directory of the project
+cat chimie.cpp > utilities/totalcode.txt
 cd chimie
-cat define.cpp >> /home/runner/Chimie-CLI/utilities/totalcode.txt
-cat define.h >> /home/runner/Chimie-CLI/utilities/totalcode.txt
-cat /home/runner/Chimie-CLI/utilities/countLines.sh >> /home/runner/Chimie-CLI/utilities/totalcode.txt
+cat define.cpp >> ../utilities/totalcode.txt
+cat define.h >> ../utilities/totalcode.txt
+cat ../utilities/countLines.sh >> ../utilities/totalcode.txt
 cd ..
 cd utilities
 cat totalcode.txt | wc -l 
