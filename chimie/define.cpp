@@ -357,8 +357,20 @@ string Chimie::getOsName()
     #endif
 }   
 
+bool Chimie::askQuestion(vector<pair<string, string>> questions) {
+  int index = rand() % questions.size(); // get random question
+  pair<string, string> question = questions[index];
+  cout << question.first << "\n\n"; // ask the question
+  string answer; cin >> answer; // get user answer
+  if (answer == question.second) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 /*
-Version: 1.0.0
+Version: 1.0.1
 Copyright: No-one
 Licence: None
 Dev team: Julien Renaud

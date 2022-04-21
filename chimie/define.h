@@ -189,4 +189,6 @@ class Chimie {
     static Element* importElement(string filename);
     static void Init();
     static string getOsName();
+    static bool askQuestion(vector<pair<string, string>> questions);
+    vector<pair<string, string>> q_and_a = {make_pair("", "")};
 };
