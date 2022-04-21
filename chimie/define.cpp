@@ -391,7 +391,7 @@ int Chimie::askQuestion(vector<pair<string, string>> questions, int times) {
 }
 
 /*
-Version: 1.0.1
+Version: 1.2
 Copyright: No-one
 Licence: None
 Dev team: Julien Renaud
