@@ -37,8 +37,15 @@ void app() {
       cout << "creer_compose: cree un compose ionique ou moleculaire equilibre a partire de deux elements \n \n";
       cout << "netoie: efface tout le texte qui est presentement sur l'ecran\n\n"; 
       cout << "trouver_gi: indique quel est le gaz inerte le plus proche de l'element\n\n";
+      cout << "quiz: un outil de pratique pour la chimie\n\n";
       cout << "systeme: retourne le nom de ton OS \n\n";
       cout << "temps: indique l'heure exacte\n\n";
+    } else if (command == "quiz") { 
+      cout << "Quel niveau de difficulte? (facile, medium, difficile)\n\n";
+      string difficulte; cin >> difficulte;
+      if (difficulte == "facile") {
+        cout << Chimie::askQuestion(easy, easy.size()) << "/4 \n \n";
+      }
     } else if (command == "info") {
       // demander quel type de recherche
       string type; cout << "Souhaites-tu trouver par: nom (commande: nom) , symbole atomique (comande: symbole) ou numero atomique (commande: numero) \n \n"; cin >> type;

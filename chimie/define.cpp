@@ -17,6 +17,15 @@ string Chimie::boolToFrench(bool ibool) {
   return "?";
 }
 
+bool Chimie::inVector(vector<int> vec, int number) {
+  for (int x : vec) {
+    if (number == x) {
+      return true;
+    }
+  }
+  return false;
+}
+
 void Chimie::loading(int millisecond) {
   long long oneMillisec = 1000000;
   for(int x = 0; x < 101; x++) {
@@ -357,16 +366,28 @@ string Chimie::getOsName()
     #endif
 }   
 
-bool Chimie::askQuestion(vector<pair<string, string>> questions) {
-  int index = rand() % questions.size(); // get random question
-  pair<string, string> question = questions[index];
-  cout << question.first << "\n\n"; // ask the question
-  string answer; cin >> answer; // get user answer
-  if (answer == question.second) {
-    return true;
-  } else {
-    return false;
+int Chimie::askQuestion(vector<pair<string, string>> questions, int times) {
+  int total = 0;
+  vector<int> usedQ;
+  for (int x = 0; x < times; x++) {
+    cout << endl;
+    int index;
+    do {
+      index = rand() % questions.size(); // get random question
+    } while (inVector(usedQ, index));
+    pair<string, string> question = questions[index];
+    cout << question.first << "\n\n"; // ask the question
+    string answer; cin >> answer; // get user answer
+    cout << endl;
+    if (answer == question.second) {
+      total += 1;
+    } else {
+      total += 0;
+    }
+    usedQ.push_back(index);
+    cout << "\n";
   }
+  return total;
 }
 
 /*

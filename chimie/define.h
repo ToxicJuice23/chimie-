@@ -189,6 +189,8 @@ class Chimie {
     static Element* importElement(string filename);
     static void Init();
     static string getOsName();
-    static bool askQuestion(vector<pair<string, string>> questions);
-    vector<pair<string, string>> q_and_a = {make_pair("", "")};
+    static int askQuestion(vector<pair<string, string>> questions, int times);
+    static bool inVector(vector<int> vec, int number);
 };
+
+vector<pair<string, string>> easy = {make_pair("Quel est la particule subatomique avec un charge neutre?\n", "neutron"), make_pair("Quel est la propriete qui determine les electrons de valence?\n", "periode"), make_pair("Combiens d'electrons de valence ont les gaz inhertes?\n", "0"), make_pair("Combiens d'element y a-il en total", "118")};
