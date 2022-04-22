@@ -6,4 +6,4 @@ Neutrons: 77
 Charge: 0
 Numero atomique: 54
 Masse atomique: 131
-Electrons de valence: 0
+Electrons de valence: 1766203501
