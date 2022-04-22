@@ -41,7 +41,7 @@ void app() {
       cout << "systeme: retourne le nom de ton OS \n\n";
       cout << "temps: indique l'heure exacte\n\n";
     } else if (command == "quiz") { 
-      cout << "Quel niveau de difficulte? (facile, medium, difficile)\n\n";
+      cout << "Quel niveau de difficulte? [facile, medium, difficile]\n\n";
       string difficulte; cin >> difficulte;
       if (difficulte == "facile") {
         cout << Chimie::askQuestion(easy, easy.size()) << "/" << easy.size() << "\n\n";
@@ -168,3 +168,5 @@ void app() {
 int main() {
   app();
 }
+
+// if you have nothing to do make sure you can have multiple answers for a question

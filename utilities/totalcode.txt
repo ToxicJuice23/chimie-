@@ -41,7 +41,7 @@ void app() {
       cout << "systeme: retourne le nom de ton OS \n\n";
       cout << "temps: indique l'heure exacte\n\n";
     } else if (command == "quiz") { 
-      cout << "Quel niveau de difficulte? (facile, medium, difficile)\n\n";
+      cout << "Quel niveau de difficulte? [facile, medium, difficile]\n\n";
       string difficulte; cin >> difficulte;
       if (difficulte == "facile") {
         cout << Chimie::askQuestion(easy, easy.size()) << "/" << easy.size() << "\n\n";
@@ -167,7 +167,9 @@ void app() {
 
 int main() {
   app();
-}#include <vector>
+}
+
+// if you have nothing to do make sure you can have multiple answers for a question#include <vector>
 #include <cmath>
 #include <string>
 #include <chrono>
@@ -765,8 +767,8 @@ class Chimie {
     static bool inVector(vector<int> vec, int number);
 };
 
-vector<pair<string, string>> easy = {make_pair("Quel est la particule subatomique avec un charge neutre?\n", "neutron"), make_pair("Quel est la propriete qui determine les electrons de valence?\n", "periode"), make_pair("Combiens d'electrons de valence ont les gaz inhertes?\n", "0"), make_pair("Combiens d'element y a-il en total\n", "118"), make_pair("Quel particule subatomique a une charge negative?\n", "electron"), make_pair("Les electrons situe sur la couche externe d'electrons sont les electrons de _______\n", "valence"), make_pair("Pour qu'un ion soit stable, il faut que sa couche de valence soit pleine ou ____\n", "vide")};
-vector<pair<string, string>> medium = {make_pair("Combiens de carbone y a-il dans de l'heptane\n", "7")};
+vector<pair<string, string>> easy = {make_pair("Quel est la particule subatomique avec un charge neutre?\n", "neutron"), make_pair("Quel est la propriete qui determine les electrons de valence?\n", "periode"), make_pair("Combiens d'electrons de valence ont les gaz inhertes?\n", "0"), make_pair("Combiens d'element y a-il en total\n", "118"), make_pair("Quel particule subatomique a une charge negative?\n", "electron"), make_pair("Les electrons situe sur la couche externe d'electrons sont les electrons de _______\n", "valence"), make_pair("Pour qu'un ion soit stable, il faut que sa couche de valence soit pleine ou ____\n", "vide"), make_pair("pH veux dire puissance d'_________\n", "hydrogene")};
+vector<pair<string, string>> medium = {make_pair("Combiens de carbone y a-il dans de l'heptane\n", "7"), make_pair("Quel est la formule chimique de l'Acide Iodhydrique (non stabilise)\n", "HI"), make_pair("Le MgOH est un acide ou une base?\n", "base"), make_pair("Une substance avec un pH de 1.2 est un(e) _____\n", "acide")};
 vector<pair<string, string>> hard = {};# run this from the root directory of the project
 cat chimie.cpp > utilities/totalcode.txt
 cd chimie
