@@ -6,4 +6,4 @@ Neutrons: 22
 Charge: 0
 Numero atomique: 18
 Masse atomique: 40
-Electrons de valence: 1766203501
+Electrons de valence: 1937207140
