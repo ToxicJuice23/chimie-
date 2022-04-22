@@ -44,7 +44,7 @@ void app() {
       cout << "Quel niveau de difficulte? (facile, medium, difficile)\n\n";
       string difficulte; cin >> difficulte;
       if (difficulte == "facile") {
-        cout << Chimie::askQuestion(easy, easy.size()) << "/4 \n \n";
+        cout << Chimie::askQuestion(easy, easy.size()) << "/" << easy.size() << "\n\n";
       }
     } else if (command == "info") {
       // demander quel type de recherche

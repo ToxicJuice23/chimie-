@@ -193,4 +193,4 @@ class Chimie {
     static bool inVector(vector<int> vec, int number);
 };
 
-vector<pair<string, string>> easy = {make_pair("Quel est la particule subatomique avec un charge neutre?\n", "neutron"), make_pair("Quel est la propriete qui determine les electrons de valence?\n", "periode"), make_pair("Combiens d'electrons de valence ont les gaz inhertes?\n", "0"), make_pair("Combiens d'element y a-il en total\n", "118"), make_pair("Quel particule subatomique a une charge negative?\n", "electrons"), make_pair("Les electrons situe sur la couche externe d'electrons sont les electrons de _______", "valence")};
+vector<pair<string, string>> easy = {make_pair("Quel est la particule subatomique avec un charge neutre?\n", "neutron"), make_pair("Quel est la propriete qui determine les electrons de valence?\n", "periode"), make_pair("Combiens d'electrons de valence ont les gaz inhertes?\n", "0"), make_pair("Combiens d'element y a-il en total\n", "118"), make_pair("Quel particule subatomique a une charge negative?\n", "electron"), make_pair("Les electrons situe sur la couche externe d'electrons sont les electrons de _______", "valence")};
