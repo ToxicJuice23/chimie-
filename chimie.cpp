@@ -8,7 +8,7 @@ using namespace std;
 void app() {
   Chimie::Init();
   // Begining dialog
-  Chimie::loading(25);
+  //Chimie::loading(25);
   cout << "         .        .   \n";
   cout << "/¯¯ |  | | |\\  /| | |¯¯¯¯      |       |      • \\|/\n";
   cout << "|   |--| | | \\/ | | |----   ---|--- ---|---      c )\n";
