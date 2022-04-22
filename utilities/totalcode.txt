@@ -44,7 +44,7 @@ void app() {
       cout << "Quel niveau de difficulte? (facile, medium, difficile)\n\n";
       string difficulte; cin >> difficulte;
       if (difficulte == "facile") {
-        cout << Chimie::askQuestion(easy, easy.size()) << "/4 \n \n";
+        cout << Chimie::askQuestion(easy, easy.size()) << "/" << easy.size() << "\n\n";
       }
     } else if (command == "info") {
       // demander quel type de recherche
@@ -554,7 +554,7 @@ int Chimie::askQuestion(vector<pair<string, string>> questions, int times) {
 }
 
 /*
-Version: 1.0.1
+Version: 1.2
 Copyright: No-one
 Licence: None
 Dev team: Julien Renaud
@@ -759,7 +759,8 @@ class Chimie {
     static bool inVector(vector<int> vec, int number);
 };
 
-vector<pair<string, string>> easy = {make_pair("Quel est la particule subatomique avec un charge neutre?\n", "neutron"), make_pair("Quel est la propriete qui determine les electrons de valence?\n", "periode"), make_pair("Combiens d'electrons de valence ont les gaz inhertes?\n", "0"), make_pair("Combiens d'element y a-il en total", "118")};# run this from the root directory of the project
+vector<pair<string, string>> easy = {make_pair("Quel est la particule subatomique avec un charge neutre?\n", "neutron"), make_pair("Quel est la propriete qui determine les electrons de valence?\n", "periode"), make_pair("Combiens d'electrons de valence ont les gaz inhertes?\n", "0"), make_pair("Combiens d'element y a-il en total\n", "118"), make_pair("Quel particule subatomique a une charge negative?\n", "electron"), make_pair("Les electrons situe sur la couche externe d'electrons sont les electrons de _______", "valence"), make_pair("Pour qu'un ion soit stable, il faut que sa couche de valence soit pleine ou ____", "vide")};
+# run this from the root directory of the project
 cat chimie.cpp > utilities/totalcode.txt
 cd chimie
 cat define.cpp >> ../utilities/totalcode.txt
