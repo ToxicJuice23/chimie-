@@ -1,8 +1,8 @@
 Nom: Bohrium
 Symbole: Bh
-Electrons: 0
-Protons: 0
-Neutrons: 264
+Electrons: 107
+Protons: 107
+Neutrons: 157
 Charge: 0
 Numero atomique: 107
 Masse atomique: 264

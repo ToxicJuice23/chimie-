@@ -1,8 +1,8 @@
 Nom: Hassium
 Symbole: Hs
-Electrons: 0
-Protons: 0
-Neutrons: 269
+Electrons: 108
+Protons: 108
+Neutrons: 161
 Charge: 0
 Numero atomique: 108
 Masse atomique: 269

@@ -1,8 +1,8 @@
 Nom: Meithnerium
 Symbole: Mt
-Electrons: 0
-Protons: 0
-Neutrons: 268
+Electrons: 109
+Protons: 109
+Neutrons: 159
 Charge: 0
 Numero atomique: 109
 Masse atomique: 268

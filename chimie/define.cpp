@@ -149,7 +149,7 @@ void Chimie::init() {
     if (!element->noCharge) {
       element->protons = element->electrons + element->charge;
     } else {
-      element->electrons = element->protons;
+      element->protons = element->electrons;
     }
     // see if its a metal or not
     if (element->charge > 0) {
@@ -397,8 +397,9 @@ Licence: None
 Dev team: Julien Renaud
 Testers: Xavier Dyer
 Ui designer: Julien
-External libraries used: iostream, wxWidgets, fstream
+External libraries used: iostream, fstream
 Other projects: tj.com
 Compatible with: Windows, Linux, MacOS, Replit
 Thank you for downloading the project!
 */
+

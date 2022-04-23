@@ -1,8 +1,8 @@
 Nom: Ununhexium
 Symbole: Uuh
-Electrons: 0
-Protons: 0
-Neutrons: 293
+Electrons: 116
+Protons: 116
+Neutrons: 177
 Charge: 0
 Numero atomique: 116
 Masse atomique: 293
