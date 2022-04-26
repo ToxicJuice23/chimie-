@@ -398,7 +398,7 @@ Dev team: Julien Renaud
 Testers: Xavier Dyer
 Ui designer: Julien
 External libraries used: iostream, fstream
-Other projects: tj.com
+Website: http://www.chimieplusplus.com
 Compatible with: Windows, Linux, MacOS, Replit
 Thank you for downloading the project!
 */
