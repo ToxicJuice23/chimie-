@@ -26,6 +26,15 @@ bool Chimie::inVector(vector<int> vec, int number) {
   return false;
 }
 
+bool Chimie::inVectorString(vector<string> vec, string number) {
+  for (string x : vec) {
+    if (number == x) {
+      return true;
+    }
+  }
+  return false;
+}
+
 void Chimie::loading(int millisecond) {
   long long oneMillisec = 1000000;
   for(int x = 0; x < 101; x++) {
@@ -366,7 +375,7 @@ string Chimie::getOsName()
     #endif
 }   
 
-int Chimie::askQuestion(vector<pair<string, string>> questions, int times) {
+int Chimie::askQuestion(vector<pair<string, vector<string>>> questions, int times) {
   int total = 0;
   vector<int> usedQ;
   for (int x = 0; x < times; x++) {
@@ -375,11 +384,11 @@ int Chimie::askQuestion(vector<pair<string, string>> questions, int times) {
     do {
       index = rand() % questions.size(); // get random question
     } while (inVector(usedQ, index));
-    pair<string, string> question = questions[index];
+    pair<string, vector<string>> question = questions[index];
     cout << question.first << "\n\n"; // ask the question
     string answer; cin >> answer; // get user answer
     cout << endl;
-    if (answer == question.second) {
+    if (Chimie::inVectorString(question.second, answer)) {
       total += 1;
     } else {
       total += 0;

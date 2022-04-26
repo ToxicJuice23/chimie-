@@ -189,12 +189,24 @@ class Chimie {
     static Element* importElement(string filename);
     static void Init();
     static string getOsName();
-    static int askQuestion(vector<pair<string, string>> questions, int times);
+    static int askQuestion(vector<pair<string, vector<string>>> questions, int times);
     static bool inVector(vector<int> vec, int number);
+    static bool inVectorString(vector<string> vec, string number);
 };
 
-vector<pair<string, string>> easy = {make_pair("Quel est la particule subatomique avec un charge neutre?\n", "neutron"), make_pair("Quel est la propriete qui determine les electrons de valence?\n", "periode"), make_pair("Quel est la charge des gaz inhertes?\n", "0"), make_pair("Combiens d'element y a-il en total\n", "118"), make_pair("Quel particule subatomique a une charge negative?\n", "electron"), make_pair("Les electrons situe sur la couche externe d'electrons sont les electrons de _______\n", "valence"), make_pair("Pour qu'un ion soit stable, il faut que sa couche de valence soit pleine ou ____\n", "vide"), make_pair("pH veux dire puissance d'_________\n", "hydrogene"), make_pair("Quel est le le premier element du tableau périodique", "hydrogene")};
+vector<pair<string, vector<string>>> easy = {make_pair("Quel est la particule subatomique avec un charge neutre?\n", vector<string> {"neutron", "neutrons"}),
+make_pair("Quel est la propriete qui determine les electrons de valence?\n", vector<string> {"periode", "collone"}),
+make_pair("Quel est la charge des gaz inhertes?\n", vector<string> {"0", "zero"}),
+make_pair("Combiens d'element y a-il en total\n", vector<string> {"118"}),
+make_pair("Quel particule subatomique a une charge negative?\n", vector<string> {"electron", "Electron", "electrons", "Electrons"}),
+make_pair("Les electrons situe sur la couche externe d'electrons sont les electrons de _______\n", vector<string> {"valence", "Valence"}),
+make_pair("Pour qu'un ion soit stable, il faut que sa couche de valence soit pleine ou ____\n", vector<string> {"vide", "Vide"}),
+make_pair("pH veux dire puissance d'_________\n", vector<string> {"hydrogene", "Hydrogene"}),
+make_pair("Quel est le le premier element du tableau périodique", vector<string> {"hydrogene", "Hydrogene"})};
 
-vector<pair<string, string>> medium = {make_pair("Combiens de carbone y a-il dans de l'heptane\n", "7"), make_pair("Quel est la formule chimique de l'Acide Iodhydrique (non stabilise)\n", "HI"), make_pair("Le MgOH est un acide ou une base?\n", "base"), make_pair("Une substance avec un pH de 1.2 est un(e) _____\n", "acide")};
+vector<pair<string, vector<string>>> medium = {make_pair("Combiens de carbone y a-il dans de l'heptane\n", vector<string> {"7", "sept"}),
+make_pair("Quel est la formule chimique de l'Acide Iodhydrique (non stabilise)\n", vector<string> {"HI", "hi"}),
+make_pair("Le MgOH est un acide ou une base?\n", vector<string> {"base", "Base"}),
+make_pair("Une substance avec un pH de 1.2 est un(e) _____\n", vector<string> {"acide", "Acide"})};
 
-vector<pair<string, string>> hard = {};
+vector<pair<string, vector<string>>> hard = {};
