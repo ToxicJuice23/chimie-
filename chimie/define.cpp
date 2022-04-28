@@ -110,6 +110,15 @@ Element* Element::trouver_gi_proche() {
 
 // define a func to print all values of an element
 void Chimie::printValues(Element* element) {
+  cout << "|¯¯¯¯¯¯¯¯¯¯¯¯¯¯|\n";
+  cout << "| " << element->electrons << "        " << element->charge << "  | \n";
+  cout << "|      " << element->symboleAtomique << "      |\n";
+  cout << "|              |\n";
+  cout << "|    " << element->nom << "   |\n";
+  cout << "|              |\n";
+  cout << "|      " << element->masseAtomique_ << "      |\n";
+  cout << "|______________|\n";
+  
   cout << "Nom: " << element->nom << "\n";
   cout << "Symbole atomique: " << element->symboleAtomique << "\n";
   cout << "Numero atomique: " << element->nombreAtomique_ << "\n";
@@ -120,15 +129,6 @@ void Chimie::printValues(Element* element) {
   cout << "Electrons de valence: " << element->electronsDeValence << "\n";
   cout << "Masse atomique: " << element->masseAtomique_ << "\n";
   cout << "Metal: " /*<< boolalpha*/ << Chimie::boolToFrench(element->metal) << "\n" << "\n";
-
-  cout << "|¯¯¯¯¯¯¯¯¯¯¯¯¯¯|\n";
-  cout << "| " << element->electrons << "        " << element->charge << "  | \n";
-  cout << "|      " << element->symboleAtomique << "      |\n";
-  cout << "|              |\n";
-  cout << "|    " << element->nom << "   |\n";
-  cout << "|              |\n";
-  cout << "|      " << element->masseAtomique_ << "      |\n";
-  cout << "|______________|\n";
 }
 
 // definir une methode pour trouver le min car c++ est epais

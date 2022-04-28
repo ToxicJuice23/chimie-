@@ -40,6 +40,7 @@ void app() {
       cout << "quiz: un outil de pratique pour la chimie\n\n";
       cout << "systeme: retourne le nom de ton OS \n\n";
       cout << "temps: indique l'heure exacte\n\n";
+      cout << "tout: liste tout les elements";
       cout << "credits: montre les credits\n\n";
     } else if (command == "quiz") { 
       cout << "Quel niveau de difficulte? [facile, medium, difficile]\n\n";
@@ -139,6 +140,10 @@ void app() {
         cout << "\nInacapable de trouver l'element\n\n";
       }
       
+    } else if (command == "tout") {
+      for (Element * element : all) {
+        Chimie::printValues(element);
+      }
     } else if (command == "systeme") {
       cout << Chimie::getOsName() << endl << endl;
     } else if (command == "temps") {
