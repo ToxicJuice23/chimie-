@@ -400,15 +400,15 @@ int Chimie::askQuestion(vector<pair<string, vector<string>>> questions, int time
 }
 
 /*
-Version: 1.2
+Version: 1.3
 Copyright: No-one
-Licence: None
+Licence: GNU GPL
 Dev team: Julien Renaud
 Testers: Xavier Dyer
 Ui designer: Julien
 External libraries used: iostream, fstream
 Website: http://www.chimieplusplus.com
-Compatible with: Windows, Linux, MacOS, Replit
+Compatible with: Linux, MacOS, Replit
 Thank you for downloading the project!
 */
 

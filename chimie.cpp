@@ -40,6 +40,7 @@ void app() {
       cout << "quiz: un outil de pratique pour la chimie\n\n";
       cout << "systeme: retourne le nom de ton OS \n\n";
       cout << "temps: indique l'heure exacte\n\n";
+      cout << "credits: montre les credits\n\n";
     } else if (command == "quiz") { 
       cout << "Quel niveau de difficulte? [facile, medium, difficile]\n\n";
       string difficulte; cin >> difficulte;
@@ -149,6 +150,17 @@ void app() {
       if (result == 1) {
         result = system("cls");
       }
+    } else if(command == "credits") {
+      cout << "Version: 1.3 \n\
+Copyright: No-one \n\
+Licence: GNU GPL \n\
+Dev team: Julien Renaud \n\
+Testers: Xavier Dyer \n\
+Ui designer: Julien \n\
+External libraries used: iostream, fstream \n\
+Website: http://www.chimieplusplus.com \n\
+Compatible with: Linux, MacOS, Replit \n\
+Thank you for downloading the project!\n";
     } else if (command == "sortir" || command == "^C") {
       // sortir de l'app
       cout << "|¯¯¯\\  \\   /  |¯¯¯¯¯ \n";
@@ -168,5 +180,3 @@ void app() {
 int main() {
   app();
 }
-
-// if you have nothing to do make sure you can have multiple answers for a question
