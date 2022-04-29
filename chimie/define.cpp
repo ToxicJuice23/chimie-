@@ -35,6 +35,23 @@ bool Chimie::inVectorString(vector<string> vec, string number) {
   return false;
 }
 
+string Chimie::lowerString(string input) {
+  string alphabet = "abcdefghijklmnopqrstuvwxyz";
+  string higherAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  int index1 = 0;
+  for (char ichar : input) {
+    int index = 0;
+    for (char letter : higherAlphabet) {
+      if (letter == ichar) {
+        input[index1] = alphabet[index];
+      }
+      index++;
+    }
+    index1++;
+  }
+  return input;
+}
+
 void Chimie::loading(int millisecond) {
   long long oneMillisec = 1000000;
   for(int x = 0; x < 101; x++) {

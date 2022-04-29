@@ -1,6 +1,7 @@
 #include <iostream>
 #include <ctime>
 #include <chrono>
+#include <cctype>
 #include "chimie/define.cpp"
 using namespace std;
 
@@ -28,6 +29,7 @@ void app() {
       cout << "Entre une commande: ";
     }
     cin >> command; cout << endl;
+    command = Chimie::lowerString(command);
     if (command == "aide") {
       // list all commands
       cout << "Voici une liste de commande: \n \n";
@@ -162,7 +164,7 @@ Licence: GNU GPL \n\
 Dev team: Julien Renaud \n\
 Testers: Xavier Dyer \n\
 Ui designer: Julien \n\
-External libraries used: iostream, fstream \n\
+Libraries used: stdlib, fstream \n\
 Website: http://www.chimieplusplus.com \n\
 Compatible with: Linux, MacOS, Replit \n\
 Thank you for downloading the project!\n";
