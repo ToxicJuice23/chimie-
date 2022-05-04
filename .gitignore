@@ -1,7 +1,6 @@
 replit.nix
 .replit
 .cache
-utilities/gitSetup
-todo
-questions.txt
-uptimeBot.sh
+questions.txt.ign
+uptimeBot.sh.ign
+*.ign

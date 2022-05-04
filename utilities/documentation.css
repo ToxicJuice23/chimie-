@@ -1,0 +1,35 @@
+body {
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-top: 10px;
+  text-align: center;
+  background-color: rgb(220, 220, 220);
+}
+
+.main-desc {
+  border: solid black 2px;
+  font-size: 20px;
+  padding: 5px;
+  background-color: lightgreen;
+}
+
+.section {
+  font-weight: 2px;
+  text-align: left;
+}
+
+code {
+  background-color: lightgray;
+  color: blue;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+ul {
+  list-style-type: '-     ';
+}
+
+.doc-body {
+  text-align: left;
+  font-size: 17px;
+}
