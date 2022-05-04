@@ -5,15 +5,62 @@
     <link rel="stylesheet" href="documentation.css">
   </head>
   <body>
-    <h1 class="section"><code>Chimie</code> class:</h1>
-    <div class="main-desc">
+    <h1 class="section">Chimie class:</h1>
+    <div class="parent-desc">
       <h3>The <code>Chimie</code> class is a static class used to group all general functions and some chemistry related functions</h3>
     </div>
+    <h4>All methods in this class:</h4>
     <div class="doc-body">
-      <h5>All methods in this class</h5>
       <ul>
-        <li>boolToFrench()</li>
+        <li><code>string boolToFrench(bool ibool)</code></li>
+        <li><code>void loading(int millisecond)</code></li>
+        <li><code>void printValues(Element* element)</code></li>
+        <li><code>void init()</code></li>
+        <li><code>void createElementFile(Element* element)</code></li>
+        <li><code>void createFiles()</code></li>
+        <li><code>Element* findElementByName(string name)</code></li>
+        <li><code>Element* findElementBySymbol(string sybol)</code></li>
+        <li><code>string crop(string input, int start, int end=0)</code></li>
+        <li><code>Element* importElement(string filename)</code></li>
+        <li><code>void Init()</code></li>
+        <li><code>string getOsName()</code></li>
+        <li><code>bool inVector(vector&lt;int&gt; vec, int number)</code></li>
+        <li><code>bool inVectorString(vector&lt;string&gt; vec, string number)</code></li>
+        <li><code>string lowerString(string input)</code></li>
+        <li><code>int askQuestion(vector&lt;pair&lt;string, vector&lt;string&gt;&gt;&gt; questions, int times)</code></li>
       </ul>
-    </div>
+      </div>
+      <br><br>
+      <div class="main-desc">
+        <p><code>string boolToFrench(bool ibool)</code> <strong>is a function used in the user interface</strong></p>
+      </div>
+      <div class="doc-body">
+        <ul>
+          <li>Accepts either true or false as a paremeter</li>
+          <li>Returns a translation of the boolean as a string</li>
+        </ul>
+        <h4>Example:</h4>
+        <div class="scrollable-x"><pre>
+#include &lt;iostream&gt;
+#include "define.cpp"
+          
+int main() {
+    Chimie::boolToFrench(true); // returns "Oui"
+    Chimie::boolToFrench(false); // returns "Non"
+}</pre>
+        </div>
+      </div> <br> <br>
+      <div class="main-desc">
+        <p><code>void loading(int milliseconds)</code> is a function that serves as a loading screen</p>
+      </div>
+      <div class="dont-scroll">
+        <p>This function is very simple and doesn't do much. It is also very easy to call and use. Simply call <code>Chimie::loading(100)</code> where 100 will be the gap between each percentage of the loading in milliseconds.</p>
+      </div> <br> <br>
+      <div class="main-desc">
+      
+      </div>
+      <div class="doc-body">
+      
+      </div>
   </body>
 </html>

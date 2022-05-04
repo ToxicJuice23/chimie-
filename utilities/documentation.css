@@ -2,8 +2,9 @@ body {
   margin-left: 70px;
   margin-right: 70px;
   margin-top: 10px;
+  margin-bottom: 20px;
   text-align: center;
-  background-color: rgb(220, 220, 220);
+  background-color: rgb(240, 240, 240);
 }
 
 .main-desc {
@@ -11,6 +12,8 @@ body {
   font-size: 20px;
   padding: 5px;
   background-color: lightgreen;
+  text-align: center;
+  font-weight: bold;
 }
 
 .section {
@@ -22,14 +25,46 @@ code {
   background-color: lightgray;
   color: blue;
   padding: 3px;
-  border-radius: 5px;
+  border-radius: 7px;
+  font-weight: normal !important;
 }
 
 ul {
   list-style-type: '-     ';
+  line-height: 22px;
 }
 
 .doc-body {
   text-align: left;
-  font-size: 17px;
+  font-size: 15px;
+  overflow-x: scroll;
+  width: 100%;
+  white-space: nowrap;
+}
+
+h4 {
+  text-align: left !important;
+}
+
+.scrollable-x {
+  max-height: 100px;
+  overflow-y: scroll;
+  color: black;
+  background-color: lightgray;
+  padding: 10px;
+  padding-top: 0px;
+}
+
+.parent-desc {
+  border: solid black 3px;
+  font-size: 20px;
+  padding: 5px;
+  background-color: purple;
+  text-align: center;
+  color: white;
+}
+
+.dont-scroll {
+  text-align: left;
+  font-size: 15px;
 }
