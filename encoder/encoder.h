@@ -17,3 +17,16 @@ class encoder {
     int write(string filename, string _string, char method);
     vector<string> read(string filename);
 };
+
+class User {
+  private:
+    string username;
+    string password;
+    string email;
+    encoder* Encoder = new encoder();
+  public:
+    User(string email, string password, string username);
+    bool logged_in = false;
+    bool login();
+    bool register_user();
+};

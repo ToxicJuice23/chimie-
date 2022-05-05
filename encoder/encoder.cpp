@@ -55,3 +55,17 @@ vector<string> encoder::read(string filename) {
   }
   return lines;
 }
+
+User::User(string email, string password, string username) {
+  this->email = this->Encoder->encode(email);
+  this->password = this->Encoder->encode(password);
+  this->username = this->Encoder->encode(username);
+}
+
+bool User::login() {
+  vector<string> users = this->Encoder->read(".users");
+}
+
+bool User::register_user() {
+  this->Encoder->write(".users", this->email+this->username+this->password+"\n");
+}
