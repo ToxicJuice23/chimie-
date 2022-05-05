@@ -20,7 +20,7 @@ string Chimie::boolToFrench(bool ibool) {
 string Chimie::getLewis(Element* element) {
   switch (element->electronsDeValence) {
     case 0:
-
+      
     break;
     case 1:
 
