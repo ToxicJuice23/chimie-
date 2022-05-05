@@ -62,10 +62,51 @@ User::User(string email, string password, string username) {
   this->username = this->Encoder->encode(username);
 }
 
-bool User::login() {
-  vector<string> users = this->Encoder->read(".users");
+User* Chimie_login::login() {
+  vector<string> users = Encoder->read(".users");
+  cout << "Enter your username? ";
+  string username; cin >> username;
+  cout << "\nEnter your email? ";
+  string email; cin >> email;
+  cout << "\nEnter your password? ";
+  string password; cin >> password;
+  for (string x : users) {
+    if (x == email+","+password+","+username) { 
+      cout << "Lets gooooo\n";
+      Encoder->write(".cache", Encoder->encode(username+","+email+","+password), 'w');
+      return new User(email, password, username);
+    } else {
+      cout << email+","+password+","+username << " vs " << x;
+    }
+  }
+
+  return nullptr;
 }
 
-bool User::register_user() {
-  this->Encoder->write(".users", this->email+this->username+this->password+"\n");
+User* Chimie_login::register_user(string email, string password, string username) {
+  Encoder->write(".users", Encoder->encode(email)+","+Encoder->encode(password)+","+Encoder->encode(username)+"\n");
+  return new User(email, password, username);
+}
+
+void Chimie_login::logout() {
+  Encoder->write(".cache", "", 'w');
+}
+
+vector<string> split(string _string, char delimiter) {
+  vector<string> result;
+  int index = 0;
+  string current_part;
+  for (char x : _string) {
+    if (x == delimiter) {
+      
+    }
+    index++
+  }
+}
+
+User* Chimie_login::logged_in() {
+  vector<string> result = Encoder->read(".cache");
+  if (result != "") {
+    return new User()
+  }
 }
