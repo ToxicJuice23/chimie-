@@ -10,14 +10,27 @@ using namespace std;
 void app() {
   Chimie_login::logged_in();
   while (!is_logged_in) {
-    cout << "Would you like to: login or register\n";
-    string command; cin >> command;
-    if (Encoder->read("encoder/.users") != vector<string>{""} && command == "login") {
-      cout << "\nLogin:\n";
-      cout << "Enter email: "; string email; string password; string username; cin >> email;
-      cout << "Enter username: "; cin >> username; cout << "Enter password: "; cin >> password;
-      Chimie_login::login(email, password, username);
+    vector<string> users;
+    if (!users.empty()) {
+      cout << "Would you like to: login or register\n";
+      string command; cin >> command;
+      if (Encoder->read("encoder/.users") != vector<string>{""} && command == "login") {
+        cout << "\nLogin:\n";
+        cout << "Enter email: "; string email; string password; string username; cin >> email;
+        cout << "Enter username: "; cin >> username; cout << "Enter password: "; cin >> password;
+        Chimie_login::login(email, password, username);
+      } else {
+        cout << "\nRegister:\n";
+        cout << "Enter email: "; string email; string password; string username; cin >> email;
+        cout << "Enter username: "; cin >> username; cout << "Enter password: "; cin >> password;
+        if (email != "" && password != "" && username != "") { 
+          Chimie_login::register_user(email, password, username);
+        } else {
+          cout << "You must fill up every category\n";
+        }
+      }
     } else {
+      cout << "No user is registered in the database\n";
       cout << "\nRegister:\n";
       cout << "Enter email: "; string email; string password; string username; cin >> email;
       cout << "Enter username: "; cin >> username; cout << "Enter password: "; cin >> password;
