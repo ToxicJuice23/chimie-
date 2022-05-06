@@ -66,11 +66,13 @@ User* Chimie_login::login(string email, string password, string username) {
   vector<string> users = Encoder->read("encoder/.users");
   for (string x : users) {
     if (x == email+","+password+","+username) { 
-      cout << "Welcome back "+username+"\n";
+      cout << "Welcome back "+username+"!\n";
       Encoder->write("encoder/.cache", Encoder->encode(email+","+password+","+username), 'w');
       is_logged_in = true;
       return new User(email, password, username);
     }
+    cout << "\nNo account matched the credentials sorry.\n";
+    return nullptr;
   }
 
   return nullptr;
@@ -80,6 +82,7 @@ User* Chimie_login::register_user(string email, string password, string username
   Encoder->write("encoder/.users", Encoder->encode(email)+","+Encoder->encode(password)+","+Encoder->encode(username)+"\n");
   is_logged_in = true;
   cout << "Welcome "+username+"!\n";
+  Encoder->write("encoder/.cache", Encoder->encode(email+","+password+","+username), 'w');
   return new User(email, password, username);
 }
 
@@ -92,7 +95,7 @@ User* Chimie_login::logged_in() {
   vector<string> result = Encoder->read("encoder/.cache");
   vector<int> comma_locations;
   int index = 0;
-  if (result[0] != "") { // PROBLEM IS ACCESSING EMPTY FILE :o
+  if (!result.empty()) {
     for (char x : result[0]) {
       if (x == ',') {
         comma_locations.push_back(index);
@@ -107,6 +110,7 @@ User* Chimie_login::logged_in() {
     return new User(email, password, username);
   } else {
     cout << "No user is logged in\n";
+    is_logged_in = false;
     return NULL;
   }
 }

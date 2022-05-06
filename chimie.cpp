@@ -9,20 +9,18 @@ using namespace std;
 // welcome to chimie++!
 void app() {
   Chimie_login::logged_in();
-  cout << "0";
   while (!is_logged_in) {
-    cout << "1";
     cout << "Would you like to: login or register\n";
     string command; cin >> command;
     if (Encoder->read("encoder/.users") != vector<string>{""} && command == "login") {
-      cout << "Login\n";
+      cout << "\nLogin:\n";
       cout << "Enter email: "; string email; string password; string username; cin >> email;
-      cout << "Enter username: "; cin >> password; cout << "Enter password: "; cin >> password;
+      cout << "Enter username: "; cin >> username; cout << "Enter password: "; cin >> password;
       Chimie_login::login(email, password, username);
     } else {
-      cout << "Register\n";
+      cout << "\nRegister:\n";
       cout << "Enter email: "; string email; string password; string username; cin >> email;
-      cout << "Enter username: "; cin >> password; cout << "Enter password: "; cin >> password;
+      cout << "Enter username: "; cin >> username; cout << "Enter password: "; cin >> password;
       if (email != "" && password != "" && username != "") { 
         Chimie_login::register_user(email, password, username);
       } else {
@@ -44,7 +42,7 @@ void app() {
   string command;
   int times = 1;
   // UI principal
-  while (true) {
+  while (is_logged_in) {
     // get users command until sortir
     if (times > 1) {
       cout << "Entre une " << times << "eme commande: ";
@@ -65,8 +63,8 @@ void app() {
       cout << "quiz: un outil de pratique pour la chimie\n\n";
       cout << "systeme: retourne le nom de ton OS \n\n";
       cout << "temps: indique l'heure exacte\n\n";
-      cout << "tout: liste tout les elements";
-      cout << "credits: montre les credits\n\n";
+      cout << "tout: liste tout les elements\n\n";
+      cout << "logout: Te deconnecte de ton compte\n\ncredits: montre les credits\n\n";
     } else if (command == "quiz") { 
       cout << "Quel niveau de difficulte? [facile, medium, difficile]\n\n";
       string difficulte; cin >> difficulte;
@@ -130,6 +128,9 @@ void app() {
         }  else {
         cout << "Mode de saisie invalide. \n";
       }
+    } else if (command == "logout") {
+      Chimie_login::logout();
+      break;
     } else if(command == "creer_compose") {
       // trouve les elements dans la base de donne et cree une equation
       try {
