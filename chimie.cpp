@@ -3,10 +3,33 @@
 #include <chrono>
 #include <cctype>
 #include "chimie/define.cpp"
+#include "encoder/encoder.cpp"
 using namespace std;
 
 // welcome to chimie++!
 void app() {
+  Chimie_login::logged_in();
+  cout << "0";
+  while (!is_logged_in) {
+    cout << "1";
+    cout << "Would you like to: login or register\n";
+    string command; cin >> command;
+    if (Encoder->read("encoder/.users") != vector<string>{""} && command == "login") {
+      cout << "Login\n";
+      cout << "Enter email: "; string email; string password; string username; cin >> email;
+      cout << "Enter username: "; cin >> password; cout << "Enter password: "; cin >> password;
+      Chimie_login::login(email, password, username);
+    } else {
+      cout << "Register\n";
+      cout << "Enter email: "; string email; string password; string username; cin >> email;
+      cout << "Enter username: "; cin >> password; cout << "Enter password: "; cin >> password;
+      if (email != "" && password != "" && username != "") { 
+        Chimie_login::register_user(email, password, username);
+      } else {
+        cout << "You must fill up every category\n";
+      }
+    }
+  }
   Chimie::Init();
   // Begining dialog
   //Chimie::loading(25);

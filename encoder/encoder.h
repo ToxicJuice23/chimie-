@@ -31,14 +31,16 @@ class User {
   public:
     User(string email, string password, string username);
     bool logged_in = true;
+    vector<string> get_info();
 };
 
+bool is_logged_in;
 encoder* Encoder = new encoder();
 class Chimie_login {
   public:
-    
-    static User* login();
+    static User* login(string email, string password, string username);
     static User* register_user(string email, string password, string username);
     static void logout();
-    static bool logged_in();
+    static User* logged_in();
+
 };

@@ -61,6 +61,7 @@ string Chimie::getLewis(Element* element) {
     default:
       cout << "Invalid electrons\n\n";
   }
+  return "not done >:(";
 }
 
 bool Chimie::inVector(vector<int> vec, int number) {

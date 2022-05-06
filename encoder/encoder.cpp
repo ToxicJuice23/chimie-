@@ -62,21 +62,14 @@ User::User(string email, string password, string username) {
   this->username = this->Encoder->encode(username);
 }
 
-User* Chimie_login::login() {
-  vector<string> users = Encoder->read(".users");
-  cout << "Enter your username? ";
-  string username; cin >> username;
-  cout << "\nEnter your email? ";
-  string email; cin >> email;
-  cout << "\nEnter your password? ";
-  string password; cin >> password;
+User* Chimie_login::login(string email, string password, string username) {
+  vector<string> users = Encoder->read("encoder/.users");
   for (string x : users) {
     if (x == email+","+password+","+username) { 
-      cout << "Lets gooooo\n";
-      Encoder->write(".cache", Encoder->encode(username+","+email+","+password), 'w');
+      cout << "Welcome back "+username+"\n";
+      Encoder->write("encoder/.cache", Encoder->encode(email+","+password+","+username), 'w');
+      is_logged_in = true;
       return new User(email, password, username);
-    } else {
-      cout << email+","+password+","+username << " vs " << x;
     }
   }
 
@@ -84,29 +77,40 @@ User* Chimie_login::login() {
 }
 
 User* Chimie_login::register_user(string email, string password, string username) {
-  Encoder->write(".users", Encoder->encode(email)+","+Encoder->encode(password)+","+Encoder->encode(username)+"\n");
+  Encoder->write("encoder/.users", Encoder->encode(email)+","+Encoder->encode(password)+","+Encoder->encode(username)+"\n");
+  is_logged_in = true;
+  cout << "Welcome "+username+"!\n";
   return new User(email, password, username);
 }
 
 void Chimie_login::logout() {
-  Encoder->write(".cache", "", 'w');
-}
-
-vector<string> split(string _string, char delimiter) {
-  vector<string> result;
-  int index = 0;
-  string current_part;
-  for (char x : _string) {
-    if (x == delimiter) {
-      
-    }
-    index++
-  }
+  Encoder->write("encoder/.cache", "", 'w');
+  is_logged_in = false;
 }
 
 User* Chimie_login::logged_in() {
-  vector<string> result = Encoder->read(".cache");
-  if (result != "") {
-    return new User()
+  vector<string> result = Encoder->read("encoder/.cache");
+  vector<int> comma_locations;
+  int index = 0;
+  if (result[0] != "") { // PROBLEM IS ACCESSING EMPTY FILE :o
+    for (char x : result[0]) {
+      if (x == ',') {
+        comma_locations.push_back(index);
+      }
+      index++;
+    }
+    string email = result[0].substr(0, comma_locations[0]);
+    string password = result[0].substr(comma_locations[0] + 1, comma_locations[1] - comma_locations[0] - 1);
+    string username = result[0].substr(comma_locations[1] + 1, result[0].length() - comma_locations[1]);
+    cout << "Welcome back "+username+"!";
+    is_logged_in = true;
+    return new User(email, password, username);
+  } else {
+    cout << "No user is logged in\n";
+    return NULL;
   }
+}
+
+vector<string> User::get_info() {
+  return vector<string> {this->username, this->email};
 }
