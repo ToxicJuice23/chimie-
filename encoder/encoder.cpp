@@ -1,5 +1,14 @@
 #include "encoder.h"
 
+bool Chimie_login::has_char(string _string, char wanted) {
+  for (char x : _string) {
+    if (x == wanted) {
+      return true;
+    }
+  }
+  return false;
+}
+
 string encoder::vector_to_string(vector<char> v) { 
   string s(v.begin(), v.end());
   return s;
@@ -66,12 +75,12 @@ User* Chimie_login::login(string email, string password, string username) {
   vector<string> users = Encoder->read("encoder/.users");
   for (string x : users) {
     if (x == email+","+password+","+username) { 
-      cout << "Welcome back "+username+"!\n";
+      cout << "Bienvenue "+username+"!\n";
       Encoder->write("encoder/.cache", Encoder->encode(email+","+password+","+username), 'w');
       is_logged_in = true;
       return new User(email, password, username);
     }
-    cout << "\nNo account matched the credentials sorry.\n";
+    cout << "\nIl n'y existe pas de comptes avec ces donnees\n";
     return nullptr;
   }
 
@@ -81,7 +90,7 @@ User* Chimie_login::login(string email, string password, string username) {
 User* Chimie_login::register_user(string email, string password, string username) {
   Encoder->write("encoder/.users", Encoder->encode(email)+","+Encoder->encode(password)+","+Encoder->encode(username)+"\n");
   is_logged_in = true;
-  cout << "Welcome "+username+"!\n";
+  cout << "Bienvenue "+username+"!\n";
   Encoder->write("encoder/.cache", Encoder->encode(email+","+password+","+username), 'w');
   return new User(email, password, username);
 }
@@ -105,11 +114,11 @@ User* Chimie_login::logged_in() {
     string email = result[0].substr(0, comma_locations[0]);
     string password = result[0].substr(comma_locations[0] + 1, comma_locations[1] - comma_locations[0] - 1);
     string username = result[0].substr(comma_locations[1] + 1, result[0].length() - comma_locations[1]);
-    cout << "Welcome back "+username+"!";
+    cout << "Bienvenue "+username+"!";
     is_logged_in = true;
     return new User(email, password, username);
   } else {
-    cout << "No user is logged in\n";
+    cout << "Aucun utilisateur est connecte\n";
     is_logged_in = false;
     return NULL;
   }

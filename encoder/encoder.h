@@ -42,5 +42,5 @@ class Chimie_login {
     static User* register_user(string email, string password, string username);
     static void logout();
     static User* logged_in();
-
+    static bool has_char(string _string, char wanted);
 };

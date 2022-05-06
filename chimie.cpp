@@ -12,42 +12,46 @@ void app() {
   while (!is_logged_in) {
     vector<string> users = Encoder->read("encoder/.users");
     if (!users.empty()) {
-      cout << "Would you like to: login or register\n";
+      cout << "Aimerais-tu te: connecter ou enregistrer\n";
       string command; cin >> command;
-      if (Encoder->read("encoder/.users") != vector<string>{""} && command == "login") {
-        cout << "\nLogin:\n";
-        cout << "Enter email: "; string email; string password; string username; cin >> email;
-        cout << "Enter username: "; cin >> username; cout << "Enter password: "; cin >> password;
-        Chimie_login::login(email, password, username);
+      if (Encoder->read("encoder/.users") != vector<string>{""} && command == "connecter") {
+        cout << "\nConnection:\n";
+        cout << "Entre ton email: "; string email; string password; string username; cin >> email;
+        cout << "Entre ton nom d'utilisateur: "; cin >> username; cout << "Entre ton mot de passe: "; cin >> password;
+        if (Chimie_login::has_char(email, '@') && Chimie_login::has_char(email, '.') && username.length() > 4) {
+          Chimie_login::login(email, password, username);
+        } else {
+          cout << "Desole, ton email ou nom d'utilisateur est invalide. (Le nom d'utilisateur doit avoir au moins 4 lettres)\n";
+        }
       } else {
-        cout << "\nRegister:\n";
-        cout << "Enter email: "; string email; string password; string username; cin >> email;
-        cout << "Enter username: "; cin >> username; cout << "Enter password: "; cin >> password;
+        cout << "\nEnregistrer:\n";
+        cout << "Entre ton email: "; string email; string password; string username; cin >> email;
+        cout << "Entre ton nom d'utilisateur: "; cin >> username; cout << "Entre ton mot de passe: "; cin >> password;
         if (email != "" && password != "" && username != "") { 
           Chimie_login::register_user(email, password, username);
         } else {
-          cout << "You must fill up every category\n";
+          cout << "Tu dois remplir chaque case.\n";
         }
       }
     } else {
-      cout << "No user is registered in the database\n";
-      cout << "\nRegister:\n";
-      cout << "Enter email: "; string email; string password; string username; cin >> email;
-      cout << "Enter username: "; cin >> username; cout << "Enter password: "; cin >> password;
+      cout << "Il y a aucun utilisateur d'enregistre dans la base de donnee\n";
+      cout << "\nEnregistrer:\n";
+      cout << "Entre ton email: "; string email; string password; string username; cin >> email;
+      cout << "Entre ton nom d'utilisateur: "; cin >> username; cout << "Entre ton mot de passe: "; cin >> password;
       if (email != "" && password != "" && username != "") { 
         Chimie_login::register_user(email, password, username);
       } else {
-        cout << "You must fill up every category\n";
+        cout << "Tu dois remplir chaque case.\n";
       }
     }
   }
   Chimie::Init();
   // Begining dialog
   //Chimie::loading(25);
-  cout << "         .        .   \n";
-  cout << "/¯¯ |  | | |\\  /| | |¯¯¯¯      |       |      • \\|/\n";
-  cout << "|   |--| | | \\/ | | |----   ---|--- ---|---      c )\n";
-  cout << "\\__ |  | | |    | | |____      |       |      • /|\\  \n";
+  cout << "\n         .        .   \n";
+  cout << "/¯¯ |  | | |\\  /| | |¯¯¯¯      |       |\n";
+  cout << "|   |--| | | \\/ | | |----   ---|--- ---|---\n";
+  cout << "\\__ |  | | |    | | |____      |       |\n";
   cout << "Bienvenue a Chimie++ (version terminal)\n";
   cout << "La raison qu'il n'y a pas d'accents est que certains OS ne montrent pas bien les accents et ecrivent du griboulli.\n";
   cout << "Qu'aimerais-tu faire? (en passant, tu peux avoir une liste des commandes avec le mot 'aide') \n";
@@ -208,9 +212,9 @@ Thank you for downloading the project!\n";
     } else if (command == "sortir" || command == "^C") {
       // sortir de l'app
       cout << "|¯¯¯\\  \\   /  |¯¯¯¯¯ \n";
-      cout << "|   /   \\ /   |        • \\|/ \n";
-      cout << "|---     |    |-----      c ) \n";
-      cout << "|   \\    |    |        • /|\\ \n";
+      cout << "|   /   \\ /   |      \n";
+      cout << "|---     |    |-----  \n";
+      cout << "|   \\    |    |      \n";
       cout << "|___/    |    |_____ \n";
       break;
     } else {

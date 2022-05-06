@@ -12,42 +12,46 @@ void app() {
   while (!is_logged_in) {
     vector<string> users = Encoder->read("encoder/.users");
     if (!users.empty()) {
-      cout << "Would you like to: login or register\n";
+      cout << "Aimerais-tu te: connecter ou enregistrer\n";
       string command; cin >> command;
-      if (Encoder->read("encoder/.users") != vector<string>{""} && command == "login") {
-        cout << "\nLogin:\n";
-        cout << "Enter email: "; string email; string password; string username; cin >> email;
-        cout << "Enter username: "; cin >> username; cout << "Enter password: "; cin >> password;
-        Chimie_login::login(email, password, username);
+      if (Encoder->read("encoder/.users") != vector<string>{""} && command == "connecter") {
+        cout << "\nConnection:\n";
+        cout << "Entre ton email: "; string email; string password; string username; cin >> email;
+        cout << "Entre ton nom d'utilisateur: "; cin >> username; cout << "Entre ton mot de passe: "; cin >> password;
+        if (Chimie_login::has_char(email, '@') && Chimie_login::has_char(email, '.') && username.length() > 4) {
+          Chimie_login::login(email, password, username);
+        } else {
+          cout << "Desole, ton email ou nom d'utilisateur est invalide. (Le nom d'utilisateur doit avoir au moins 4 lettres)\n";
+        }
       } else {
-        cout << "\nRegister:\n";
-        cout << "Enter email: "; string email; string password; string username; cin >> email;
-        cout << "Enter username: "; cin >> username; cout << "Enter password: "; cin >> password;
+        cout << "\nEnregistrer:\n";
+        cout << "Entre ton email: "; string email; string password; string username; cin >> email;
+        cout << "Entre ton nom d'utilisateur: "; cin >> username; cout << "Entre ton mot de passe: "; cin >> password;
         if (email != "" && password != "" && username != "") { 
           Chimie_login::register_user(email, password, username);
         } else {
-          cout << "You must fill up every category\n";
+          cout << "Tu dois remplir chaque case.\n";
         }
       }
     } else {
-      cout << "No user is registered in the database\n";
-      cout << "\nRegister:\n";
-      cout << "Enter email: "; string email; string password; string username; cin >> email;
-      cout << "Enter username: "; cin >> username; cout << "Enter password: "; cin >> password;
+      cout << "Il y a aucun utilisateur d'enregistre dans la base de donnee\n";
+      cout << "\nEnregistrer:\n";
+      cout << "Entre ton email: "; string email; string password; string username; cin >> email;
+      cout << "Entre ton nom d'utilisateur: "; cin >> username; cout << "Entre ton mot de passe: "; cin >> password;
       if (email != "" && password != "" && username != "") { 
         Chimie_login::register_user(email, password, username);
       } else {
-        cout << "You must fill up every category\n";
+        cout << "Tu dois remplir chaque case.\n";
       }
     }
   }
   Chimie::Init();
   // Begining dialog
   //Chimie::loading(25);
-  cout << "         .        .   \n";
-  cout << "/¯¯ |  | | |\\  /| | |¯¯¯¯      |       |      • \\|/\n";
-  cout << "|   |--| | | \\/ | | |----   ---|--- ---|---      c )\n";
-  cout << "\\__ |  | | |    | | |____      |       |      • /|\\  \n";
+  cout << "\n         .        .   \n";
+  cout << "/¯¯ |  | | |\\  /| | |¯¯¯¯      |       |\n";
+  cout << "|   |--| | | \\/ | | |----   ---|--- ---|---\n";
+  cout << "\\__ |  | | |    | | |____      |       |\n";
   cout << "Bienvenue a Chimie++ (version terminal)\n";
   cout << "La raison qu'il n'y a pas d'accents est que certains OS ne montrent pas bien les accents et ecrivent du griboulli.\n";
   cout << "Qu'aimerais-tu faire? (en passant, tu peux avoir une liste des commandes avec le mot 'aide') \n";
@@ -208,9 +212,9 @@ Thank you for downloading the project!\n";
     } else if (command == "sortir" || command == "^C") {
       // sortir de l'app
       cout << "|¯¯¯\\  \\   /  |¯¯¯¯¯ \n";
-      cout << "|   /   \\ /   |        • \\|/ \n";
-      cout << "|---     |    |-----      c ) \n";
-      cout << "|   \\    |    |        • /|\\ \n";
+      cout << "|   /   \\ /   |      \n";
+      cout << "|---     |    |-----  \n";
+      cout << "|   \\    |    |      \n";
       cout << "|___/    |    |_____ \n";
       break;
     } else {
@@ -935,6 +939,15 @@ cd ..
 cd utilities
 cat totalcode.txt | wc -l #include "encoder.h"
 
+bool Chimie_login::has_char(string _string, char wanted) {
+  for (char x : _string) {
+    if (x == wanted) {
+      return true;
+    }
+  }
+  return false;
+}
+
 string encoder::vector_to_string(vector<char> v) { 
   string s(v.begin(), v.end());
   return s;
@@ -1001,12 +1014,12 @@ User* Chimie_login::login(string email, string password, string username) {
   vector<string> users = Encoder->read("encoder/.users");
   for (string x : users) {
     if (x == email+","+password+","+username) { 
-      cout << "Welcome back "+username+"!\n";
+      cout << "Bienvenue "+username+"!\n";
       Encoder->write("encoder/.cache", Encoder->encode(email+","+password+","+username), 'w');
       is_logged_in = true;
       return new User(email, password, username);
     }
-    cout << "\nNo account matched the credentials sorry.\n";
+    cout << "\nIl n'y existe pas de comptes avec ces donnees\n";
     return nullptr;
   }
 
@@ -1016,7 +1029,7 @@ User* Chimie_login::login(string email, string password, string username) {
 User* Chimie_login::register_user(string email, string password, string username) {
   Encoder->write("encoder/.users", Encoder->encode(email)+","+Encoder->encode(password)+","+Encoder->encode(username)+"\n");
   is_logged_in = true;
-  cout << "Welcome "+username+"!\n";
+  cout << "Bienvenue "+username+"!\n";
   Encoder->write("encoder/.cache", Encoder->encode(email+","+password+","+username), 'w');
   return new User(email, password, username);
 }
@@ -1040,11 +1053,11 @@ User* Chimie_login::logged_in() {
     string email = result[0].substr(0, comma_locations[0]);
     string password = result[0].substr(comma_locations[0] + 1, comma_locations[1] - comma_locations[0] - 1);
     string username = result[0].substr(comma_locations[1] + 1, result[0].length() - comma_locations[1]);
-    cout << "Welcome back "+username+"!";
+    cout << "Bienvenue "+username+"!";
     is_logged_in = true;
     return new User(email, password, username);
   } else {
-    cout << "No user is logged in\n";
+    cout << "Aucun utilisateur est connecte\n";
     is_logged_in = false;
     return NULL;
   }
@@ -1097,5 +1110,5 @@ class Chimie_login {
     static User* register_user(string email, string password, string username);
     static void logout();
     static User* logged_in();
-
+    static bool has_char(string _string, char wanted);
 };
