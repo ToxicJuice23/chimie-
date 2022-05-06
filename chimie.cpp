@@ -10,7 +10,7 @@ using namespace std;
 void app() {
   Chimie_login::logged_in();
   while (!is_logged_in) {
-    vector<string> users;
+    vector<string> users = Encoder->read("encoder/.users");
     if (!users.empty()) {
       cout << "Would you like to: login or register\n";
       string command; cin >> command;
@@ -224,3 +224,6 @@ Thank you for downloading the project!\n";
 int main() {
   app();
 }
+
+// next time u have nothing to do add requirements for password and email
+// u can also make the user login w only email and password, add unique creds
