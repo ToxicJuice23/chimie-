@@ -229,5 +229,4 @@ int main() {
   app();
 }
 
-// next time u have nothing to do add requirements for password and email
-// u can also make the user login w only email and password, add unique creds
+// u can also make the user login w/ only email and password, add unique creds
