@@ -16,19 +16,23 @@ void app() {
       string command; cin >> command;
       if (Encoder->read("encoder/.users") != vector<string>{""} && command == "connecter") {
         cout << "\nConnection:\n";
-        cout << "Entre ton email: "; string email; string password; string username; cin >> email;
+        string password; string username;
         cout << "Entre ton nom d'utilisateur: "; cin >> username; cout << "Entre ton mot de passe: "; cin >> password;
-        if (Chimie_login::has_char(email, '@') && Chimie_login::has_char(email, '.') && username.length() > 4) {
-          Chimie_login::login(email, password, username);
+        if (username.length() > 4 && password.length() > 6) {
+          Chimie_login::login(username, password);
         } else {
-          cout << "Desole, ton email ou nom d'utilisateur est invalide. (Le nom d'utilisateur doit avoir au moins 4 lettres)\n";
+          cout << "Desole, ton nom d'utilisateur est invalide. (Le nom d'utilisateur doit avoir au moins 4 characteres)\n";
         }
       } else {
         cout << "\nEnregistrer:\n";
-        cout << "Entre ton email: "; string email; string password; string username; cin >> email;
+        string password; string username;
         cout << "Entre ton nom d'utilisateur: "; cin >> username; cout << "Entre ton mot de passe: "; cin >> password;
-        if (email != "" && password != "" && username != "") { 
-          Chimie_login::register_user(email, password, username);
+        if (password != "" && username != "") { 
+          if (!Chimie_login::already_used(username)) {
+            Chimie_login::register_user(username, password);
+          } else {
+            cout << "Ton nom d'utilisateur est deja utilise\n";
+          }
         } else {
           cout << "Tu dois remplir chaque case.\n";
         }
@@ -36,10 +40,14 @@ void app() {
     } else {
       cout << "Il y a aucun utilisateur d'enregistre dans la base de donnee\n";
       cout << "\nEnregistrer:\n";
-      cout << "Entre ton email: "; string email; string password; string username; cin >> email;
+      string password; string username;
       cout << "Entre ton nom d'utilisateur: "; cin >> username; cout << "Entre ton mot de passe: "; cin >> password;
-      if (email != "" && password != "" && username != "") { 
-        Chimie_login::register_user(email, password, username);
+      if (password != "" && username != "") {
+        if (!Chimie_login::already_used(username)) {
+          Chimie_login::register_user(username, password);
+        } else {
+          cout << "Ton nom d'utilisateur est deja utilise\n";
+        }
       } else {
         cout << "Tu dois remplir chaque case.\n";
       }
@@ -48,6 +56,7 @@ void app() {
   Chimie::Init();
   // Begining dialog
   //Chimie::loading(25);
+    cout << "Bienvenue "+Chimie_login::logged_in()->get_info()[0]+"!\n";
   cout << "\n         .        .   \n";
   cout << "/¯¯ |  | | |\\  /| | |¯¯¯¯      |       |\n";
   cout << "|   |--| | | \\/ | | |----   ---|--- ---|---\n";
@@ -198,6 +207,8 @@ void app() {
       if (result == 1) {
         result = system("cls");
       }
+    } else if (command == "about_me") {
+      cout << "username: "+Chimie_login::logged_in()->get_info()[0]+" password: "+Chimie_login::logged_in()->get_info()[1]+"\n";
     } else if(command == "credits") {
       cout << "Version: 1.3 \n\
 Copyright: No-one \n\

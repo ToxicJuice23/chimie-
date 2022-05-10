@@ -65,20 +65,36 @@ vector<string> encoder::read(string filename) {
   return lines;
 }
 
-User::User(string email, string password, string username) {
-  this->email = this->Encoder->encode(email);
-  this->password = this->Encoder->encode(password);
-  this->username = this->Encoder->encode(username);
+bool Chimie_login::already_used(string username) {
+  vector<string> res = Encoder->read(".users");
+  for (string x : res) {
+    int comma;
+    int index;
+    for (char y : x) {
+      if (y == ',') {
+        comma = index;
+      }
+      index++;
+    }
+    if (x.substr(0,comma) == username) {
+      return true;
+    }
+  }
+  return false;
 }
 
-User* Chimie_login::login(string email, string password, string username) {
+User::User(string username, string password) {
+  this->password = password;
+  this->username = username;
+}
+
+User* Chimie_login::login(string username, string password) {
   vector<string> users = Encoder->read("encoder/.users");
   for (string x : users) {
-    if (x == email+","+password+","+username) { 
-      cout << "Bienvenue "+username+"!\n";
-      Encoder->write("encoder/.cache", Encoder->encode(email+","+password+","+username), 'w');
+    if (x == username+","+password) { 
+      Encoder->write("encoder/.cache", Encoder->encode(username+","+password), 'w');
       is_logged_in = true;
-      return new User(email, password, username);
+      return new User(username, password);
     }
     cout << "\nIl n'y existe pas de comptes avec ces donnees\n";
     return nullptr;
@@ -87,12 +103,11 @@ User* Chimie_login::login(string email, string password, string username) {
   return nullptr;
 }
 
-User* Chimie_login::register_user(string email, string password, string username) {
-  Encoder->write("encoder/.users", Encoder->encode(email)+","+Encoder->encode(password)+","+Encoder->encode(username)+"\n");
+User* Chimie_login::register_user(string username, string password) {
+  Encoder->write("encoder/.users", Encoder->encode(username)+","+Encoder->encode(password)+"\n");
   is_logged_in = true;
-  cout << "Bienvenue "+username+"!\n";
-  Encoder->write("encoder/.cache", Encoder->encode(email+","+password+","+username), 'w');
-  return new User(email, password, username);
+  Encoder->write("encoder/.cache", Encoder->encode(username+","+password), 'w');
+  return new User(username, password);
 }
 
 void Chimie_login::logout() {
@@ -111,12 +126,10 @@ User* Chimie_login::logged_in() {
       }
       index++;
     }
-    string email = result[0].substr(0, comma_locations[0]);
-    string password = result[0].substr(comma_locations[0] + 1, comma_locations[1] - comma_locations[0] - 1);
-    string username = result[0].substr(comma_locations[1] + 1, result[0].length() - comma_locations[1]);
-    cout << "Bienvenue "+username+"!";
+    string username = result[0].substr(0, comma_locations[0]);
+    string password = result[0].substr(comma_locations[0] + 1, result[0].length() - comma_locations[0]);
     is_logged_in = true;
-    return new User(email, password, username);
+    return new User(username, password);
   } else {
     cout << "Aucun utilisateur est connecte\n";
     is_logged_in = false;
@@ -125,5 +138,5 @@ User* Chimie_login::logged_in() {
 }
 
 vector<string> User::get_info() {
-  return vector<string> {this->username, this->email};
+  return vector<string> {this->username, this->password};
 }

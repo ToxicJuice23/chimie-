@@ -18,18 +18,15 @@ class encoder {
     string vector_to_string(vector<char> v);
     int write(string filename, string _string, char method);
     vector<string> read(string filename);
-    User* login();
-    User* register_user();
 };
 
 class User {
   private:
     string username;
     string password;
-    string email;
     encoder* Encoder = new encoder();
   public:
-    User(string email, string password, string username);
+    User(string username, string password);
     bool logged_in = true;
     vector<string> get_info();
 };
@@ -38,9 +35,10 @@ bool is_logged_in;
 encoder* Encoder = new encoder();
 class Chimie_login {
   public:
-    static User* login(string email, string password, string username);
-    static User* register_user(string email, string password, string username);
+    static User* login(string username, string password);
+    static User* register_user(string username, string password);
     static void logout();
     static User* logged_in();
+    static bool already_used(string username);
     static bool has_char(string _string, char wanted);
 };
