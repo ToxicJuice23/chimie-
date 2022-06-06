@@ -9,5 +9,11 @@ cd encoder
 cat encoder.cpp >> ../utilities/totalcode.txt
 cat encoder.h >> ../utilities/totalcode.txt
 cd ..
+cd game
+cat game.cpp >> ../utilities/totalcode.txt
+cat game.h >> ../utilities/totalcode.txt
+cat gameTest.cpp >> ../utilities/totalcode.txt
+cd ..
 cd utilities
+cat countLines.sh >> totalcode.txt
 cat totalcode.txt | wc -l 

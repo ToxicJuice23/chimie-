@@ -134,3 +134,5 @@ User* Chimie_login::logged_in() {
 vector<string> User::get_info() {
   return vector<string> {this->username, this->password};
 }
+
+//vector<string> get_values(string filename)

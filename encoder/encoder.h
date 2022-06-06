@@ -40,4 +40,5 @@ class Chimie_login {
     static User* logged_in();
     static bool already_used(string username);
     static bool has_char(string _string, char wanted);
+    //static vector<string> get_values(string filename);
 };

@@ -31,7 +31,7 @@ void app() {
           if (!Chimie_login::already_used(username)) {
             Chimie_login::register_user(username, password);
           } else {
-            cout << "Ton nom d'utilisateur est deja utilise\n";
+            cout << "Ton nom d'utilisateur est deja utilise\n\n";
           }
         } else {
           cout << "Tu dois remplir chaque case.\n";
@@ -46,7 +46,7 @@ void app() {
         if (!Chimie_login::already_used(username)) {
           Chimie_login::register_user(username, password);
         } else {
-          cout << "Ton nom d'utilisateur est deja utilise\n";
+          cout << "Ton nom d'utilisateur est deja utilise\n\n";
         }
       } else {
         cout << "Tu dois remplir chaque case.\n";
@@ -56,6 +56,7 @@ void app() {
   Chimie::Init();
   // Begining dialog
   //Chimie::loading(25);
+    cout << "Bienvenue "+Chimie_login::logged_in()->get_info()[0]+"!\n";
   cout << "\n         .        .   \n";
   cout << "/¯¯ |  | | |\\  /| | |¯¯¯¯      |       |\n";
   cout << "|   |--| | | \\/ | | |----   ---|--- ---|---\n";
@@ -89,6 +90,7 @@ void app() {
       cout << "systeme: retourne le nom de ton OS \n\n";
       cout << "temps: indique l'heure exacte\n\n";
       cout << "tout: liste tout les elements\n\n";
+      cout << "effacer: efface tout les comptes de la base de donnees\n\n";
       cout << "logout: Te deconnecte de ton compte\n\ncredits: montre les credits\n\n";
     } else if (command == "quiz") { 
       cout << "Quel niveau de difficulte? [facile, medium, difficile]\n\n";
@@ -156,6 +158,10 @@ void app() {
     } else if (command == "logout") {
       Chimie_login::logout();
       break;
+    } else if (command == "effacer") {
+      Encoder->write("encoder/.users", "", 'w');
+      Chimie_login::logout();
+      break;
     } else if(command == "creer_compose") {
       // trouve les elements dans la base de donne et cree une equation
       try {
@@ -168,7 +174,11 @@ void app() {
           cout << "Incapable de trouver l'element \n";
         } else {
           Compose* UserCompose = new Compose(Element1_, Element2_);
-          UserCompose->printCompose();
+          if (Element1_->metal && Element2_->metal) {
+
+          } else {
+            UserCompose->printCompose();
+          }
         }
       } catch(...) {
         cout << "Incapable de trouver l'element \n";
@@ -206,6 +216,8 @@ void app() {
       if (result == 1) {
         result = system("cls");
       }
+    } else if (command == "about_me") {
+      cout << "username: "+Chimie_login::logged_in()->get_info()[0]+" password: "+Chimie_login::logged_in()->get_info()[1]+"\n";
     } else if(command == "credits") {
       cout << "Version: 1.3 \n\
 Copyright: No-one \n\
@@ -237,7 +249,7 @@ int main() {
   app();
 }
 
-// u can also make the user login w/ only email and password, add unique creds#include <vector>
+// u can add unique creds#include <vector>
 #include <cmath>
 #include <string>
 #include <chrono>
@@ -254,53 +266,6 @@ string Chimie::boolToFrench(bool ibool) {
     return "Non";
   }
   return "?";
-}
-
-string Chimie::getLewis(Element* element) {
-  switch (element->electronsDeValence) {
-    case 0:
-      
-    break;
-    case 1:
-
-    break;
-    case 2:
-
-    break;
-    case 3:
-
-    break;
-    case 4:
-
-    break;
-    case 5: 
-
-    break;
-    case 6:
-
-    break;
-    case 7:
-
-    break;
-    case 8:
-
-    break;
-    case 9:
-
-    break;
-    case 10:
-
-    break;
-    case 11:
-
-    break;
-    case 12:
-
-    break;
-    default:
-      cout << "Invalid electrons\n\n";
-  }
-  return "not done >:(";
 }
 
 bool Chimie::inVector(vector<int> vec, int number) {
@@ -943,7 +908,13 @@ cd encoder
 cat encoder.cpp >> ../utilities/totalcode.txt
 cat encoder.h >> ../utilities/totalcode.txt
 cd ..
+cd game
+cat game.cpp >> ../utilities/totalcode.txt
+cat game.h >> ../utilities/totalcode.txt
+cat gameTest.cpp >> ../utilities/totalcode.txt
+cd ..
 cd utilities
+cat countLines.sh >> totalcode.txt
 cat totalcode.txt | wc -l #include "encoder.h"
 
 bool Chimie_login::has_char(string _string, char wanted) {
@@ -1012,17 +983,11 @@ vector<string> encoder::read(string filename) {
 }
 
 bool Chimie_login::already_used(string username) {
-  vector<string> res = Encoder->read(".users");
+  vector<string> res = Encoder->read("encoder/.users");
   for (string x : res) {
-    int comma;
-    int index;
-    for (char y : x) {
-      if (y == ',') {
-        comma = index;
-      }
-      index++;
-    }
-    if (x.substr(0,comma) == username) {
+    int length = username.length();
+    string registered = x.substr(0, length);
+    if (registered == username) {
       return true;
     }
   }
@@ -1030,15 +995,14 @@ bool Chimie_login::already_used(string username) {
 }
 
 User::User(string username, string password) {
-  this->password = this->Encoder->encode(password);
-  this->username = this->Encoder->encode(username);
+  this->password = password;
+  this->username = username;
 }
 
 User* Chimie_login::login(string username, string password) {
   vector<string> users = Encoder->read("encoder/.users");
   for (string x : users) {
     if (x == username+","+password) { 
-      cout << "Bienvenue "+username+"!\n";
       Encoder->write("encoder/.cache", Encoder->encode(username+","+password), 'w');
       is_logged_in = true;
       return new User(username, password);
@@ -1053,7 +1017,6 @@ User* Chimie_login::login(string username, string password) {
 User* Chimie_login::register_user(string username, string password) {
   Encoder->write("encoder/.users", Encoder->encode(username)+","+Encoder->encode(password)+"\n");
   is_logged_in = true;
-  cout << "Bienvenue "+username+"!\n";
   Encoder->write("encoder/.cache", Encoder->encode(username+","+password), 'w');
   return new User(username, password);
 }
@@ -1076,7 +1039,6 @@ User* Chimie_login::logged_in() {
     }
     string username = result[0].substr(0, comma_locations[0]);
     string password = result[0].substr(comma_locations[0] + 1, result[0].length() - comma_locations[0]);
-    cout << "Bienvenue "+username+"!";
     is_logged_in = true;
     return new User(username, password);
   } else {
@@ -1121,7 +1083,6 @@ class User {
     bool logged_in = true;
     vector<string> get_info();
 };
-
 bool is_logged_in;
 encoder* Encoder = new encoder();
 class Chimie_login {
@@ -1132,4 +1093,77 @@ class Chimie_login {
     static User* logged_in();
     static bool already_used(string username);
     static bool has_char(string _string, char wanted);
-};
+};#include "game.h"
+#include <stdlib.h>
+
+Element* game::guess() {
+  int index = rand() % 3 + 0;
+  return elements[index];
+}
+
+Element* game::get_ui() {
+  cout << "Fer, Oxygene ou Zinc?\n";
+  string choix; cin >> choix;
+  if (choix == "sortir") {
+    return Carbone;
+  }
+  return Chimie::findElementByName(choix);
+}
+
+void game() {
+  cout << "Started\n";
+  while (true) {
+    Element* computer = game::guess();
+    Element* user = game::get_ui();
+    if (user != nullptr) {
+      if (user == Carbone) {
+        break;
+      }
+      Chimie::printValues(computer);
+      if (user->nom == "Oxygene" && computer->nom == "Fer" || user->nom == "Fer" && computer->nom == "Zinc" || user->nom == "Zinc" && computer->nom == "Oxygene") {
+        // user wins
+        cout << "Bravo!\n";
+      } else if (user->nom == computer->nom) {
+        // tie
+        cout << "Egalitee\n";
+      } else {
+        // user loses
+        cout << "Desole, tu as perdu\n";
+      }
+    } else {
+      cout << "Nom d'element non-valide\n";
+    }
+  }
+}#include "../chimie/define.cpp"
+
+Element* elements[3] = {Fer, Oxygene, Zinc};
+class game {
+  public:
+    
+    static Element* guess();
+    static Element* get_ui(); // user input
+    //static void greet();
+    //static void rules();
+};#include "game.cpp"
+
+int main() {
+  game();
+}# run this from the root directory of the project
+cat chimie.cpp > utilities/totalcode.txt
+cd chimie
+cat define.cpp >> ../utilities/totalcode.txt
+cat define.h >> ../utilities/totalcode.txt
+cat ../utilities/countLines.sh >> ../utilities/totalcode.txt
+cd ..
+cd encoder
+cat encoder.cpp >> ../utilities/totalcode.txt
+cat encoder.h >> ../utilities/totalcode.txt
+cd ..
+cd game
+cat game.cpp >> ../utilities/totalcode.txt
+cat game.h >> ../utilities/totalcode.txt
+cat gameTest.cpp >> ../utilities/totalcode.txt
+cd ..
+cd utilities
+cat countLines.sh >> totalcode.txt
+cat totalcode.txt | wc -l 
