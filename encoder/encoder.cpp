@@ -66,17 +66,11 @@ vector<string> encoder::read(string filename) {
 }
 
 bool Chimie_login::already_used(string username) {
-  vector<string> res = Encoder->read(".users");
+  vector<string> res = Encoder->read("encoder/.users");
   for (string x : res) {
-    int comma;
-    int index;
-    for (char y : x) {
-      if (y == ',') {
-        comma = index;
-      }
-      index++;
-    }
-    if (x.substr(0,comma) == username) {
+    int length = username.length();
+    string registered = x.substr(0, length);
+    if (registered == username) {
       return true;
     }
   }

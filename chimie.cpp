@@ -31,7 +31,7 @@ void app() {
           if (!Chimie_login::already_used(username)) {
             Chimie_login::register_user(username, password);
           } else {
-            cout << "Ton nom d'utilisateur est deja utilise\n";
+            cout << "Ton nom d'utilisateur est deja utilise\n\n";
           }
         } else {
           cout << "Tu dois remplir chaque case.\n";
@@ -46,7 +46,7 @@ void app() {
         if (!Chimie_login::already_used(username)) {
           Chimie_login::register_user(username, password);
         } else {
-          cout << "Ton nom d'utilisateur est deja utilise\n";
+          cout << "Ton nom d'utilisateur est deja utilise\n\n";
         }
       } else {
         cout << "Tu dois remplir chaque case.\n";
@@ -90,6 +90,7 @@ void app() {
       cout << "systeme: retourne le nom de ton OS \n\n";
       cout << "temps: indique l'heure exacte\n\n";
       cout << "tout: liste tout les elements\n\n";
+      cout << "effacer: efface tout les comptes de la base de donnees\n\n";
       cout << "logout: Te deconnecte de ton compte\n\ncredits: montre les credits\n\n";
     } else if (command == "quiz") { 
       cout << "Quel niveau de difficulte? [facile, medium, difficile]\n\n";
@@ -157,6 +158,10 @@ void app() {
     } else if (command == "logout") {
       Chimie_login::logout();
       break;
+    } else if (command == "effacer") {
+      Encoder->write("encoder/.users", "", 'w');
+      Chimie_login::logout();
+      break;
     } else if(command == "creer_compose") {
       // trouve les elements dans la base de donne et cree une equation
       try {
@@ -169,7 +174,11 @@ void app() {
           cout << "Incapable de trouver l'element \n";
         } else {
           Compose* UserCompose = new Compose(Element1_, Element2_);
-          UserCompose->printCompose();
+          if (Element1_->metal && Element2_->metal) {
+
+          } else {
+            UserCompose->printCompose();
+          }
         }
       } catch(...) {
         cout << "Incapable de trouver l'element \n";
@@ -240,4 +249,4 @@ int main() {
   app();
 }
 
-// u can also make the user login w/ only email and password, add unique creds
+// u can add unique creds

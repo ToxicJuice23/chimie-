@@ -30,7 +30,6 @@ class User {
     bool logged_in = true;
     vector<string> get_info();
 };
-
 bool is_logged_in;
 encoder* Encoder = new encoder();
 class Chimie_login {
