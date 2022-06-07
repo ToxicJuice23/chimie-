@@ -219,7 +219,8 @@ void Chimie_login::logout() {
 User* Chimie_login::logged_in() {
   vector<string> user = get_values("encoder/.cache", 1);
   if (!user.empty()) {
-    string username, password = user[0], user[1];
+    string username = user[0];
+    string password = user[1];
     is_logged_in = true;
     return new User(username, password);
   } else {
