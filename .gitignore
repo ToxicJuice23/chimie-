@@ -1,6 +1,6 @@
 replit.nix
 .replit
-.cache
+.cache/replit/nix/env.json
 questions.txt.ign
 uptimeBot.sh.ign
 todo
