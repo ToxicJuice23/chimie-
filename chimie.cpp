@@ -53,10 +53,11 @@ void app() {
       }
     }
   }
+  int user_id = Chimie_login::get_user_id();
   Chimie::Init();
   // Begining dialog
   //Chimie::loading(25);
-    cout << "Bienvenue "+Chimie_login::logged_in()->get_info()[0]+"!\n";
+    cout << "Bienvenue "+Chimie_login::get_values("encoder/.cache", 1)[0]+"!\n";
   cout << "\n         .        .   \n";
   cout << "/¯¯ |  | | |\\  /| | |¯¯¯¯      |       |\n";
   cout << "|   |--| | | \\/ | | |----   ---|--- ---|---\n";
@@ -76,6 +77,8 @@ void app() {
       cout << "Entre une commande: ";
     }
     cin >> command; cout << endl;
+    Chimie_login::update_count("encoder/.users", user_id, 1);
+    Chimie_login::update_count("encoder/.cache", 1, 1);
     command = Chimie::lowerString(command);
     if (command == "aide") {
       // list all commands
@@ -91,6 +94,7 @@ void app() {
       cout << "temps: indique l'heure exacte\n\n";
       cout << "tout: liste tout les elements\n\n";
       cout << "effacer: efface tout les comptes de la base de donnees\n\n";
+      cout << "stats: affiche tes statistiques\n\n";
       cout << "logout: Te deconnecte de ton compte\n\ncredits: montre les credits\n\n";
     } else if (command == "quiz") { 
       cout << "Quel niveau de difficulte? [facile, medium, difficile]\n\n";
@@ -218,6 +222,9 @@ void app() {
       }
     } else if (command == "about_me") {
       cout << "username: "+Chimie_login::logged_in()->get_info()[0]+" password: "+Chimie_login::logged_in()->get_info()[1]+"\n";
+    } else if (command == "stats") {
+      vector<string> user_values = Chimie_login::get_values("encoder/.users", user_id);
+      cout << "Username: "+user_values[0]+" \nAmmount of searches: "+user_values[2]+"\n\n";
     } else if(command == "credits") {
       cout << "Version: 1.3 \n\
 Copyright: No-one \n\
@@ -249,4 +256,4 @@ int main() {
   app();
 }
 
-// add stats for your account example: nombre de recherches
+// account changing using index

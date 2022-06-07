@@ -16,4 +16,6 @@ cat gameTest.cpp >> ../utilities/totalcode.txt
 cd ..
 cd utilities
 cat countLines.sh >> totalcode.txt
-cat totalcode.txt | wc -l 
+cat totalcode.txt | wc -l
+echo lines
+cd ..
