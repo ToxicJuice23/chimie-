@@ -6,5 +6,5 @@ uptimeBot.sh.ign
 todo
 *.ign
 utilities/ascii.txt
-!.users
-!.cache
+.users
+.cache
