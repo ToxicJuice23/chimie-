@@ -194,6 +194,7 @@ class Chimie {
     static bool inVectorString(vector<string> vec, string number);
     static string lowerString(string input);
     static string getLewis(Element* element);
+    static void downloadElement(Element* element, string filepath);
 };
 
 vector<pair<string, vector<string>>> easy = {make_pair("Quel est la particule subatomique avec un charge neutre?\n", vector<string> {"neutron", "neutrons"}),

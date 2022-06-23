@@ -1,0 +1,9 @@
+Nom: Silicium
+Symbole: Si
+Electrons: 14
+Protons: 18
+Neutrons: 14
+Charge: 4
+Numero atomique: 14
+Masse atomique: 28
+Electrons de valence: 4

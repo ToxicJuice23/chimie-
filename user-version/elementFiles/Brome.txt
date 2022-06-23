@@ -1,0 +1,9 @@
+Nom: Brome
+Symbole: Br
+Electrons: 35
+Protons: 34
+Neutrons: 45
+Charge: -1
+Numero atomique: 35
+Masse atomique: 80
+Electrons de valence: 7

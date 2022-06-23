@@ -1,0 +1,9 @@
+Nom: Actinium
+Symbole: Ac
+Electrons: 89
+Protons: 92
+Neutrons: 138
+Charge: 3
+Numero atomique: 89
+Masse atomique: 227
+Electrons de valence: 0

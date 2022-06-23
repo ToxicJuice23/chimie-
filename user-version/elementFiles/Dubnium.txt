@@ -1,0 +1,9 @@
+Nom: Dubnium
+Symbole: Db
+Electrons: 105
+Protons: 105
+Neutrons: 157
+Charge: 0
+Numero atomique: 105
+Masse atomique: 262
+Electrons de valence: 5

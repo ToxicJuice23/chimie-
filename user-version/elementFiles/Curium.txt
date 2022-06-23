@@ -1,0 +1,9 @@
+Nom: Curium
+Symbole: Cm
+Electrons: 96
+Protons: 99
+Neutrons: 151
+Charge: 3
+Numero atomique: 96
+Masse atomique: 247
+Electrons de valence: 0

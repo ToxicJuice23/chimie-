@@ -1,0 +1,9 @@
+Nom: Ytterbium
+Symbole: Yb
+Electrons: 70
+Protons: 73
+Neutrons: 103
+Charge: 3
+Numero atomique: 70
+Masse atomique: 173
+Electrons de valence: 0

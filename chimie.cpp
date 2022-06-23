@@ -95,6 +95,7 @@ void app() {
       cout << "tout: liste tout les elements\n\n";
       cout << "effacer: efface tout les comptes de la base de donnees\n\n";
       cout << "stats: affiche tes statistiques\n\n";
+      cout << "telecharger: telecharge les donnees d'un element dans un fichier choisi\n\n";
       cout << "logout: Te deconnecte de ton compte\n\ncredits: montre les credits\n\n";
     } else if (command == "quiz") { 
       cout << "Quel niveau de difficulte? [facile, medium, difficile]\n\n";
@@ -221,7 +222,18 @@ void app() {
         result = system("cls");
       }
     } else if (command == "about_me") {
-      cout << "username: "+Chimie_login::logged_in()->get_info()[0]+" password: "+Chimie_login::logged_in()->get_info()[1]+"\n";
+      cout << "Desole, cette comande est seulement accessible au developeur\n\n";//"username: "+Chimie_login::logged_in()->get_info()[0]+" password: "+Chimie_login::logged_in()->get_info()[1]+"\n";
+    } else if (command == "telecharger") {
+      string name; cout << "Quel est le nom de l'elelement?\n\n"; cin >> name;
+      string filename; cout << "Quel est le chemin du fichier ou tu aimerais sauvegarder l'element (relatif ou non-relatif)\n\n"; cin >> filename;// continue this and add debugging so if the filepath is wrong well dont do it :D
+      system(("touch "+filename).c_str());
+      fstream test; test.open(filename);
+      if (test.is_open() && Chimie::findElementByName(name)) {
+        Chimie::downloadElement(Chimie::findElementByName(name), filename);
+      } else {
+        cout << test.is_open() << endl;
+        cout << "Erreur: Le chemin de fichier est invalide ou l'element est invalide \n\n";
+      }
     } else if (command == "stats") {
       vector<string> user_values = Chimie_login::get_values("encoder/.users", user_id);
       cout << "Username: "+user_values[0]+" \nAmmount of searches: "+user_values[2]+"\n\n";
@@ -256,4 +268,4 @@ int main() {
   app();
 }
 
-// account changing using index
+// edit setup file (make it dowloadable using curl hehe)

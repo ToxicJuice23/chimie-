@@ -1,0 +1,9 @@
+Nom: Nobelium
+Symbole: No
+Electrons: 102
+Protons: 105
+Neutrons: 157
+Charge: 3
+Numero atomique: 102
+Masse atomique: 259
+Electrons de valence: 0

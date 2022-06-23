@@ -1,0 +1,9 @@
+Nom: Scandium
+Symbole: Sc
+Electrons: 21
+Protons: 24
+Neutrons: 24
+Charge: 3
+Numero atomique: 21
+Masse atomique: 45
+Electrons de valence: 3

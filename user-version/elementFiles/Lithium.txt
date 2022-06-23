@@ -1,0 +1,9 @@
+Nom: Lithium
+Symbole: Li
+Electrons: 3
+Protons: 4
+Neutrons: 4
+Charge: 1
+Numero atomique: 3
+Masse atomique: 7
+Electrons de valence: 1

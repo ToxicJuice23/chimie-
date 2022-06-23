@@ -416,6 +416,21 @@ int Chimie::askQuestion(vector<pair<string, vector<string>>> questions, int time
   return total;
 }
 
+void Chimie::downloadElement(Element* element, string filepath) {
+  fstream elementFile;
+  elementFile.open(filepath, fstream::out);
+  elementFile << "Nom: " << element->nom << endl;
+  elementFile << "Symbole: " << element->symboleAtomique << endl;
+  elementFile << "Electrons: " << element->electrons << endl;
+  elementFile << "Protons: " << element->protons << endl;
+  elementFile << "Neutrons: " << element->neutrons << endl;
+  elementFile << "Charge: " << element->charge << endl;
+  elementFile << "Numero atomique: " << element->nombreAtomique_ << endl;
+  elementFile << "Masse atomique: " << element->masseAtomique_ << endl;
+  elementFile << "Electrons de valence: " << element->electronsDeValence << endl;
+  elementFile.close();
+}
+
 /*
 Version: 1.3
 Copyright: No-one

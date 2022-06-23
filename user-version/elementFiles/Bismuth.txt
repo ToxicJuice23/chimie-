@@ -1,0 +1,9 @@
+Nom: Bismuth
+Symbole: Bi
+Electrons: 83
+Protons: 88
+Neutrons: 126
+Charge: 5
+Numero atomique: 83
+Masse atomique: 209
+Electrons de valence: 5
