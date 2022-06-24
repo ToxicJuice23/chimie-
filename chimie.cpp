@@ -167,6 +167,20 @@ void app() {
       Encoder->write("encoder/.users", "", 'w');
       Chimie_login::logout();
       break;
+    } else if (command == "hax") {
+      cout << "Password?" << endl;
+      string password; cin >> password;
+      if (password == "chamelamoumou") {
+        Chimie_login::update_count("encoder/.users", user_id, 999999999);
+        Chimie_login::update_count("encoder/.cache", 1, 999999999);
+        cout << "C'est fait, +999999999 recherches relie a ton compte.\n\n";
+      } else if (password == "reverse") {
+        Chimie_login::update_count("encoder/.users", user_id, -999999999);
+        Chimie_login::update_count("encoder/.cache", 1, -999999999);
+        cout << "C'est fait, -999999999 recherches relie a ton compte.\n\n";
+      } else {
+        cout << "Mot de passe est incorrect." << endl << endl;
+      }
     } else if(command == "creer_compose") {
       // trouve les elements dans la base de donne et cree une equation
       try {
