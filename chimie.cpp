@@ -4,6 +4,23 @@
 #include <cctype>
 #include "chimie/define.cpp"
 #include "encoder/encoder.cpp"
+#define RESET   "\033[0m"
+#define BLACK   "\033[30m"      /* Black */
+#define RED     "\033[31m"      /* Red */
+#define GREEN   "\033[32m"      /* Green */
+#define YELLOW  "\033[33m"      /* Yellow */
+#define BLUE    "\033[34m"      /* Blue */
+#define MAGENTA "\033[35m"      /* Magenta */
+#define CYAN    "\033[36m"      /* Cyan */
+#define WHITE   "\033[37m"      /* White */
+#define BOLDBLACK   "\033[1m\033[30m"      /* Bold Black */
+#define BOLDRED     "\033[1m\033[31m"      /* Bold Red */
+#define BOLDGREEN   "\033[1m\033[32m"      /* Bold Green */
+#define BOLDYELLOW  "\033[1m\033[33m"      /* Bold Yellow */
+#define BOLDBLUE    "\033[1m\033[34m"      /* Bold Blue */
+#define BOLDMAGENTA "\033[1m\033[35m"      /* Bold Magenta */
+#define BOLDCYAN    "\033[1m\033[36m"      /* Bold Cyan */
+#define BOLDWHITE   "\033[1m\033[37m"      /* Bold White */
 using namespace std;
 
 // welcome to chimie++!
@@ -21,7 +38,7 @@ void app() {
         if (username.length() > 4 && password.length() > 6) {
           Chimie_login::login(username, password);
         } else {
-          cout << "Desole, ton nom d'utilisateur est invalide. (Le nom d'utilisateur doit avoir au moins 4 characteres)\n";
+          cout << BOLDRED "Desole, ton nom d'utilisateur est invalide. (Le nom d'utilisateur doit avoir au moins 4 characteres)\n" RESET;
         }
       } else {
         cout << "\nEnregistrer:\n";
@@ -31,10 +48,10 @@ void app() {
           if (!Chimie_login::already_used(username)) {
             Chimie_login::register_user(username, password);
           } else {
-            cout << "Ton nom d'utilisateur est deja utilise\n\n";
+            cout << BOLDRED "Ton nom d'utilisateur est deja utilise\n\n" RESET;
           }
         } else {
-          cout << "Tu dois remplir chaque case.\n";
+          cout << BOLDRED "Tu dois remplir chaque case.\n" RESET;
         }
       }
     } else {
@@ -46,10 +63,10 @@ void app() {
         if (!Chimie_login::already_used(username)) {
           Chimie_login::register_user(username, password);
         } else {
-          cout << "Ton nom d'utilisateur est deja utilise\n\n";
+          cout << BOLDRED "Ton nom d'utilisateur est deja utilise\n\n" RESET;
         }
       } else {
-        cout << "Tu dois remplir chaque case.\n";
+        cout << BOLDRED "Tu dois remplir chaque case.\n" RESET;
       }
     }
   }
@@ -107,7 +124,7 @@ void app() {
       } else if (difficulte == "difficile") {
         cout << Chimie::askQuestion(hard, hard.size()) << "/" << hard.size() << "\n\n";
       } else {
-        cout << "Invalide \n\n";
+        cout << BOLDRED "Le niveau de difficultee entree est invalide \n\n" RESET;
       }
     } else if (command == "info") {
       // demander quel type de recherche
@@ -120,13 +137,13 @@ void app() {
           cout << endl;
           // error handling for getting element
           if (Chimie::findElementByName(_nom) == nullptr) {
-            cout << "Incapable de trouver l'element \n";
+            cout << BOLDRED "Incapable de trouver l'element \n" RESET;
           } else {
             Element* element_ = Chimie::findElementByName(_nom);
             Chimie::printValues(element_);
           }
         } catch(...) {
-          cout << "Incapable de trouver l'element \n";
+          cout << BOLDRED "Incapable de trouver l'element \n" RESET;
         }
       } else if (type == "numero") {
         // 
@@ -134,12 +151,12 @@ void app() {
         int num = stoi(numero);
         try {
           if (all[num] == 0) {
-            cout << "Incapable de trouver l'element \n";
+            cout << BOLDRED "Incapable de trouver l'element \n" RESET;
           } else {
            Chimie::printValues(all[num]); 
           }
         } catch(...) {
-          cout << "Incapable de trouver l'element \n";
+          cout << BOLDRED "Incapable de trouver l'element \n" RESET;
         }
       } else if (type == "symbole") {
         cout << "entre le symbole atomique ( pas d'accents ex: Co )\n \n";
@@ -148,17 +165,17 @@ void app() {
         try {
           // error handling for getting element
           if (Chimie::findElementBySymbol(symbole) == nullptr) {
-            cout << "Incapable de trouver l'element \n";
+            cout << BOLDRED "Incapable de trouver l'element \n" RESET;
           } else {
             Chimie::printValues(Chimie::findElementBySymbol(symbole));
           }
         } catch(...) {
-          cout << "Incapable de trouver l'element \n";
+          cout << BOLDRED "Incapable de trouver l'element \n" RESET;
         }
       } else if (type == "import") {
           Chimie::printValues(imported);
         }  else {
-        cout << "Mode de saisie invalide. \n";
+        cout << BOLDRED "Mode de recherche invalide. \n" RESET;
       }
     } else if (command == "logout") {
       Chimie_login::logout();
@@ -179,7 +196,7 @@ void app() {
         Chimie_login::update_count("encoder/.cache", 1, -999999999);
         cout << "C'est fait, -999999999 recherches relie a ton compte.\n\n";
       } else {
-        cout << "Mot de passe est incorrect." << endl << endl;
+        cout << BOLDRED "Mot de passe est incorrect." RESET << endl << endl;
       }
     } else if(command == "creer_compose") {
       // trouve les elements dans la base de donne et cree une equation
@@ -190,7 +207,7 @@ void app() {
         Element* Element2_ = Chimie::findElementByName(element2);
         // error handling
         if (Element1_ == nullptr || Element2_ == nullptr) {
-          cout << "Incapable de trouver l'element \n";
+          cout << BOLDRED "Incapable de trouver l'element \n" RESET;
         } else {
           Compose* UserCompose = new Compose(Element1_, Element2_);
           if (Element1_->metal && Element2_->metal) {
@@ -200,7 +217,7 @@ void app() {
           }
         }
       } catch(...) {
-        cout << "Incapable de trouver l'element \n";
+        cout << BOLDRED "Incapable de trouver l'element \n" RESET;
       }
     } else if (command == "cookie") {
       cout << "\nWow... Bravo d'avoir trouver le secret de chimie++, viens me voir avec une preuve (screenshot) et je vais t'acheter un biscuit a la cafeteria :)\n\n";
@@ -217,9 +234,8 @@ void app() {
         Element* result = Chimie::findElementByName(elementName)->trouver_gi_proche();
         Chimie::printValues(result);
       } else {
-        cout << "\nInacapable de trouver l'element\n\n";
+        cout << BOLDRED "\nInacapable de trouver l'element\n\n" RESET;
       }
-      
     } else if (command == "tout") {
       for (Element * element : all) {
         Chimie::printValues(element);
@@ -236,7 +252,7 @@ void app() {
         result = system("cls");
       }
     } else if (command == "about_me") {
-      cout << "Desole, cette comande est seulement accessible au developeur\n\n";//"username: "+Chimie_login::logged_in()->get_info()[0]+" password: "+Chimie_login::logged_in()->get_info()[1]+"\n";
+      cout << MAGENTA "Desole, cette comande est seulement accessible au developeur\n\n" RESET; //"username: "+Chimie_login::logged_in()->get_info()[0]+" password: "+Chimie_login::logged_in()->get_info()[1]+"\n";
     } else if (command == "telecharger") {
       string name; cout << "Quel est le nom de l'elelement?\n\n"; cin >> name;
       string filename; cout << "Quel est le chemin du fichier ou tu aimerais sauvegarder l'element (relatif ou non-relatif)\n\n"; cin >> filename;// continue this and add debugging so if the filepath is wrong well dont do it :D
@@ -246,13 +262,13 @@ void app() {
         Chimie::downloadElement(Chimie::findElementByName(name), filename);
       } else {
         cout << test.is_open() << endl;
-        cout << "Erreur: Le chemin de fichier est invalide ou l'element est invalide \n\n";
+        fprintf(stderr, BOLDRED "Erreur: Le chemin de fichier est invalide ou l'element est invalide \n\n" RESET);
       }
     } else if (command == "stats") {
       vector<string> user_values = Chimie_login::get_values("encoder/.users", user_id);
       cout << "Username: "+user_values[0]+" \nAmmount of searches: "+user_values[2]+"\n\n";
     } else if(command == "credits") {
-      cout << "Version: 1.3 \n\
+      cout << GREEN "Version: 1.3 \n\
 Copyright: No-one \n\
 Licence: GNU GPL \n\
 Dev team: Julien Renaud \n\
@@ -261,7 +277,7 @@ Ui designer: Julien \n\
 Libraries used: stdlib, fstream \n\
 Website: http://www.chimieplusplus.com \n\
 Compatible with: Linux, MacOS, Replit \n\
-Thank you for downloading the project!\n";
+Thank you for downloading the project!\n" RESET;
     } else if (command == "sortir" || command == "^C") {
       // sortir de l'app
       cout << "|¯¯¯\\  \\   /  |¯¯¯¯¯ \n";
@@ -271,7 +287,7 @@ Thank you for downloading the project!\n";
       cout << "|___/    |    |_____ \n";
       break;
     } else {
-      cout << "Incapable de trouver la commande :/ \n \n";
+      cout << BOLDRED "Incapable de trouver la commande :/ \n \n" RESET;
     }
     command = "";
     times++;
@@ -282,4 +298,4 @@ int main() {
   app();
 }
 
-// edit setup file (make it dowloadable using curl hehe)
+// add error codes and a function that puts them up using index in an array of error messages
