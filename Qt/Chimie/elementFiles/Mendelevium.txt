@@ -1,0 +1,9 @@
+Nom: Mendelevium
+Symbole: Md
+Electrons: 101
+Protons: 104
+Neutrons: 157
+Charge: 3
+Numero atomique: 101
+Masse atomique: 258
+Electrons de valence: 0

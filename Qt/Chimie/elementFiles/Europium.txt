@@ -1,0 +1,9 @@
+Nom: Europium
+Symbole: Eu
+Electrons: 63
+Protons: 66
+Neutrons: 89
+Charge: 3
+Numero atomique: 63
+Masse atomique: 152
+Electrons de valence: 0

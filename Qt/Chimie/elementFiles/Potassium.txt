@@ -1,0 +1,9 @@
+Nom: Potassium
+Symbole: K
+Electrons: 19
+Protons: 20
+Neutrons: 20
+Charge: 1
+Numero atomique: 19
+Masse atomique: 39
+Electrons de valence: 1

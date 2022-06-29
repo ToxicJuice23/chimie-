@@ -1,0 +1,9 @@
+Nom: Zirconium
+Symbole: Zr
+Electrons: 40
+Protons: 44
+Neutrons: 51
+Charge: 4
+Numero atomique: 40
+Masse atomique: 91
+Electrons de valence: 4

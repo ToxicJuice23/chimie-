@@ -1,0 +1,9 @@
+Nom: Praseodyme
+Symbole: Pr
+Electrons: 59
+Protons: 63
+Neutrons: 82
+Charge: 4
+Numero atomique: 59
+Masse atomique: 141
+Electrons de valence: 0

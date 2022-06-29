@@ -1,0 +1,9 @@
+Nom: Bore
+Symbole: B
+Electrons: 5
+Protons: 2
+Neutrons: 6
+Charge: -3
+Numero atomique: 5
+Masse atomique: 11
+Electrons de valence: 3

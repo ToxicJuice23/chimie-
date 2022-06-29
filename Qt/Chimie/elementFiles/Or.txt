@@ -1,0 +1,9 @@
+Nom: Or
+Symbole: Au
+Electrons: 79
+Protons: 82
+Neutrons: 118
+Charge: 3
+Numero atomique: 79
+Masse atomique: 197
+Electrons de valence: 1

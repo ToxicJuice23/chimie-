@@ -1,0 +1,9 @@
+Nom: Beryllium
+Symbole: Be
+Electrons: 4
+Protons: 6
+Neutrons: 5
+Charge: 2
+Numero atomique: 4
+Masse atomique: 9
+Electrons de valence: 2

@@ -1,0 +1,9 @@
+Nom: Titane
+Symbole: Ti
+Electrons: 22
+Protons: 26
+Neutrons: 26
+Charge: 4
+Numero atomique: 22
+Masse atomique: 48
+Electrons de valence: 4

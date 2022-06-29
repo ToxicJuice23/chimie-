@@ -1,0 +1,9 @@
+Nom: Cuivre
+Symbole: Cu
+Electrons: 29
+Protons: 31
+Neutrons: 35
+Charge: 2
+Numero atomique: 29
+Masse atomique: 64
+Electrons de valence: 1

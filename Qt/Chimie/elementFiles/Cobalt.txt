@@ -1,0 +1,9 @@
+Nom: Cobalt
+Symbole: Co
+Electrons: 27
+Protons: 30
+Neutrons: 32
+Charge: 3
+Numero atomique: 27
+Masse atomique: 59
+Electrons de valence: 9

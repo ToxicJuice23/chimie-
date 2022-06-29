@@ -1,0 +1,9 @@
+Nom: Lutecium
+Symbole: Lu
+Electrons: 71
+Protons: 74
+Neutrons: 104
+Charge: 3
+Numero atomique: 71
+Masse atomique: 175
+Electrons de valence: 0

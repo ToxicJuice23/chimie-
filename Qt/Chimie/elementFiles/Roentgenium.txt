@@ -1,0 +1,9 @@
+Nom: Roentgenium
+Symbole: Rg
+Electrons: 111
+Protons: 111
+Neutrons: 169
+Charge: 0
+Numero atomique: 111
+Masse atomique: 280
+Electrons de valence: 1

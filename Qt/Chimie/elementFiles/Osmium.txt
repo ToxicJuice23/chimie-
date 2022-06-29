@@ -1,0 +1,9 @@
+Nom: Osmium
+Symbole: Os
+Electrons: 76
+Protons: 80
+Neutrons: 114
+Charge: 4
+Numero atomique: 76
+Masse atomique: 190
+Electrons de valence: 8

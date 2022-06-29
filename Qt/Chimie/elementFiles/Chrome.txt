@@ -1,0 +1,9 @@
+Nom: Chrome
+Symbole: Cr
+Electrons: 24
+Protons: 27
+Neutrons: 28
+Charge: 3
+Numero atomique: 24
+Masse atomique: 52
+Electrons de valence: 6

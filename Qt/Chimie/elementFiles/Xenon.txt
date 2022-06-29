@@ -1,0 +1,9 @@
+Nom: Xenon
+Symbole: Xe
+Electrons: 54
+Protons: 54
+Neutrons: 77
+Charge: 0
+Numero atomique: 54
+Masse atomique: 131
+Electrons de valence: 0

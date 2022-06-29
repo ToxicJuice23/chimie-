@@ -1,0 +1,9 @@
+Nom: Fermium
+Symbole: Fm
+Electrons: 100
+Protons: 103
+Neutrons: 157
+Charge: 3
+Numero atomique: 100
+Masse atomique: 257
+Electrons de valence: 0

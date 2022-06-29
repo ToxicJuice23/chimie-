@@ -1,0 +1,9 @@
+Nom: Tungstene
+Symbole: W
+Electrons: 74
+Protons: 80
+Neutrons: 110
+Charge: 6
+Numero atomique: 74
+Masse atomique: 184
+Electrons de valence: 6

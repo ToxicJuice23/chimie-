@@ -1,0 +1,9 @@
+Nom: Americium
+Symbole: Am
+Electrons: 95
+Protons: 99
+Neutrons: 146
+Charge: 4
+Numero atomique: 95
+Masse atomique: 241
+Electrons de valence: 0
