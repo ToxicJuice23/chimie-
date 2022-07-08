@@ -204,7 +204,8 @@ DIST          = /opt/Qt/6.3.1/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt/6.3.1/gcc_64/mkspecs/features/exceptions.prf \
 		/opt/Qt/6.3.1/gcc_64/mkspecs/features/yacc.prf \
 		/opt/Qt/6.3.1/gcc_64/mkspecs/features/lex.prf \
-		../Chimie/Chimie.pro ../Chimie/mainwindow.h ../Chimie/main.cpp \
+		../Chimie/Chimie.pro ../Chimie/chimie/define.h \
+		../Chimie/mainwindow.h ../Chimie/main.cpp \
 		../Chimie/mainwindow.cpp
 QMAKE_TARGET  = Chimie
 DESTDIR       = 
@@ -534,8 +535,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../Chimie/Resource.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /opt/Qt/6.3.1/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../Chimie/mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../Chimie/main.cpp ../Chimie/mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Chimie/chimie/define.h ../Chimie/mainwindow.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../Chimie/chimie/define.cpp ../Chimie/main.cpp ../Chimie/mainwindow.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../Chimie/mainwindow.ui $(DISTDIR)/
 
 
@@ -712,6 +713,7 @@ moc_mainwindow.cpp: ../Chimie/mainwindow.h \
 		/opt/Qt/6.3.1/gcc_64/include/QtGui/QTransform \
 		/opt/Qt/6.3.1/gcc_64/include/QtCore/qnativeinterface.h \
 		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QTabWidget \
 		moc_predefs.h \
 		/opt/Qt/6.3.1/gcc_64/libexec/moc
 	/opt/Qt/6.3.1/gcc_64/libexec/moc $(DEFINES) --include /home/jujur/coding/c++/chimie++/Qt/build-Chimie-Desktop_Qt_6_3_1_GCC_64bit-Debug/moc_predefs.h -I/opt/Qt/6.3.1/gcc_64/mkspecs/linux-g++ -I/home/jujur/coding/c++/chimie++/Qt/Chimie -I/opt/Qt/6.3.1/gcc_64/include -I/opt/Qt/6.3.1/gcc_64/include/QtWidgets -I/opt/Qt/6.3.1/gcc_64/include/QtGui -I/opt/Qt/6.3.1/gcc_64/include/QtCore -I. -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../Chimie/mainwindow.h -o moc_mainwindow.cpp
@@ -872,6 +874,7 @@ main.o: ../Chimie/main.cpp ../Chimie/mainwindow.h \
 		/opt/Qt/6.3.1/gcc_64/include/QtGui/QTransform \
 		/opt/Qt/6.3.1/gcc_64/include/QtCore/qnativeinterface.h \
 		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QTabWidget \
 		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QApplication \
 		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qapplication.h \
 		/opt/Qt/6.3.1/gcc_64/include/QtCore/qcoreapplication.h \
@@ -1030,6 +1033,7 @@ mainwindow.o: ../Chimie/mainwindow.cpp ../Chimie/mainwindow.h \
 		/opt/Qt/6.3.1/gcc_64/include/QtGui/QTransform \
 		/opt/Qt/6.3.1/gcc_64/include/QtCore/qnativeinterface.h \
 		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QTabWidget \
 		ui_mainwindow.h \
 		/opt/Qt/6.3.1/gcc_64/include/QtCore/QVariant \
 		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QApplication \
@@ -1053,12 +1057,24 @@ mainwindow.o: ../Chimie/mainwindow.cpp ../Chimie/mainwindow.h \
 		/opt/Qt/6.3.1/gcc_64/include/QtGui/qinputmethod.h \
 		/opt/Qt/6.3.1/gcc_64/include/QtCore/qlocale.h \
 		/opt/Qt/6.3.1/gcc_64/include/QtGui/qguiapplication_platform.h \
-		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QMenuBar \
-		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qmenubar.h \
-		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qmenu.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QGridLayout \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qgridlayout.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qlayout.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qboxlayout.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtGui/qpicture.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtGui/qtextdocument.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qabstractbutton.h \
 		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QStatusBar \
 		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qstatusbar.h \
-		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QWidget
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QWidget \
+		../Chimie/chimie/define.cpp \
+		../Chimie/chimie/define.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../Chimie/mainwindow.cpp
 
 qrc_Resource.o: qrc_Resource.cpp 

@@ -1,0 +1,9 @@
+Nom: Erbium
+Symbole: Er
+Electrons: 99
+Protons: 68
+Neutrons: 99
+Charge: 3
+Numero atomique: 68
+Masse atomique: 167
+Electrons de valence: 0

@@ -1,0 +1,9 @@
+Nom: Francium
+Symbole: Fr
+Electrons: 136
+Protons: 87
+Neutrons: 136
+Charge: 1
+Numero atomique: 87
+Masse atomique: 223
+Electrons de valence: 1

@@ -1,0 +1,9 @@
+Nom: Nickel
+Symbole: Ni
+Electrons: 31
+Protons: 28
+Neutrons: 31
+Charge: 3
+Numero atomique: 28
+Masse atomique: 59
+Electrons de valence: 10

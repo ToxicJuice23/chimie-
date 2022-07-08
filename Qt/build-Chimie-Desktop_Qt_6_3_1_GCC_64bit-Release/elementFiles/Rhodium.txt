@@ -1,0 +1,9 @@
+Nom: Rhodium
+Symbole: Rh
+Electrons: 58
+Protons: 45
+Neutrons: 58
+Charge: 4
+Numero atomique: 45
+Masse atomique: 103
+Electrons de valence: 9

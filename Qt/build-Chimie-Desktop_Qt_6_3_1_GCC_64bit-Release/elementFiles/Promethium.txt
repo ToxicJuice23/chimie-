@@ -1,0 +1,9 @@
+Nom: Promethium
+Symbole: Pm
+Electrons: 84
+Protons: 61
+Neutrons: 84
+Charge: 3
+Numero atomique: 61
+Masse atomique: 145
+Electrons de valence: 0

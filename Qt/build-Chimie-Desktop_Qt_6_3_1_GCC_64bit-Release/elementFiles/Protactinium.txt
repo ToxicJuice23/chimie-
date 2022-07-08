@@ -1,0 +1,9 @@
+Nom: Protactinium
+Symbole: Pa
+Electrons: 140
+Protons: 91
+Neutrons: 140
+Charge: 5
+Numero atomique: 91
+Masse atomique: 231
+Electrons de valence: 0

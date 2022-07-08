@@ -1,0 +1,9 @@
+Nom: Iridium
+Symbole: Ir
+Electrons: 115
+Protons: 77
+Neutrons: 115
+Charge: 4
+Numero atomique: 77
+Masse atomique: 192
+Electrons de valence: 9

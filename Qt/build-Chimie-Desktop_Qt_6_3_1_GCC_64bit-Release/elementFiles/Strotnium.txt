@@ -1,0 +1,9 @@
+Nom: Strotnium
+Symbole: Sr
+Electrons: 50
+Protons: 38
+Neutrons: 50
+Charge: 2
+Numero atomique: 38
+Masse atomique: 88
+Electrons de valence: 2

@@ -1,0 +1,9 @@
+Nom: Hafnium
+Symbole: Hf
+Electrons: 106
+Protons: 72
+Neutrons: 106
+Charge: 4
+Numero atomique: 72
+Masse atomique: 178
+Electrons de valence: 4

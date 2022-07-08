@@ -1,0 +1,9 @@
+Nom: Terbium
+Symbole: Tb
+Electrons: 94
+Protons: 65
+Neutrons: 94
+Charge: 4
+Numero atomique: 65
+Masse atomique: 159
+Electrons de valence: 0

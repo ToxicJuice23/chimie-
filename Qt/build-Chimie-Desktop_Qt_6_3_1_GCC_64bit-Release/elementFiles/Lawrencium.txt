@@ -1,0 +1,9 @@
+Nom: Lawrencium
+Symbole: Lr
+Electrons: 159
+Protons: 103
+Neutrons: 159
+Charge: 3
+Numero atomique: 103
+Masse atomique: 262
+Electrons de valence: 0

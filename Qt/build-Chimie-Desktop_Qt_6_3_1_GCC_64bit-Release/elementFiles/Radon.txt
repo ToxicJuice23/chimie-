@@ -1,0 +1,9 @@
+Nom: Radon
+Symbole: Rn
+Electrons: 136
+Protons: 86
+Neutrons: 136
+Charge: 0
+Numero atomique: 86
+Masse atomique: 222
+Electrons de valence: 0

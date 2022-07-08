@@ -1,0 +1,9 @@
+Nom: Etain
+Symbole: Sn
+Electrons: 69
+Protons: 50
+Neutrons: 69
+Charge: 4
+Numero atomique: 50
+Masse atomique: 119
+Electrons de valence: 4

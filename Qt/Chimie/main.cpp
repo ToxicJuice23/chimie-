@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
     a.setWindowIcon(QIcon("./chimieLogo.ico"));
     MainWindow w;
     w.resize(800, 600);
-    w.setWindowTitle("Chimie++");
+    w.setWindowTitle("Chimie++ | Acceuil");
     w.show();
     w.setStyleSheet(("background-color:"+w.bg_color+";color:white;").c_str());
     return a.exec();

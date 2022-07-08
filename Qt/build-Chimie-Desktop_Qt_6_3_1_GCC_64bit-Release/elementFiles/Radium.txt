@@ -1,0 +1,9 @@
+Nom: Radium
+Symbole: Ra
+Electrons: 138
+Protons: 88
+Neutrons: 138
+Charge: 2
+Numero atomique: 88
+Masse atomique: 226
+Electrons de valence: 2

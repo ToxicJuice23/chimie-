@@ -1,0 +1,9 @@
+Nom: Arsenic
+Symbole: As
+Electrons: 42
+Protons: 33
+Neutrons: 42
+Charge: -3
+Numero atomique: 33
+Masse atomique: 75
+Electrons de valence: 5

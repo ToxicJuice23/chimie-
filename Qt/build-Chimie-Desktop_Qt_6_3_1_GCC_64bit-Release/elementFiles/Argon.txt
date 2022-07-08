@@ -1,0 +1,9 @@
+Nom: Argon
+Symbole: Ar
+Electrons: 22
+Protons: 18
+Neutrons: 22
+Charge: 0
+Numero atomique: 18
+Masse atomique: 40
+Electrons de valence: 0

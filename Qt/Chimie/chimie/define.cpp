@@ -66,8 +66,8 @@ void Chimie::loading(int millisecond) {
 Element::Element(string symboleAtomique_, string nomP, int nombreAtomique, int masseAtomique, int charge_, int valence) {
   // set properties of object
   nom = nomP;
-  electrons = nombreAtomique;
-  // electrons de valence, neutrons and protons are init by init()
+  protons = nombreAtomique;
+  // electrons de valence, neutrons and electrons are init by init()
   // set the electrons de valence property
   if (valence == 100) {
     for (pair<int, vector<int>> electrons_fams : elementFamilies) {
@@ -127,16 +127,18 @@ Element* Element::trouver_gi_proche() {
 
 // define a func to print all values of an element
 vector<string> Chimie::getValues(Element* element) {
-  /*return vector<string> {element->nom,
-  element->symboleAtomique,
-  element->nombreAtomique_,
-  element->electrons,
-  element->protons,
-  element->neutrons,
-  element->charge,
-  element->electronsDeValence,
-  element->masseAtomique_,
-  element->metal}*/
+  return vector<string> {
+    element->nom,
+    element->symboleAtomique,
+    to_string(element->nombreAtomique_),
+    to_string(element->electrons),
+    to_string(element->protons),
+    to_string(element->neutrons),
+    to_string(element->charge),
+    to_string(element->electronsDeValence),
+    to_string(element->masseAtomique_),
+    to_string(element->metal)
+  };
 }
 
 // definir une methode pour trouver le min car c++ est epais
@@ -164,9 +166,9 @@ void Chimie::init() {
     }
     // if the element is synth then assing the electrons to proton value lol
     if (!element->noCharge) {
-      element->protons = element->electrons + element->charge;
+      element->electrons = element->masseAtomique_ - element->protons;
     } else {
-      element->protons = element->electrons;
+      element->electrons = element->masseAtomique_ - element->protons;
     }
     // see if its a metal or not
     if (element->charge > 0) {
@@ -178,7 +180,7 @@ void Chimie::init() {
     if (element->nom == "Hydrogene") {
       element->metal = false;
     }
-    element->neutrons = element->masseAtomique_ - element->electrons;
+    element->neutrons = element->masseAtomique_ - element->protons;
   }
 }
 

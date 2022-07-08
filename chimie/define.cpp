@@ -66,8 +66,8 @@ void Chimie::loading(int millisecond) {
 Element::Element(string symboleAtomique_, string nomP, int nombreAtomique, int masseAtomique, int charge_, int valence) {
   // set properties of object
   nom = nomP;
-  electrons = nombreAtomique;
-  // electrons de valence, neutrons and protons are init by init()
+  protons = nombreAtomique;
+  // electrons de valence, neutrons and electrons are init by init()
   // set the electrons de valence property
   if (valence == 100) {
     for (pair<int, vector<int>> electrons_fams : elementFamilies) {
@@ -109,7 +109,7 @@ Element * Element::stabiliser() {
   return nullptr;
 }
 
-// Do this when you are done with stabiliser
+
 Element* Element::trouver_gi_proche() {
   vector<int> gaps;
   for (Element * element : gi) {
@@ -173,9 +173,9 @@ void Chimie::init() {
     }
     // if the element is synth then assing the electrons to proton value lol
     if (!element->noCharge) {
-      element->protons = element->electrons + element->charge;
+      element->electrons = element->masseAtomique_ - element->protons;
     } else {
-      element->protons = element->electrons;
+      element->electrons = element->masseAtomique_ - element->protons;
     }
     // see if its a metal or not
     if (element->charge > 0) {

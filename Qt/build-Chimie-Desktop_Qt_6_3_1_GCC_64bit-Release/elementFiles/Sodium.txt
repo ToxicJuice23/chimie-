@@ -1,0 +1,9 @@
+Nom: Sodium
+Symbole: Na
+Electrons: 12
+Protons: 11
+Neutrons: 12
+Charge: 1
+Numero atomique: 11
+Masse atomique: 23
+Electrons de valence: 1

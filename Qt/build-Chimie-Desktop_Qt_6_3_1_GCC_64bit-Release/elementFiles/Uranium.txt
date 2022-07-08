@@ -1,0 +1,9 @@
+Nom: Uranium
+Symbole: U
+Electrons: 146
+Protons: 92
+Neutrons: 146
+Charge: 4
+Numero atomique: 92
+Masse atomique: 238
+Electrons de valence: 0

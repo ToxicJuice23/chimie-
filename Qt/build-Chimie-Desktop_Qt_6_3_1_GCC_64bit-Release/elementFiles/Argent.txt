@@ -1,0 +1,9 @@
+Nom: Argent
+Symbole: Ag
+Electrons: 61
+Protons: 47
+Neutrons: 61
+Charge: 1
+Numero atomique: 47
+Masse atomique: 108
+Electrons de valence: 1

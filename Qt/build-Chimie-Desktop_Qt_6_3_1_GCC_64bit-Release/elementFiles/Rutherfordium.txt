@@ -1,0 +1,9 @@
+Nom: Rutherfordium
+Symbole: Rf
+Electrons: 157
+Protons: 104
+Neutrons: 157
+Charge: 4
+Numero atomique: 104
+Masse atomique: 261
+Electrons de valence: 4

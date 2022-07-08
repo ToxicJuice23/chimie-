@@ -100,7 +100,7 @@ public:
         font2.setPointSize(15);
         font2.setUnderline(true);
         label_2->setFont(font2);
-        label_2->setAlignment(Qt::AlignCenter);
+        label_2->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         gridLayout->addWidget(label_2, 2, 0, 1, 2);
 
@@ -142,7 +142,7 @@ public:
 "\n"
 "\n"
 "\n"
-"Listes d'actions:", nullptr));
+"Liste d'actions:", nullptr));
     } // retranslateUi
 
 };

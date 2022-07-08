@@ -1,0 +1,9 @@
+Nom: Antimoine
+Symbole: Sb
+Electrons: 71
+Protons: 51
+Neutrons: 71
+Charge: 5
+Numero atomique: 51
+Masse atomique: 122
+Electrons de valence: 5

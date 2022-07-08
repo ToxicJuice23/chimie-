@@ -1,0 +1,9 @@
+Nom: Niobium
+Symbole: Nb
+Electrons: 52
+Protons: 41
+Neutrons: 52
+Charge: 5
+Numero atomique: 41
+Masse atomique: 93
+Electrons de valence: 5

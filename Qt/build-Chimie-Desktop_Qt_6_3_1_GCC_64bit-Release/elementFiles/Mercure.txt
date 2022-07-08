@@ -1,0 +1,9 @@
+Nom: Mercure
+Symbole: Hg
+Electrons: 120
+Protons: 80
+Neutrons: 120
+Charge: 2
+Numero atomique: 80
+Masse atomique: 200
+Electrons de valence: 2

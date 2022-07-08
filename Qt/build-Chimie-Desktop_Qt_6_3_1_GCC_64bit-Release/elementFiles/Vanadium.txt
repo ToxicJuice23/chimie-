@@ -1,0 +1,9 @@
+Nom: Vanadium
+Symbole: V
+Electrons: 28
+Protons: 23
+Neutrons: 28
+Charge: 5
+Numero atomique: 23
+Masse atomique: 51
+Electrons de valence: 5

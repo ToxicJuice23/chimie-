@@ -1,0 +1,9 @@
+Nom: Einsteinium
+Symbole: Es
+Electrons: 153
+Protons: 99
+Neutrons: 153
+Charge: 3
+Numero atomique: 99
+Masse atomique: 252
+Electrons de valence: 0

@@ -1,0 +1,9 @@
+Nom: Iode
+Symbole: I
+Electrons: 74
+Protons: 53
+Neutrons: 74
+Charge: -1
+Numero atomique: 53
+Masse atomique: 127
+Electrons de valence: 7

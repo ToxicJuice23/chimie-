@@ -1,0 +1,9 @@
+Nom: Seaborgium
+Symbole: Sg
+Electrons: 160
+Protons: 106
+Neutrons: 160
+Charge: 0
+Numero atomique: 106
+Masse atomique: 266
+Electrons de valence: 6

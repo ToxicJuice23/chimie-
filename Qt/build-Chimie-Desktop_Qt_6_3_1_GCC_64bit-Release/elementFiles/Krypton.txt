@@ -1,0 +1,9 @@
+Nom: Krypton
+Symbole: Kr
+Electrons: 48
+Protons: 36
+Neutrons: 48
+Charge: 0
+Numero atomique: 36
+Masse atomique: 84
+Electrons de valence: 0

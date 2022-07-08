@@ -1,0 +1,9 @@
+Nom: Plutonium
+Symbole: Pu
+Electrons: 150
+Protons: 94
+Neutrons: 150
+Charge: 4
+Numero atomique: 94
+Masse atomique: 244
+Electrons de valence: 0

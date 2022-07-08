@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=Chimie++
+Exec=/home/jujur/coding/c++/chimie++/Qt/build-Chimie-Desktop_Qt_6_3_1_GCC_64bit-Release/Chimie
+Terminal=false
+Icon=/home/jujur/coding/c++/chimie++/Qt/Chimie/chimieLogo.ico
+Type=Application
+

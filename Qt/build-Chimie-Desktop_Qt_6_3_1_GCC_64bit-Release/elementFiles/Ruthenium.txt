@@ -1,0 +1,9 @@
+Nom: Ruthenium
+Symbole: Ru
+Electrons: 58
+Protons: 44
+Neutrons: 58
+Charge: 4
+Numero atomique: 44
+Masse atomique: 102
+Electrons de valence: 8

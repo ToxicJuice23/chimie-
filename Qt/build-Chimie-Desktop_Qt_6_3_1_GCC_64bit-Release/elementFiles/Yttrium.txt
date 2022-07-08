@@ -1,0 +1,9 @@
+Nom: Yttrium
+Symbole: Y
+Electrons: 50
+Protons: 39
+Neutrons: 50
+Charge: 3
+Numero atomique: 39
+Masse atomique: 89
+Electrons de valence: 3

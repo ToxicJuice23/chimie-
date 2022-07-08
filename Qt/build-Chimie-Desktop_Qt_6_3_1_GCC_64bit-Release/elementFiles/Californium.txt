@@ -1,0 +1,9 @@
+Nom: Californium
+Symbole: Cf
+Electrons: 153
+Protons: 98
+Neutrons: 153
+Charge: 3
+Numero atomique: 98
+Masse atomique: 251
+Electrons de valence: 0

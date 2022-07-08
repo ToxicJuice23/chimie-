@@ -1,0 +1,9 @@
+Nom: Neptunium
+Symbole: Np
+Electrons: 144
+Protons: 93
+Neutrons: 144
+Charge: 4
+Numero atomique: 93
+Masse atomique: 237
+Electrons de valence: 0

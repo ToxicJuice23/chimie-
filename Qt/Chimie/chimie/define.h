@@ -214,6 +214,6 @@ make_pair("Le MgOH est un acide ou une base?\n", vector<string> {"base", "Base"}
 make_pair("Une substance avec un pH de 1.2 est un(e) _____\n", vector<string> {"acide", "Acide"})};
 
 vector<pair<string, vector<string>>> hard = {
-  make_pair("HCl + NaOH -> NaCl + ___", vector<string> {"h20", "H20"}),
+  make_pair("HCl + NaOH -> NaCl + ___", vector<string> {"h2o", "H2O"}),
   make_pair("Quel est l'element numero 47", vector<string> {"Ag", "ag", "Argent", "argent"})
 };

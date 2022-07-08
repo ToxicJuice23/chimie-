@@ -1,0 +1,9 @@
+Nom: Cadmium
+Symbole: Cd
+Electrons: 64
+Protons: 48
+Neutrons: 64
+Charge: 2
+Numero atomique: 48
+Masse atomique: 112
+Electrons de valence: 2

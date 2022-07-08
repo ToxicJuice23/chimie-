@@ -1,0 +1,9 @@
+Nom: Azote
+Symbole: N
+Electrons: 7
+Protons: 7
+Neutrons: 7
+Charge: -3
+Numero atomique: 7
+Masse atomique: 14
+Electrons de valence: 5

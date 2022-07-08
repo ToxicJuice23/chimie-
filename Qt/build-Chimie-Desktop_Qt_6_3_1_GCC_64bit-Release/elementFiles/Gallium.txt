@@ -1,0 +1,9 @@
+Nom: Gallium
+Symbole: Ga
+Electrons: 39
+Protons: 31
+Neutrons: 39
+Charge: 3
+Numero atomique: 31
+Masse atomique: 70
+Electrons de valence: 3

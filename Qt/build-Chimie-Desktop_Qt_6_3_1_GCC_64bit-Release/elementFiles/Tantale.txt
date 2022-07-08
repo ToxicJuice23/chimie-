@@ -1,0 +1,9 @@
+Nom: Tantale
+Symbole: Ta
+Electrons: 108
+Protons: 73
+Neutrons: 108
+Charge: 5
+Numero atomique: 73
+Masse atomique: 181
+Electrons de valence: 5

@@ -1,0 +1,9 @@
+Nom: Phosphore
+Symbole: P
+Electrons: 16
+Protons: 15
+Neutrons: 16
+Charge: -3
+Numero atomique: 15
+Masse atomique: 31
+Electrons de valence: 5

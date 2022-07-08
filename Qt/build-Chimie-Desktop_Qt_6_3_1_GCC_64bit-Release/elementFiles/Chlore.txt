@@ -1,0 +1,9 @@
+Nom: Chlore
+Symbole: Cl
+Electrons: 18
+Protons: 17
+Neutrons: 18
+Charge: -1
+Numero atomique: 17
+Masse atomique: 35
+Electrons de valence: 7

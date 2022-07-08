@@ -1,0 +1,9 @@
+Nom: Gadolinium
+Symbole: Gd
+Electrons: 93
+Protons: 64
+Neutrons: 93
+Charge: 3
+Numero atomique: 64
+Masse atomique: 157
+Electrons de valence: 0

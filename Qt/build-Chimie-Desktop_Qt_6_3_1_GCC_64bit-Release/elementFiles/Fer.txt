@@ -1,0 +1,9 @@
+Nom: Fer
+Symbole: Fe
+Electrons: 30
+Protons: 26
+Neutrons: 30
+Charge: 3
+Numero atomique: 26
+Masse atomique: 56
+Electrons de valence: 8
