@@ -44,7 +44,7 @@ public:
   string type;
   bool stable;
   string formule;
-  void printCompose();
+  vector<string> getCompose();
 
   Compose(Element* Element1, Element* Element2);
 };

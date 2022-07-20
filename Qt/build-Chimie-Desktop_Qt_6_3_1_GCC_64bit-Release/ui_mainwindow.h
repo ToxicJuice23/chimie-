@@ -11,12 +11,15 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QFormLayout>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QRadioButton>
 #include <QtWidgets/QScrollArea>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -28,6 +31,8 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QGridLayout *gridLayout_4;
+    QLabel *label_4;
+    QPushButton *pushButton_8;
     QWidget *sideBarWidget;
     QGridLayout *gridLayout_8;
     QVBoxLayout *sideBar;
@@ -67,10 +72,25 @@ public:
     QWidget *scrollAreaContainer;
     QGridLayout *gridLayout_7;
     QLabel *elementList;
-    QWidget *page_3;
+    QWidget *composeMain;
+    QGridLayout *gridLayout_9;
+    QLabel *label;
+    QLineEdit *lineEdit_2;
+    QSpacerItem *verticalSpacer;
+    QPushButton *pushButton_17;
+    QLineEdit *lineEdit;
+    QRadioButton *radioButton;
+    QLabel *label_7;
     QWidget *page_4;
-    QPushButton *pushButton_8;
-    QLabel *label_4;
+    QFormLayout *formLayout;
+    QLabel *Charge;
+    QLabel *label_8;
+    QLabel *Formule;
+    QLabel *label_11;
+    QLabel *Type;
+    QLabel *label_6;
+    QLabel *label_10;
+    QLabel *label_9;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -87,6 +107,22 @@ public:
         gridLayout_4->setSpacing(0);
         gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
         gridLayout_4->setContentsMargins(0, 0, 0, 0);
+        label_4 = new QLabel(centralwidget);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        QFont font1;
+        font1.setPointSize(20);
+        label_4->setFont(font1);
+
+        gridLayout_4->addWidget(label_4, 2, 1, 1, 1);
+
+        pushButton_8 = new QPushButton(centralwidget);
+        pushButton_8->setObjectName(QString::fromUtf8("pushButton_8"));
+        QFont font2;
+        font2.setPointSize(15);
+        pushButton_8->setFont(font2);
+
+        gridLayout_4->addWidget(pushButton_8, 2, 2, 1, 1);
+
         sideBarWidget = new QWidget(centralwidget);
         sideBarWidget->setObjectName(QString::fromUtf8("sideBarWidget"));
         gridLayout_8 = new QGridLayout(sideBarWidget);
@@ -98,45 +134,45 @@ public:
         sideBar->setObjectName(QString::fromUtf8("sideBar"));
         pushButton_16 = new QPushButton(sideBarWidget);
         pushButton_16->setObjectName(QString::fromUtf8("pushButton_16"));
-        QFont font1;
-        font1.setPointSize(12);
-        pushButton_16->setFont(font1);
+        QFont font3;
+        font3.setPointSize(12);
+        pushButton_16->setFont(font3);
 
         sideBar->addWidget(pushButton_16);
 
         pushButton_11 = new QPushButton(sideBarWidget);
         pushButton_11->setObjectName(QString::fromUtf8("pushButton_11"));
-        pushButton_11->setFont(font1);
+        pushButton_11->setFont(font3);
 
         sideBar->addWidget(pushButton_11);
 
         pushButton_12 = new QPushButton(sideBarWidget);
         pushButton_12->setObjectName(QString::fromUtf8("pushButton_12"));
-        pushButton_12->setFont(font1);
+        pushButton_12->setFont(font3);
 
         sideBar->addWidget(pushButton_12);
 
         pushButton_13 = new QPushButton(sideBarWidget);
         pushButton_13->setObjectName(QString::fromUtf8("pushButton_13"));
-        pushButton_13->setFont(font1);
+        pushButton_13->setFont(font3);
 
         sideBar->addWidget(pushButton_13);
 
         pushButton_14 = new QPushButton(sideBarWidget);
         pushButton_14->setObjectName(QString::fromUtf8("pushButton_14"));
-        pushButton_14->setFont(font1);
+        pushButton_14->setFont(font3);
 
         sideBar->addWidget(pushButton_14);
 
         pushButton_10 = new QPushButton(sideBarWidget);
         pushButton_10->setObjectName(QString::fromUtf8("pushButton_10"));
-        pushButton_10->setFont(font1);
+        pushButton_10->setFont(font3);
 
         sideBar->addWidget(pushButton_10);
 
         pushButton_15 = new QPushButton(sideBarWidget);
         pushButton_15->setObjectName(QString::fromUtf8("pushButton_15"));
-        pushButton_15->setFont(font1);
+        pushButton_15->setFont(font3);
 
         sideBar->addWidget(pushButton_15);
 
@@ -153,8 +189,6 @@ public:
 
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
-        QFont font2;
-        font2.setPointSize(4);
         stackedWidget->setFont(font2);
         home = new QWidget();
         home->setObjectName(QString::fromUtf8("home"));
@@ -168,33 +202,31 @@ public:
         gridLayout_2->setContentsMargins(-1, -1, 1, -1);
         pushButton_4 = new QPushButton(home);
         pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        QFont font3;
-        font3.setPointSize(15);
-        pushButton_4->setFont(font3);
+        pushButton_4->setFont(font2);
 
         gridLayout_2->addWidget(pushButton_4, 4, 1, 1, 1);
 
         pushButton_2 = new QPushButton(home);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setFont(font3);
+        pushButton_2->setFont(font2);
 
         gridLayout_2->addWidget(pushButton_2, 5, 0, 1, 1);
 
         pushButton_6 = new QPushButton(home);
         pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
-        pushButton_6->setFont(font3);
+        pushButton_6->setFont(font2);
 
         gridLayout_2->addWidget(pushButton_6, 3, 0, 1, 1);
 
         pushButton = new QPushButton(home);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setFont(font3);
+        pushButton->setFont(font2);
 
         gridLayout_2->addWidget(pushButton, 5, 1, 1, 1);
 
         pushButton_3 = new QPushButton(home);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setFont(font3);
+        pushButton_3->setFont(font2);
 
         gridLayout_2->addWidget(pushButton_3, 4, 0, 1, 1);
 
@@ -210,7 +242,7 @@ public:
 
         pushButton_5 = new QPushButton(home);
         pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
-        pushButton_5->setFont(font3);
+        pushButton_5->setFont(font2);
 
         gridLayout_2->addWidget(pushButton_5, 3, 1, 1, 1);
 
@@ -285,9 +317,7 @@ public:
 
         elementInfo_2 = new QLabel(gazInerte);
         elementInfo_2->setObjectName(QString::fromUtf8("elementInfo_2"));
-        QFont font10;
-        font10.setPointSize(20);
-        elementInfo_2->setFont(font10);
+        elementInfo_2->setFont(font1);
         elementInfo_2->setAlignment(Qt::AlignCenter);
 
         gridLayout_5->addWidget(elementInfo_2, 1, 0, 1, 2);
@@ -309,7 +339,7 @@ public:
         gridLayout_7->setObjectName(QString::fromUtf8("gridLayout_7"));
         elementList = new QLabel(scrollAreaContainer);
         elementList->setObjectName(QString::fromUtf8("elementList"));
-        elementList->setFont(font10);
+        elementList->setFont(font1);
         elementList->setAlignment(Qt::AlignCenter);
 
         gridLayout_7->addWidget(elementList, 0, 0, 1, 1);
@@ -319,32 +349,106 @@ public:
         gridLayout_6->addWidget(scrollArea, 0, 0, 1, 1);
 
         stackedWidget->addWidget(allElements);
-        page_3 = new QWidget();
-        page_3->setObjectName(QString::fromUtf8("page_3"));
-        stackedWidget->addWidget(page_3);
+        composeMain = new QWidget();
+        composeMain->setObjectName(QString::fromUtf8("composeMain"));
+        gridLayout_9 = new QGridLayout(composeMain);
+        gridLayout_9->setObjectName(QString::fromUtf8("gridLayout_9"));
+        label = new QLabel(composeMain);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
+
+        gridLayout_9->addWidget(label, 0, 0, 1, 7);
+
+        lineEdit_2 = new QLineEdit(composeMain);
+        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        lineEdit_2->setFont(font9);
+
+        gridLayout_9->addWidget(lineEdit_2, 1, 0, 1, 3);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        gridLayout_9->addItem(verticalSpacer, 5, 3, 1, 1);
+
+        pushButton_17 = new QPushButton(composeMain);
+        pushButton_17->setObjectName(QString::fromUtf8("pushButton_17"));
+        QFont font10;
+        font10.setPointSize(8);
+        pushButton_17->setFont(font10);
+
+        gridLayout_9->addWidget(pushButton_17, 4, 3, 1, 1);
+
+        lineEdit = new QLineEdit(composeMain);
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        lineEdit->setFont(font9);
+
+        gridLayout_9->addWidget(lineEdit, 3, 0, 1, 3);
+
+        radioButton = new QRadioButton(composeMain);
+        radioButton->setObjectName(QString::fromUtf8("radioButton"));
+        radioButton->setFont(font10);
+
+        gridLayout_9->addWidget(radioButton, 4, 0, 1, 3);
+
+        label_7 = new QLabel(composeMain);
+        label_7->setObjectName(QString::fromUtf8("label_7"));
+
+        gridLayout_9->addWidget(label_7, 3, 5, 1, 1);
+
+        stackedWidget->addWidget(composeMain);
         page_4 = new QWidget();
         page_4->setObjectName(QString::fromUtf8("page_4"));
+        formLayout = new QFormLayout(page_4);
+        formLayout->setObjectName(QString::fromUtf8("formLayout"));
+        Charge = new QLabel(page_4);
+        Charge->setObjectName(QString::fromUtf8("Charge"));
+
+        formLayout->setWidget(1, QFormLayout::LabelRole, Charge);
+
+        label_8 = new QLabel(page_4);
+        label_8->setObjectName(QString::fromUtf8("label_8"));
+
+        formLayout->setWidget(1, QFormLayout::FieldRole, label_8);
+
+        Formule = new QLabel(page_4);
+        Formule->setObjectName(QString::fromUtf8("Formule"));
+
+        formLayout->setWidget(2, QFormLayout::LabelRole, Formule);
+
+        label_11 = new QLabel(page_4);
+        label_11->setObjectName(QString::fromUtf8("label_11"));
+
+        formLayout->setWidget(2, QFormLayout::FieldRole, label_11);
+
+        Type = new QLabel(page_4);
+        Type->setObjectName(QString::fromUtf8("Type"));
+
+        formLayout->setWidget(3, QFormLayout::LabelRole, Type);
+
+        label_6 = new QLabel(page_4);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+
+        formLayout->setWidget(3, QFormLayout::FieldRole, label_6);
+
+        label_10 = new QLabel(page_4);
+        label_10->setObjectName(QString::fromUtf8("label_10"));
+
+        formLayout->setWidget(4, QFormLayout::FieldRole, label_10);
+
+        label_9 = new QLabel(page_4);
+        label_9->setObjectName(QString::fromUtf8("label_9"));
+        label_9->setAlignment(Qt::AlignCenter);
+
+        formLayout->setWidget(0, QFormLayout::SpanningRole, label_9);
+
         stackedWidget->addWidget(page_4);
 
         gridLayout_4->addWidget(stackedWidget, 0, 2, 1, 1);
-
-        pushButton_8 = new QPushButton(centralwidget);
-        pushButton_8->setObjectName(QString::fromUtf8("pushButton_8"));
-        pushButton_8->setFont(font3);
-
-        gridLayout_4->addWidget(pushButton_8, 2, 2, 1, 1);
-
-        label_4 = new QLabel(centralwidget);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setFont(font10);
-
-        gridLayout_4->addWidget(label_4, 2, 1, 1, 1);
 
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(5);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -353,6 +457,8 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        label_4->setText(QCoreApplication::translate("MainWindow", "\342\200\211", nullptr));
+        pushButton_8->setText(QCoreApplication::translate("MainWindow", "Acceuil", nullptr));
         pushButton_16->setText(QCoreApplication::translate("MainWindow", "Acceuil", nullptr));
         pushButton_11->setText(QCoreApplication::translate("MainWindow", "Recherche", nullptr));
         pushButton_12->setText(QCoreApplication::translate("MainWindow", "Gaz Inerte", nullptr));
@@ -394,8 +500,20 @@ public:
         pushButton_9->setText(QCoreApplication::translate("MainWindow", "Chercher", nullptr));
         elementInfo_2->setText(QString());
         elementList->setText(QString());
-        pushButton_8->setText(QCoreApplication::translate("MainWindow", "Acceuil", nullptr));
-        label_4->setText(QCoreApplication::translate("MainWindow", "\342\200\211", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "Entre deux \303\251l\303\251ments pour cr\303\251er un compos\303\251 stable\n"
+"\n"
+"", nullptr));
+        pushButton_17->setText(QCoreApplication::translate("MainWindow", "Soumettre", nullptr));
+        radioButton->setText(QCoreApplication::translate("MainWindow", "Sauvgarder mon choix pour le restant de ma session", nullptr));
+        label_7->setText(QString());
+        Charge->setText(QCoreApplication::translate("MainWindow", "Charge: ", nullptr));
+        label_8->setText(QString());
+        Formule->setText(QCoreApplication::translate("MainWindow", "Formule:", nullptr));
+        label_11->setText(QString());
+        Type->setText(QCoreApplication::translate("MainWindow", "Type de liaison: ", nullptr));
+        label_6->setText(QString());
+        label_10->setText(QString());
+        label_9->setText(QCoreApplication::translate("MainWindow", "Informations \303\240 propos du compos\303\251", nullptr));
     } // retranslateUi
 
 };

@@ -18,6 +18,8 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     string bg_color;
+    string compose_element_1;
+    string compose_element_2;
 
 private slots:
     void on_pushButton_clicked();
@@ -51,6 +53,8 @@ private slots:
     void on_pushButton_15_clicked();
 
     void on_pushButton_16_clicked();
+
+    void on_pushButton_17_clicked();
 
 private:
     Ui::MainWindow *ui;

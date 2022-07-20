@@ -174,7 +174,7 @@ void MainWindow::on_elementInput_2_returnPressed()
 void MainWindow::on_pushButton_4_clicked()
 {
     ui->stackedWidget->setCurrentIndex(3);
-    setWindowTitle("Chimie | Tout les éléments");
+    setWindowTitle("Chimie++ | Tout les éléments");
 }
 
 
@@ -192,7 +192,8 @@ void MainWindow::on_pushButton_12_clicked()
 
 void MainWindow::on_pushButton_3_clicked()
 {
-
+    setWindowTitle("Chimie++ | Créer Composé");
+    ui->stackedWidget->setCurrentIndex(4);
 }
 
 
@@ -217,5 +218,18 @@ void MainWindow::on_pushButton_15_clicked()
 void MainWindow::on_pushButton_16_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
+    setWindowTitle("Chimie++ | Acceuil");
+}
+
+
+void MainWindow::on_pushButton_17_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(5);
+    if (ui->radioButton->isChecked()) {
+        compose_element_1 = ui->lineEdit->text().toStdString();
+        compose_element_2 = ui->lineEdit_2->text().toStdString();
+    } else {
+        compose_element_1, compose_element_2 = "";
+    }
 }
 

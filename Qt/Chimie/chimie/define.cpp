@@ -286,17 +286,19 @@ string creerCompose(Element* metal, Element* non_metal) {
 // Compose class part -----------------------------------------
 Compose::Compose(Element* Element1, Element* Element2) {
   // make sure this isnt 2 metals
-  if (Element1->metal && Element2->metal) {
-    cout << "Desole, tu ne peux pas avoir 2 Metaux \n";
+  if (false) {
+
   } else {
       charge = Element1->charge + Element2->charge;
       if (Element1->nom == "Hydrogene" && !Element2->metal) {
         type = types[2];
       } else if (Element1->metal == true && Element2->metal == false) {
-          type = types[0];
-        } else {
-          type = types[1];
-        }
+        type = types[0];
+      } else if (Element1->metal && Element2->metal) {
+        type = types[1];
+      } else {
+        type = types[1];
+      }
       // make sure u dont get {element}1
       int nEle2 = sqrt(pow(Element1->charge, 2));
       int nEle1 = sqrt(pow(Element2->charge, 2));
@@ -324,12 +326,11 @@ Compose::Compose(Element* Element1, Element* Element2) {
   }
 }
 
-// define a method to print all the values of a compose
-void Compose::printCompose() {
-  cout << endl;
-  cout << "Charge: " << this->charge << endl;
-  cout << "Type: " << this->type << endl;
-  cout << "Formule: " << this->formule << endl << endl;
+// define a method to get all the values of a compose
+vector<string> Compose::getCompose() {
+  return {"Charge: " + to_string(this->charge),
+  "Type: " + this->type,
+  "Formule: " + this->formule};
 }
 
 string Chimie::crop(string input, int start, int end) {
