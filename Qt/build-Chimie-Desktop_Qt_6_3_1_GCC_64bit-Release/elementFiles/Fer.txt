@@ -1,6 +1,6 @@
 Nom: Fer
 Symbole: Fe
-Electrons: 30
+Electrons: 23
 Protons: 26
 Neutrons: 30
 Charge: 3

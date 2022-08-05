@@ -1,6 +1,6 @@
 Nom: Nobelium
 Symbole: No
-Electrons: 157
+Electrons: 99
 Protons: 102
 Neutrons: 157
 Charge: 3

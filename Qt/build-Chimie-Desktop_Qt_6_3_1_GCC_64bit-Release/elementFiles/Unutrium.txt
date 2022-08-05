@@ -1,6 +1,6 @@
 Nom: Unutrium
 Symbole: Uut
-Electrons: 171
+Electrons: 113
 Protons: 113
 Neutrons: 171
 Charge: 0

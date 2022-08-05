@@ -1,6 +1,6 @@
 Nom: Hafnium
 Symbole: Hf
-Electrons: 106
+Electrons: 68
 Protons: 72
 Neutrons: 106
 Charge: 4

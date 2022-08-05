@@ -1,6 +1,6 @@
 Nom: Sodium
 Symbole: Na
-Electrons: 12
+Electrons: 10
 Protons: 11
 Neutrons: 12
 Charge: 1

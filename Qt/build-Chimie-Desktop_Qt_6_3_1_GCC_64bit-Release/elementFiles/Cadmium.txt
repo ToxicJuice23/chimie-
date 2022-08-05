@@ -1,6 +1,6 @@
 Nom: Cadmium
 Symbole: Cd
-Electrons: 64
+Electrons: 46
 Protons: 48
 Neutrons: 64
 Charge: 2

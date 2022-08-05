@@ -1,6 +1,6 @@
 Nom: Magnesium
 Symbole: Mg
-Electrons: 12
+Electrons: 10
 Protons: 12
 Neutrons: 12
 Charge: 2

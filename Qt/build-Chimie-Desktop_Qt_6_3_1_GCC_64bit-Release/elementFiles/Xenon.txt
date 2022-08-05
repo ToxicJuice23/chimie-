@@ -1,6 +1,6 @@
 Nom: Xenon
 Symbole: Xe
-Electrons: 77
+Electrons: 54
 Protons: 54
 Neutrons: 77
 Charge: 0

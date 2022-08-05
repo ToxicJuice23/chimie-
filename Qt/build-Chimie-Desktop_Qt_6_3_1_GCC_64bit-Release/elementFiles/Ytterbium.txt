@@ -1,6 +1,6 @@
 Nom: Ytterbium
 Symbole: Yb
-Electrons: 103
+Electrons: 67
 Protons: 70
 Neutrons: 103
 Charge: 3

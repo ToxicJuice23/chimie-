@@ -1,6 +1,6 @@
 Nom: Neptunium
 Symbole: Np
-Electrons: 144
+Electrons: 89
 Protons: 93
 Neutrons: 144
 Charge: 4

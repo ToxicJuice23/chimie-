@@ -1,6 +1,6 @@
 Nom: Phosphore
 Symbole: P
-Electrons: 16
+Electrons: 18
 Protons: 15
 Neutrons: 16
 Charge: -3

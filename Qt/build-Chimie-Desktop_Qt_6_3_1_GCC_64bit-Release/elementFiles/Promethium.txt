@@ -1,6 +1,6 @@
 Nom: Promethium
 Symbole: Pm
-Electrons: 84
+Electrons: 58
 Protons: 61
 Neutrons: 84
 Charge: 3

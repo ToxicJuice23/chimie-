@@ -1,6 +1,6 @@
 Nom: Bore
 Symbole: B
-Electrons: 6
+Electrons: 8
 Protons: 5
 Neutrons: 6
 Charge: -3

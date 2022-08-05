@@ -81,14 +81,14 @@ public:
     QLineEdit *lineEdit;
     QRadioButton *radioButton;
     QLabel *label_7;
-    QWidget *page_4;
+    QWidget *informations_compose;
     QFormLayout *formLayout;
     QLabel *Charge;
-    QLabel *label_8;
+    QLabel *charge_compose;
     QLabel *Formule;
-    QLabel *label_11;
+    QLabel *formule_compose;
     QLabel *Type;
-    QLabel *label_6;
+    QLabel *type_compose;
     QLabel *label_10;
     QLabel *label_9;
 
@@ -395,52 +395,52 @@ public:
         gridLayout_9->addWidget(label_7, 3, 5, 1, 1);
 
         stackedWidget->addWidget(composeMain);
-        page_4 = new QWidget();
-        page_4->setObjectName(QString::fromUtf8("page_4"));
-        formLayout = new QFormLayout(page_4);
+        informations_compose = new QWidget();
+        informations_compose->setObjectName(QString::fromUtf8("informations_compose"));
+        formLayout = new QFormLayout(informations_compose);
         formLayout->setObjectName(QString::fromUtf8("formLayout"));
-        Charge = new QLabel(page_4);
+        Charge = new QLabel(informations_compose);
         Charge->setObjectName(QString::fromUtf8("Charge"));
 
         formLayout->setWidget(1, QFormLayout::LabelRole, Charge);
 
-        label_8 = new QLabel(page_4);
-        label_8->setObjectName(QString::fromUtf8("label_8"));
+        charge_compose = new QLabel(informations_compose);
+        charge_compose->setObjectName(QString::fromUtf8("charge_compose"));
 
-        formLayout->setWidget(1, QFormLayout::FieldRole, label_8);
+        formLayout->setWidget(1, QFormLayout::FieldRole, charge_compose);
 
-        Formule = new QLabel(page_4);
+        Formule = new QLabel(informations_compose);
         Formule->setObjectName(QString::fromUtf8("Formule"));
 
         formLayout->setWidget(2, QFormLayout::LabelRole, Formule);
 
-        label_11 = new QLabel(page_4);
-        label_11->setObjectName(QString::fromUtf8("label_11"));
+        formule_compose = new QLabel(informations_compose);
+        formule_compose->setObjectName(QString::fromUtf8("formule_compose"));
 
-        formLayout->setWidget(2, QFormLayout::FieldRole, label_11);
+        formLayout->setWidget(2, QFormLayout::FieldRole, formule_compose);
 
-        Type = new QLabel(page_4);
+        Type = new QLabel(informations_compose);
         Type->setObjectName(QString::fromUtf8("Type"));
 
         formLayout->setWidget(3, QFormLayout::LabelRole, Type);
 
-        label_6 = new QLabel(page_4);
-        label_6->setObjectName(QString::fromUtf8("label_6"));
+        type_compose = new QLabel(informations_compose);
+        type_compose->setObjectName(QString::fromUtf8("type_compose"));
 
-        formLayout->setWidget(3, QFormLayout::FieldRole, label_6);
+        formLayout->setWidget(3, QFormLayout::FieldRole, type_compose);
 
-        label_10 = new QLabel(page_4);
+        label_10 = new QLabel(informations_compose);
         label_10->setObjectName(QString::fromUtf8("label_10"));
 
         formLayout->setWidget(4, QFormLayout::FieldRole, label_10);
 
-        label_9 = new QLabel(page_4);
+        label_9 = new QLabel(informations_compose);
         label_9->setObjectName(QString::fromUtf8("label_9"));
         label_9->setAlignment(Qt::AlignCenter);
 
         formLayout->setWidget(0, QFormLayout::SpanningRole, label_9);
 
-        stackedWidget->addWidget(page_4);
+        stackedWidget->addWidget(informations_compose);
 
         gridLayout_4->addWidget(stackedWidget, 0, 2, 1, 1);
 
@@ -507,11 +507,11 @@ public:
         radioButton->setText(QCoreApplication::translate("MainWindow", "Sauvgarder mon choix pour le restant de ma session", nullptr));
         label_7->setText(QString());
         Charge->setText(QCoreApplication::translate("MainWindow", "Charge: ", nullptr));
-        label_8->setText(QString());
+        charge_compose->setText(QString());
         Formule->setText(QCoreApplication::translate("MainWindow", "Formule:", nullptr));
-        label_11->setText(QString());
+        formule_compose->setText(QString());
         Type->setText(QCoreApplication::translate("MainWindow", "Type de liaison: ", nullptr));
-        label_6->setText(QString());
+        type_compose->setText(QString());
         label_10->setText(QString());
         label_9->setText(QCoreApplication::translate("MainWindow", "Informations \303\240 propos du compos\303\251", nullptr));
     } // retranslateUi

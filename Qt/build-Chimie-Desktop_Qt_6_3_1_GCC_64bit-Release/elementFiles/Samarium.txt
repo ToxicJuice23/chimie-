@@ -1,6 +1,6 @@
 Nom: Samarium
 Symbole: Sm
-Electrons: 88
+Electrons: 58
 Protons: 62
 Neutrons: 88
 Charge: 4

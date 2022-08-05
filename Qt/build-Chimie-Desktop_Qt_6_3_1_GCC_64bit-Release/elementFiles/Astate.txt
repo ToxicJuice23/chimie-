@@ -1,6 +1,6 @@
 Nom: Astate
 Symbole: At
-Electrons: 125
+Electrons: 86
 Protons: 85
 Neutrons: 125
 Charge: -1

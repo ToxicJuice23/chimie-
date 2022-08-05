@@ -1,6 +1,6 @@
 Nom: Calcium
 Symbole: Ca
-Electrons: 20
+Electrons: 18
 Protons: 20
 Neutrons: 20
 Charge: 2

@@ -1,6 +1,6 @@
 Nom: Germanium
 Symbole: Ge
-Electrons: 41
+Electrons: 28
 Protons: 32
 Neutrons: 41
 Charge: 4

@@ -1,6 +1,6 @@
 Nom: Iode
 Symbole: I
-Electrons: 74
+Electrons: 54
 Protons: 53
 Neutrons: 74
 Charge: -1

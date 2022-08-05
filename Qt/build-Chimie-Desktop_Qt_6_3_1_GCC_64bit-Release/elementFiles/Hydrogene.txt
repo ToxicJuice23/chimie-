@@ -1,6 +1,6 @@
 Nom: Hydrogene
 Symbole: H
-Electrons: 0
+Electrons: 2
 Protons: 1
 Neutrons: 0
 Charge: -1

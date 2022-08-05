@@ -1,6 +1,6 @@
 Nom: Rutherfordium
 Symbole: Rf
-Electrons: 157
+Electrons: 100
 Protons: 104
 Neutrons: 157
 Charge: 4

@@ -1,6 +1,6 @@
 Nom: Mendelevium
 Symbole: Md
-Electrons: 157
+Electrons: 98
 Protons: 101
 Neutrons: 157
 Charge: 3

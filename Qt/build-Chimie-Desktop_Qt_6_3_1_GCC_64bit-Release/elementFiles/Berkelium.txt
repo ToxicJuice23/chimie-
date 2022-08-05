@@ -1,6 +1,6 @@
 Nom: Berkelium
 Symbole: Bk
-Electrons: 150
+Electrons: 93
 Protons: 97
 Neutrons: 150
 Charge: 4

@@ -1,6 +1,6 @@
 Nom: Selenium
 Symbole: Se
-Electrons: 45
+Electrons: 36
 Protons: 34
 Neutrons: 45
 Charge: -2

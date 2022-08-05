@@ -1,6 +1,6 @@
 Nom: Thulium
 Symbole: Tm
-Electrons: 100
+Electrons: 66
 Protons: 69
 Neutrons: 100
 Charge: 3

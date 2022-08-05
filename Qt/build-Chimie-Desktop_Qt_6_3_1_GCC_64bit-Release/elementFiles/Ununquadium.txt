@@ -1,6 +1,6 @@
 Nom: Ununquadium
 Symbole: Uuq
-Electrons: 175
+Electrons: 114
 Protons: 114
 Neutrons: 175
 Charge: 0

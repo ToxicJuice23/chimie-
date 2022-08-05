@@ -1,6 +1,6 @@
 Nom: Einsteinium
 Symbole: Es
-Electrons: 153
+Electrons: 96
 Protons: 99
 Neutrons: 153
 Charge: 3

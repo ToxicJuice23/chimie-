@@ -1,6 +1,6 @@
 Nom: Radium
 Symbole: Ra
-Electrons: 138
+Electrons: 86
 Protons: 88
 Neutrons: 138
 Charge: 2

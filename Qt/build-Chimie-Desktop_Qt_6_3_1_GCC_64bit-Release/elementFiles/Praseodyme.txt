@@ -1,6 +1,6 @@
 Nom: Praseodyme
 Symbole: Pr
-Electrons: 82
+Electrons: 55
 Protons: 59
 Neutrons: 82
 Charge: 4

@@ -1,6 +1,6 @@
 Nom: Lithium
 Symbole: Li
-Electrons: 4
+Electrons: 2
 Protons: 3
 Neutrons: 4
 Charge: 1

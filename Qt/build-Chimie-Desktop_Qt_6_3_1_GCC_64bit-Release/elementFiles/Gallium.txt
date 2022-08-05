@@ -1,6 +1,6 @@
 Nom: Gallium
 Symbole: Ga
-Electrons: 39
+Electrons: 28
 Protons: 31
 Neutrons: 39
 Charge: 3

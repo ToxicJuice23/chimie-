@@ -1,6 +1,6 @@
 Nom: Fluor
 Symbole: F
-Electrons: 7
+Electrons: 10
 Protons: 9
 Neutrons: 7
 Charge: -1

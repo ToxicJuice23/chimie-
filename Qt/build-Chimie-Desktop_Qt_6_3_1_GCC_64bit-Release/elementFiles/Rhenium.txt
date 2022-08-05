@@ -1,6 +1,6 @@
 Nom: Rhenium
 Symbole: Re
-Electrons: 111
+Electrons: 68
 Protons: 75
 Neutrons: 111
 Charge: 7

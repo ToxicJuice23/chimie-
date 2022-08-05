@@ -1,6 +1,6 @@
 Nom: Manganese
 Symbole: Mn
-Electrons: 30
+Electrons: 22
 Protons: 25
 Neutrons: 30
 Charge: 3

@@ -1,6 +1,6 @@
 Nom: Dysporsium
 Symbole: Dy
-Electrons: 94
+Electrons: 63
 Protons: 66
 Neutrons: 94
 Charge: 3

@@ -1,6 +1,6 @@
 Nom: Americium
 Symbole: Am
-Electrons: 146
+Electrons: 91
 Protons: 95
 Neutrons: 146
 Charge: 4

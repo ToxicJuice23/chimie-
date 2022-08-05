@@ -1,6 +1,6 @@
 Nom: Osmium
 Symbole: Os
-Electrons: 114
+Electrons: 72
 Protons: 76
 Neutrons: 114
 Charge: 4

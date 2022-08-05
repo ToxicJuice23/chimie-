@@ -1,6 +1,6 @@
 Nom: Zirconium
 Symbole: Zr
-Electrons: 51
+Electrons: 36
 Protons: 40
 Neutrons: 51
 Charge: 4

@@ -1,6 +1,6 @@
 Nom: Dubnium
 Symbole: Db
-Electrons: 157
+Electrons: 105
 Protons: 105
 Neutrons: 157
 Charge: 0

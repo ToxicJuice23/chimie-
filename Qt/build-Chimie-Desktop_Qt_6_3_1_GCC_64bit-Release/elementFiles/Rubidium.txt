@@ -1,6 +1,6 @@
 Nom: Rubidium
 Symbole: Rb
-Electrons: 48
+Electrons: 36
 Protons: 37
 Neutrons: 48
 Charge: 1

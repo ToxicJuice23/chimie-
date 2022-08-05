@@ -1,6 +1,6 @@
 Nom: Vanadium
 Symbole: V
-Electrons: 28
+Electrons: 18
 Protons: 23
 Neutrons: 28
 Charge: 5

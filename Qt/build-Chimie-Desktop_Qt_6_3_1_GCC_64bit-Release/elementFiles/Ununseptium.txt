@@ -1,6 +1,6 @@
 Nom: Ununseptium
 Symbole: Uus
-Electrons: 174
+Electrons: 117
 Protons: 117
 Neutrons: 174
 Charge: 0

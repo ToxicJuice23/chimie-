@@ -1,6 +1,6 @@
 Nom: Argon
 Symbole: Ar
-Electrons: 22
+Electrons: 18
 Protons: 18
 Neutrons: 22
 Charge: 0

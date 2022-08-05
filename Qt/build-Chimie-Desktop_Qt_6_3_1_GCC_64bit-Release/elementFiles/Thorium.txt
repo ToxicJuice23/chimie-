@@ -1,6 +1,6 @@
 Nom: Thorium
 Symbole: Th
-Electrons: 142
+Electrons: 86
 Protons: 90
 Neutrons: 142
 Charge: 4

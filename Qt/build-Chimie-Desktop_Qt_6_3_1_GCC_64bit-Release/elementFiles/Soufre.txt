@@ -1,6 +1,6 @@
 Nom: Soufre
 Symbole: S
-Electrons: 16
+Electrons: 18
 Protons: 16
 Neutrons: 16
 Charge: -2

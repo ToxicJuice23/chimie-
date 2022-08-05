@@ -1,6 +1,6 @@
 Nom: Plutonium
 Symbole: Pu
-Electrons: 150
+Electrons: 90
 Protons: 94
 Neutrons: 150
 Charge: 4

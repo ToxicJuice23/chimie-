@@ -1,6 +1,6 @@
 Nom: Zinc
 Symbole: Zn
-Electrons: 35
+Electrons: 28
 Protons: 30
 Neutrons: 35
 Charge: 2

@@ -1,6 +1,6 @@
 Nom: Molybdene
 Symbole: Mo
-Electrons: 54
+Electrons: 39
 Protons: 42
 Neutrons: 54
 Charge: 3

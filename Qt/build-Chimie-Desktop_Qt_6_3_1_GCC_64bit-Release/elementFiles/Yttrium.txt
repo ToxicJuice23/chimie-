@@ -1,6 +1,6 @@
 Nom: Yttrium
 Symbole: Y
-Electrons: 50
+Electrons: 36
 Protons: 39
 Neutrons: 50
 Charge: 3

@@ -1,6 +1,6 @@
 Nom: Indium
 Symbole: In
-Electrons: 66
+Electrons: 46
 Protons: 49
 Neutrons: 66
 Charge: 3

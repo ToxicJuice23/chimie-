@@ -1,6 +1,6 @@
 Nom: Argent
 Symbole: Ag
-Electrons: 61
+Electrons: 46
 Protons: 47
 Neutrons: 61
 Charge: 1

@@ -1,6 +1,6 @@
 Nom: Cobalt
 Symbole: Co
-Electrons: 32
+Electrons: 24
 Protons: 27
 Neutrons: 32
 Charge: 3

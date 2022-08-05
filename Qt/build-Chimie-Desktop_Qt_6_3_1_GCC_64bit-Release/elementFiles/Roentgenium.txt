@@ -1,6 +1,6 @@
 Nom: Roentgenium
 Symbole: Rg
-Electrons: 169
+Electrons: 111
 Protons: 111
 Neutrons: 169
 Charge: 0

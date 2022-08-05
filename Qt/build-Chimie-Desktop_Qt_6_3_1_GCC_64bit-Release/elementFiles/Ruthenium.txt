@@ -1,6 +1,6 @@
 Nom: Ruthenium
 Symbole: Ru
-Electrons: 58
+Electrons: 40
 Protons: 44
 Neutrons: 58
 Charge: 4

@@ -1,6 +1,6 @@
 Nom: Ununoctium
 Symbole: Uuo
-Electrons: 176
+Electrons: 118
 Protons: 118
 Neutrons: 176
 Charge: 0

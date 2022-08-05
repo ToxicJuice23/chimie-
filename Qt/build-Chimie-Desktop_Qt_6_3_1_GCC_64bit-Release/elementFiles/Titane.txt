@@ -1,6 +1,6 @@
 Nom: Titane
 Symbole: Ti
-Electrons: 26
+Electrons: 18
 Protons: 22
 Neutrons: 26
 Charge: 4

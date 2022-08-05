@@ -1,6 +1,6 @@
 Nom: Palladium
 Symbole: Pd
-Electrons: 60
+Electrons: 42
 Protons: 46
 Neutrons: 60
 Charge: 4

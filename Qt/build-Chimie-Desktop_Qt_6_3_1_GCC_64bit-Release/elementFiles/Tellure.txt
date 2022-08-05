@@ -1,6 +1,6 @@
 Nom: Tellure
 Symbole: Te
-Electrons: 76
+Electrons: 54
 Protons: 52
 Neutrons: 76
 Charge: -2

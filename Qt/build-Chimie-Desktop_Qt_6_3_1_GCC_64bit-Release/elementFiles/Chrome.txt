@@ -1,6 +1,6 @@
 Nom: Chrome
 Symbole: Cr
-Electrons: 28
+Electrons: 21
 Protons: 24
 Neutrons: 28
 Charge: 3

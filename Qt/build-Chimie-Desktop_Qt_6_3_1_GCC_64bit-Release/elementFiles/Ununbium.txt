@@ -1,6 +1,6 @@
 Nom: Ununbium
 Symbole: Uub
-Electrons: 173
+Electrons: 112
 Protons: 112
 Neutrons: 173
 Charge: 0

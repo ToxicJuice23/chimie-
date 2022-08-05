@@ -1,6 +1,6 @@
 Nom: Tantale
 Symbole: Ta
-Electrons: 108
+Electrons: 68
 Protons: 73
 Neutrons: 108
 Charge: 5

@@ -1,6 +1,6 @@
 Nom: Holmium
 Symbole: Ho
-Electrons: 98
+Electrons: 64
 Protons: 67
 Neutrons: 98
 Charge: 3

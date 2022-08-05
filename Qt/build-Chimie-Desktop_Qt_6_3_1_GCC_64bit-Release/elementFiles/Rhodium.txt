@@ -1,6 +1,6 @@
 Nom: Rhodium
 Symbole: Rh
-Electrons: 58
+Electrons: 41
 Protons: 45
 Neutrons: 58
 Charge: 4

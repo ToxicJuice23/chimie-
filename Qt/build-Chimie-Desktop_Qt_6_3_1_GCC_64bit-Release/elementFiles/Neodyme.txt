@@ -1,6 +1,6 @@
 Nom: Neodyme
 Symbole: Nd
-Electrons: 84
+Electrons: 57
 Protons: 60
 Neutrons: 84
 Charge: 3

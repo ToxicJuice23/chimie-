@@ -1,6 +1,6 @@
 Nom: Europium
 Symbole: Eu
-Electrons: 89
+Electrons: 60
 Protons: 63
 Neutrons: 89
 Charge: 3

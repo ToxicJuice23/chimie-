@@ -1,6 +1,6 @@
 Nom: Strotnium
 Symbole: Sr
-Electrons: 50
+Electrons: 36
 Protons: 38
 Neutrons: 50
 Charge: 2

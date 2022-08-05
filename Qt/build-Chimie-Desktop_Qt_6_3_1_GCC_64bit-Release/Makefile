@@ -183,6 +183,7 @@ DIST          = /opt/Qt/6.3.1/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt/6.3.1/gcc_64/mkspecs/features/qt_config.prf \
 		/opt/Qt/6.3.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/opt/Qt/6.3.1/gcc_64/mkspecs/features/spec_post.prf \
+		../Chimie/.qmake.stash \
 		/opt/Qt/6.3.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/opt/Qt/6.3.1/gcc_64/mkspecs/features/toolchain.prf \
 		/opt/Qt/6.3.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -341,6 +342,7 @@ Makefile: ../Chimie/Chimie.pro /opt/Qt/6.3.1/gcc_64/mkspecs/linux-g++/qmake.conf
 		/opt/Qt/6.3.1/gcc_64/mkspecs/features/qt_config.prf \
 		/opt/Qt/6.3.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/opt/Qt/6.3.1/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/opt/Qt/6.3.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/opt/Qt/6.3.1/gcc_64/mkspecs/features/toolchain.prf \
 		/opt/Qt/6.3.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -491,6 +493,7 @@ Makefile: ../Chimie/Chimie.pro /opt/Qt/6.3.1/gcc_64/mkspecs/linux-g++/qmake.conf
 /opt/Qt/6.3.1/gcc_64/mkspecs/features/qt_config.prf:
 /opt/Qt/6.3.1/gcc_64/mkspecs/linux-g++/qmake.conf:
 /opt/Qt/6.3.1/gcc_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /opt/Qt/6.3.1/gcc_64/mkspecs/features/exclusive_builds.prf:
 /opt/Qt/6.3.1/gcc_64/mkspecs/features/toolchain.prf:
 /opt/Qt/6.3.1/gcc_64/mkspecs/features/default_pre.prf:
@@ -1032,6 +1035,60 @@ mainwindow.o: ../Chimie/mainwindow.cpp ../Chimie/mainwindow.h \
 		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qtabwidget.h \
 		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QTabWidget \
 		ui_mainwindow.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtCore/QVariant \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtCore/qcoreapplication_platform.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtCore/qfuture.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtCore/qfutureinterface.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtCore/qmutex.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtCore/qresultstore.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtCore/qfuture_impl.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtCore/qthreadpool.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtCore/qthread.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtCore/qdeadlinetimer.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtCore/qelapsedtimer.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtCore/qrunnable.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtCore/qexception.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtCore/qpromise.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtCore/qlocale.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtGui/qguiapplication_platform.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QFormLayout \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qformlayout.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QLayout \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qlayout.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qboxlayout.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qgridlayout.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QGridLayout \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtGui/qpicture.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtGui/qtextdocument.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QLineEdit \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qlineedit.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtGui/qtextcursor.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QRadioButton \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qradiobutton.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QScrollArea \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qscrollarea.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QSpacerItem \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QStackedWidget \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/qstackedwidget.h \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QVBoxLayout \
+		/opt/Qt/6.3.1/gcc_64/include/QtWidgets/QWidget \
 		../Chimie/chimie/define.cpp \
 		../Chimie/chimie/define.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../Chimie/mainwindow.cpp

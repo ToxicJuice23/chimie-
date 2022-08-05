@@ -194,6 +194,8 @@ void MainWindow::on_pushButton_3_clicked()
 {
     setWindowTitle("Chimie++ | Créer Composé");
     ui->stackedWidget->setCurrentIndex(4);
+    ui->lineEdit->setText(compose_element_1.c_str());
+    ui->lineEdit_2->setText(compose_element_2.c_str());
 }
 
 
@@ -231,5 +233,15 @@ void MainWindow::on_pushButton_17_clicked()
     } else {
         compose_element_1, compose_element_2 = "";
     }
+    // 8, 11, 6, cft
+    Compose* compose = new Compose(Chimie::findElementByName(ui->lineEdit->text().toStdString()), Chimie::findElementByName(ui->lineEdit_2->text().toStdString()));
+    // ADD DEBUGGING RIGHT AFTER UR DONE WITH THIS
+    int charge = compose->charge;
+    string formule = compose->formule;
+    string type = compose->type;
+    ui->charge_compose->setText(to_string(charge).c_str());
+    ui->formule_compose->setText(formule.c_str());
+    ui->type_compose->setText(type.c_str());
+    // access serial port of keyboard and add accents to elements and make sure u can get acid with H being el_2
 }
 

@@ -1,6 +1,6 @@
 Nom: Darmastadium
 Symbole: Ds
-Electrons: 171
+Electrons: 110
 Protons: 110
 Neutrons: 171
 Charge: 0

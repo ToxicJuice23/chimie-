@@ -1,6 +1,6 @@
 Nom: Actinium
 Symbole: Ac
-Electrons: 138
+Electrons: 86
 Protons: 89
 Neutrons: 138
 Charge: 3

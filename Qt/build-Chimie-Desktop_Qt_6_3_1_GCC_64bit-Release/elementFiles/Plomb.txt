@@ -1,6 +1,6 @@
 Nom: Plomb
 Symbole: Pb
-Electrons: 125
+Electrons: 78
 Protons: 82
 Neutrons: 125
 Charge: 4

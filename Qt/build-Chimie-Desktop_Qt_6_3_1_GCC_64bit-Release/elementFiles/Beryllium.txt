@@ -1,6 +1,6 @@
 Nom: Beryllium
 Symbole: Be
-Electrons: 5
+Electrons: 2
 Protons: 4
 Neutrons: 5
 Charge: 2

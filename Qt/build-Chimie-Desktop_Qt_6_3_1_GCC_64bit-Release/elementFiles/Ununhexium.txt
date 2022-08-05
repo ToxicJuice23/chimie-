@@ -1,6 +1,6 @@
 Nom: Ununhexium
 Symbole: Uuh
-Electrons: 177
+Electrons: 116
 Protons: 116
 Neutrons: 177
 Charge: 0

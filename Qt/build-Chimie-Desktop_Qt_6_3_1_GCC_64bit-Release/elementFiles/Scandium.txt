@@ -1,6 +1,6 @@
 Nom: Scandium
 Symbole: Sc
-Electrons: 24
+Electrons: 18
 Protons: 21
 Neutrons: 24
 Charge: 3

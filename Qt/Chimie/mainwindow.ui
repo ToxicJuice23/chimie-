@@ -586,13 +586,13 @@ proche d'un élément</string>
         <item row="3" column="5">
          <widget class="QLabel" name="label_7">
           <property name="text">
-           <string>         </string>
+           <string/>
           </property>
          </widget>
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="page_4">
+      <widget class="QWidget" name="informations_compose">
        <layout class="QFormLayout" name="formLayout">
         <item row="1" column="0">
          <widget class="QLabel" name="Charge">
@@ -602,7 +602,7 @@ proche d'un élément</string>
          </widget>
         </item>
         <item row="1" column="1">
-         <widget class="QLabel" name="label_8">
+         <widget class="QLabel" name="charge_compose">
           <property name="text">
            <string/>
           </property>
@@ -616,7 +616,7 @@ proche d'un élément</string>
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="QLabel" name="label_11">
+         <widget class="QLabel" name="formule_compose">
           <property name="text">
            <string/>
           </property>
@@ -630,7 +630,7 @@ proche d'un élément</string>
          </widget>
         </item>
         <item row="3" column="1">
-         <widget class="QLabel" name="label_6">
+         <widget class="QLabel" name="type_compose">
           <property name="text">
            <string/>
           </property>
@@ -639,29 +639,7 @@ proche d'un élément</string>
         <item row="4" column="1">
          <widget class="QLabel" name="label_10">
           <property name="text">
-           <string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</string>
+           <string/>
           </property>
          </widget>
         </item>

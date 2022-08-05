@@ -1,6 +1,6 @@
 Nom: Cerium
 Symbole: Ce
-Electrons: 82
+Electrons: 54
 Protons: 58
 Neutrons: 82
 Charge: 4

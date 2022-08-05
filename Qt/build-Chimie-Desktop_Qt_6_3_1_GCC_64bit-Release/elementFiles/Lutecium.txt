@@ -1,6 +1,6 @@
 Nom: Lutecium
 Symbole: Lu
-Electrons: 104
+Electrons: 68
 Protons: 71
 Neutrons: 104
 Charge: 3

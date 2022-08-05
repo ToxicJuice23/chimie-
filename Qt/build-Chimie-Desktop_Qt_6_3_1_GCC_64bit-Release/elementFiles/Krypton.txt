@@ -1,6 +1,6 @@
 Nom: Krypton
 Symbole: Kr
-Electrons: 48
+Electrons: 36
 Protons: 36
 Neutrons: 48
 Charge: 0

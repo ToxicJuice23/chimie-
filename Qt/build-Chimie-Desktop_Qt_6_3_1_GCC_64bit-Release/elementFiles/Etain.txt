@@ -1,6 +1,6 @@
 Nom: Etain
 Symbole: Sn
-Electrons: 69
+Electrons: 46
 Protons: 50
 Neutrons: 69
 Charge: 4

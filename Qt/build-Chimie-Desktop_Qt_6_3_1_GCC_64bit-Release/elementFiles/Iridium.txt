@@ -1,6 +1,6 @@
 Nom: Iridium
 Symbole: Ir
-Electrons: 115
+Electrons: 73
 Protons: 77
 Neutrons: 115
 Charge: 4

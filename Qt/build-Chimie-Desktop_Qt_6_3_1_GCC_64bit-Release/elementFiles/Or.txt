@@ -1,6 +1,6 @@
 Nom: Or
 Symbole: Au
-Electrons: 118
+Electrons: 76
 Protons: 79
 Neutrons: 118
 Charge: 3

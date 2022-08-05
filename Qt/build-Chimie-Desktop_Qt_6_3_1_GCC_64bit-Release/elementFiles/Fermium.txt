@@ -1,6 +1,6 @@
 Nom: Fermium
 Symbole: Fm
-Electrons: 157
+Electrons: 97
 Protons: 100
 Neutrons: 157
 Charge: 3

@@ -1,6 +1,6 @@
 Nom: Bismuth
 Symbole: Bi
-Electrons: 126
+Electrons: 78
 Protons: 83
 Neutrons: 126
 Charge: 5

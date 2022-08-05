@@ -1,6 +1,6 @@
 Nom: Polonium
 Symbole: Po
-Electrons: 125
+Electrons: 80
 Protons: 84
 Neutrons: 125
 Charge: 4

@@ -1,6 +1,6 @@
 Nom: Platine
 Symbole: Pt
-Electrons: 117
+Electrons: 74
 Protons: 78
 Neutrons: 117
 Charge: 4

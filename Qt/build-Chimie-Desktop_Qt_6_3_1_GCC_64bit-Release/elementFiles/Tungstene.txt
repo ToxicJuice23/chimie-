@@ -1,6 +1,6 @@
 Nom: Tungstene
 Symbole: W
-Electrons: 110
+Electrons: 68
 Protons: 74
 Neutrons: 110
 Charge: 6

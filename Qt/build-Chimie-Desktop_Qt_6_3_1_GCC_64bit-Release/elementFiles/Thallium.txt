@@ -1,6 +1,6 @@
 Nom: Thallium
 Symbole: Tl
-Electrons: 123
+Electrons: 78
 Protons: 81
 Neutrons: 123
 Charge: 3

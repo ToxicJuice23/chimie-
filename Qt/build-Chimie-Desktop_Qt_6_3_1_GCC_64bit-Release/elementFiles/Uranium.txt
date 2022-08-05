@@ -1,6 +1,6 @@
 Nom: Uranium
 Symbole: U
-Electrons: 146
+Electrons: 88
 Protons: 92
 Neutrons: 146
 Charge: 4

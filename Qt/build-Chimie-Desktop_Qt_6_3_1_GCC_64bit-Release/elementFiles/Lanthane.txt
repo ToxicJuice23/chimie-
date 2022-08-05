@@ -1,6 +1,6 @@
 Nom: Lanthane
 Symbole: La
-Electrons: 82
+Electrons: 54
 Protons: 57
 Neutrons: 82
 Charge: 3

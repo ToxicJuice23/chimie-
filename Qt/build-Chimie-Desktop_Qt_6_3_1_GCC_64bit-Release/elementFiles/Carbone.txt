@@ -1,6 +1,6 @@
 Nom: Carbone
 Symbole: C
-Electrons: 6
+Electrons: 10
 Protons: 6
 Neutrons: 6
 Charge: -4

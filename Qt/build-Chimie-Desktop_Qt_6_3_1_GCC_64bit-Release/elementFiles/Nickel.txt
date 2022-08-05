@@ -1,6 +1,6 @@
 Nom: Nickel
 Symbole: Ni
-Electrons: 31
+Electrons: 25
 Protons: 28
 Neutrons: 31
 Charge: 3

@@ -1,6 +1,6 @@
 Nom: Baryum
 Symbole: Ba
-Electrons: 81
+Electrons: 54
 Protons: 56
 Neutrons: 81
 Charge: 2

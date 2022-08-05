@@ -1,6 +1,6 @@
 Nom: Terbium
 Symbole: Tb
-Electrons: 94
+Electrons: 61
 Protons: 65
 Neutrons: 94
 Charge: 4

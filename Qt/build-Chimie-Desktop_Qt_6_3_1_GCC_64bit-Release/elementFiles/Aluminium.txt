@@ -1,6 +1,6 @@
 Nom: Aluminium
 Symbole: Al
-Electrons: 14
+Electrons: 10
 Protons: 13
 Neutrons: 14
 Charge: 3

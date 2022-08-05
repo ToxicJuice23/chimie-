@@ -166,9 +166,9 @@ void Chimie::init() {
     }
     // if the element is synth then assing the electrons to proton value lol
     if (!element->noCharge) {
-      element->electrons = element->masseAtomique_ - element->protons;
+      element->electrons = element->protons - element->charge;
     } else {
-      element->electrons = element->masseAtomique_ - element->protons;
+      element->electrons = element->protons;
     }
     // see if its a metal or not
     if (element->charge > 0) {
@@ -221,9 +221,7 @@ void Element::init(Element* element) {
     }
     // if the element is synth then assing the electrons to proton value lol
     if (!element->noCharge) {
-      element->protons = element->electrons + element->charge;
-    } else {
-      element->electrons = element->protons;
+      element->electrons = element->protons - element->charge;
     }
     // see if its a metal or not
     if (element->charge > 0) {
@@ -286,15 +284,12 @@ string creerCompose(Element* metal, Element* non_metal) {
 // Compose class part -----------------------------------------
 Compose::Compose(Element* Element1, Element* Element2) {
   // make sure this isnt 2 metals
-  if (false) {
-
-  } else {
       charge = Element1->charge + Element2->charge;
-      if (Element1->nom == "Hydrogene" && !Element2->metal) {
+      if (Element1->nom == "Hydrogene" || Element2->nom == "Hydrogene") {
         type = types[2];
-      } else if (Element1->metal == true && Element2->metal == false) {
+      } else if (Element1->metal == true && Element2->metal == false || Element2->metal == true && Element1->metal == false) {
         type = types[0];
-      } else if (Element1->metal && Element2->metal) {
+      } else if (!Element1->metal && !Element2->metal) {
         type = types[1];
       } else {
         type = types[1];
@@ -309,21 +304,73 @@ Compose::Compose(Element* Element1, Element* Element2) {
       } else {
         stable = false;
       }
-    
+          /* skeleton:
+          if (Element1->nom == "Hydrogène") {
+
+          } else if (Element2->nom == "Hydrogène") {
+
+          } else if (!Element1->metal && Element2->metal) {
+
+          } else if (!Element2->metal && Element1->metal) {
+
+          } else {
+
+          }
+          */
       if (nEle1 <= 1) {
         if (nEle2 <= 1) {
-          formule = Element1->symboleAtomique + Element2->symboleAtomique;
+          if (Element1->nom == "Hydrogène") {
+            formule = Element1->symboleAtomique + Element2->symboleAtomique;
+          } else if (Element2->nom == "Hydrogène") {
+            formule = Element2->symboleAtomique + Element1->symboleAtomique;
+          } else if (!Element1->metal && Element2->metal) {
+            formule = Element1->symboleAtomique + Element2->symboleAtomique;
+          } else if (!Element2->metal && Element1->metal) {
+            formule = Element2->symboleAtomique + Element1->symboleAtomique;
+          } else {
+            formule = Element1->symboleAtomique + Element2->symboleAtomique;
+          }
+          
         } else {
-          formule = Element1->symboleAtomique + Element2->symboleAtomique + to_string(nEle2);
+          if (Element1->nom == "Hydrogène") {
+            formule = Element1->symboleAtomique + Element2->symboleAtomique + to_string(nEle2);
+          } else if (Element2->nom == "Hydrogène") {
+            formule = Element2->symboleAtomique + to_string(nEle2) + Element1->symboleAtomique;
+          } else if (!Element1->metal && Element2->metal) {
+            formule = Element1->symboleAtomique + Element2->symboleAtomique + to_string(nEle2);
+          } else if (!Element2->metal && Element1->metal) {
+            formule = Element2->symboleAtomique + to_string(nEle2) + Element1->symboleAtomique;
+          } else {
+            formule = Element1->symboleAtomique + Element2->symboleAtomique + to_string(nEle2);
+          }
         }
       } else {
         if (nEle2 <= 1) {
-          formule = Element1->symboleAtomique + to_string(nEle1) + Element2->symboleAtomique;
+          if (Element1->nom == "Hydrogène") {
+            formule = Element1->symboleAtomique + to_string(nEle1) + Element2->symboleAtomique;
+          } else if (Element2->nom == "Hydrogène") {
+            formule = Element2->symboleAtomique + Element1->symboleAtomique + to_string(nEle1);
+          } else if (!Element1->metal && Element2->metal) {
+            formule = Element1->symboleAtomique + to_string(nEle1) + Element2->symboleAtomique;
+          } else if (!Element2->metal && Element1->metal) {
+            formule = Element2->symboleAtomique + Element1->symboleAtomique + to_string(nEle1);
+          } else {
+            formule = Element1->symboleAtomique + to_string(nEle1) + Element2->symboleAtomique;
+          }
         } else {
-          formule = Element1->symboleAtomique + to_string(nEle1) + Element2->symboleAtomique + to_string(nEle2);
+          if (Element1->nom == "Hydrogène") {
+            formule = Element1->symboleAtomique + to_string(nEle1) + Element2->symboleAtomique + to_string(nEle2);
+          } else if (Element2->nom == "Hydrogène") {
+            formule = Element2->symboleAtomique + to_string(nEle2) + Element1->symboleAtomique + to_string(nEle1);
+          } else if (!Element1->metal && Element2->metal) {
+            formule = Element1->symboleAtomique + to_string(nEle1) + Element2->symboleAtomique + to_string(nEle2);
+          } else if (!Element2->metal && Element1->metal) {
+            formule = Element2->symboleAtomique + to_string(nEle2) + Element1->symboleAtomique + to_string(nEle1);
+          } else {
+            formule = Element1->symboleAtomique + to_string(nEle1) + Element2->symboleAtomique + to_string(nEle2);
+          }
         }
       }
-  }
 }
 
 // define a method to get all the values of a compose

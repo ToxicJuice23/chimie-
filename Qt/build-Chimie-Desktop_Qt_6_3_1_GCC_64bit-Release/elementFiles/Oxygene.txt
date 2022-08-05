@@ -1,6 +1,6 @@
 Nom: Oxygene
 Symbole: O
-Electrons: 8
+Electrons: 10
 Protons: 8
 Neutrons: 8
 Charge: -2
