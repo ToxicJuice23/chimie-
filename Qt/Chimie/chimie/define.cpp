@@ -56,7 +56,7 @@ void Chimie::loading(int millisecond) {
   long long oneMillisec = 1000000;
   for(int x = 0; x < 101; x++) {
     sleep_for(nanoseconds(millisecond * oneMillisec));
-    int result = system("clear");;
+    int result = system("clear");
     std::cout << "Chargement "<< x << "%\n";
   }
   std::cout << "Fini de charger!\n";
@@ -94,18 +94,6 @@ Element::Element(string symboleAtomique_, string nomP, int nombreAtomique, int m
 }
 
 Element * Element::stabiliser() {
-  /*if (this->electrons <= 2) {
-    int charge = this->electrons - 2;
-    int full_el_gap = 2 - this->electronsDeValence;
-    if (electrons < full_el_gap) {
-      Element* result = new Element(this->symboleAtomique, this->nom, no_el_gap, no_el_gap);
-      result->init();
-      return result;
-    } else {
-      
-    }
-  }
-*/
   return nullptr;
 }
 
@@ -177,7 +165,7 @@ void Chimie::init() {
       element->metal = false;
     }
     // if Hydrogene set gaz
-    if (element->nom == "Hydrogene") {
+    if (element->nom == "Hydrogène") {
       element->metal = false;
     }
     element->neutrons = element->masseAtomique_ - element->protons;
@@ -206,6 +194,7 @@ void Chimie::createFiles() {
     }
   }
 }
+
 void Element::init(Element* element) {
     // set the electrons de valence property
     if (element->charge < 0 && element->electrons > 2) {
@@ -230,7 +219,7 @@ void Element::init(Element* element) {
       element->metal = false;
     }
     // if Hydrogene set gaz
-    if (element->nom == "Hydrogene") {
+    if (element->nom == "Hydrogène") {
       element->metal = false;
     }
     element->neutrons = element->masseAtomique_ - element->electrons;
@@ -285,7 +274,7 @@ string creerCompose(Element* metal, Element* non_metal) {
 Compose::Compose(Element* Element1, Element* Element2) {
   // make sure this isnt 2 metals
       charge = Element1->charge + Element2->charge;
-      if (Element1->nom == "Hydrogene" || Element2->nom == "Hydrogene") {
+      if (Element1->nom == "Hydrogène" || Element2->nom == "Hydrogène") {
         type = types[2];
       } else if (Element1->metal == true && Element2->metal == false || Element2->metal == true && Element1->metal == false) {
         type = types[0];

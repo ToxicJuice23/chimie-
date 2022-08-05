@@ -328,9 +328,9 @@ Compose::Compose(Element* Element1, Element* Element2) {
           */
       if (nEle1 <= 1) {
         if (nEle2 <= 1) {
-          if (Element1->nom == "Hydrogène") {
+          if (Element1->nom == "Hydrogene") {
             formule = Element1->symboleAtomique + Element2->symboleAtomique;
-          } else if (Element2->nom == "Hydrogène") {
+          } else if (Element2->nom == "Hydrogene") {
             formule = Element2->symboleAtomique + Element1->symboleAtomique;
           } else if (!Element1->metal && Element2->metal) {
             formule = Element1->symboleAtomique + Element2->symboleAtomique;
@@ -341,9 +341,9 @@ Compose::Compose(Element* Element1, Element* Element2) {
           }
           
         } else {
-          if (Element1->nom == "Hydrogène") {
+          if (Element1->nom == "Hydrogene") {
             formule = Element1->symboleAtomique + Element2->symboleAtomique + to_string(nEle2);
-          } else if (Element2->nom == "Hydrogène") {
+          } else if (Element2->nom == "Hydrogene") {
             formule = Element2->symboleAtomique + to_string(nEle2) + Element1->symboleAtomique;
           } else if (!Element1->metal && Element2->metal) {
             formule = Element1->symboleAtomique + Element2->symboleAtomique + to_string(nEle2);
@@ -355,9 +355,9 @@ Compose::Compose(Element* Element1, Element* Element2) {
         }
       } else {
         if (nEle2 <= 1) {
-          if (Element1->nom == "Hydrogène") {
+          if (Element1->nom == "Hydrogene") {
             formule = Element1->symboleAtomique + to_string(nEle1) + Element2->symboleAtomique;
-          } else if (Element2->nom == "Hydrogène") {
+          } else if (Element2->nom == "Hydrogene") {
             formule = Element2->symboleAtomique + Element1->symboleAtomique + to_string(nEle1);
           } else if (!Element1->metal && Element2->metal) {
             formule = Element1->symboleAtomique + to_string(nEle1) + Element2->symboleAtomique;
@@ -367,9 +367,9 @@ Compose::Compose(Element* Element1, Element* Element2) {
             formule = Element1->symboleAtomique + to_string(nEle1) + Element2->symboleAtomique;
           }
         } else {
-          if (Element1->nom == "Hydrogène") {
+          if (Element1->nom == "Hydrogene") {
             formule = Element1->symboleAtomique + to_string(nEle1) + Element2->symboleAtomique + to_string(nEle2);
-          } else if (Element2->nom == "Hydrogène") {
+          } else if (Element2->nom == "Hydrogene") {
             formule = Element2->symboleAtomique + to_string(nEle2) + Element1->symboleAtomique + to_string(nEle1);
           } else if (!Element1->metal && Element2->metal) {
             formule = Element1->symboleAtomique + to_string(nEle1) + Element2->symboleAtomique + to_string(nEle2);
@@ -483,13 +483,12 @@ void Chimie::downloadElement(Element* element, string filepath) {
 }
 
 /*
-Version: 1.3
 Copyright: No-one
 Licence: GNU GPL
 Dev team: Julien Renaud
 Testers: Xavier Dyer
 Ui designer: Julien
-External libraries used: iostream, fstream
+External libraries used: iostream, fstream, Qt
 Website: http://www.chimieplusplus.com
 Compatible with: Linux, MacOS, Replit
 Thank you for downloading the project!

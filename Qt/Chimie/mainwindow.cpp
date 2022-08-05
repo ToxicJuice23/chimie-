@@ -235,13 +235,13 @@ void MainWindow::on_pushButton_17_clicked()
     }
     // 8, 11, 6, cft
     Compose* compose = new Compose(Chimie::findElementByName(ui->lineEdit->text().toStdString()), Chimie::findElementByName(ui->lineEdit_2->text().toStdString()));
-    // ADD DEBUGGING RIGHT AFTER UR DONE WITH THIS
+    // ADD DEBUGGING RIGHT AFTER UR DONE WITH THIS (to make sure composé works so like not 2 metals and that theres something in the boxes
     int charge = compose->charge;
     string formule = compose->formule;
     string type = compose->type;
     ui->charge_compose->setText(to_string(charge).c_str());
     ui->formule_compose->setText(formule.c_str());
     ui->type_compose->setText(type.c_str());
-    // access serial port of keyboard and add accents to elements and make sure u can get acid with H being el_2
+    // access serial port of keyboard and add accents to elements and add a setings file that if empty open the config menu for it
 }
 
