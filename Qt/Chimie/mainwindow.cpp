@@ -231,7 +231,8 @@ void MainWindow::on_pushButton_17_clicked()
         compose_element_1 = ui->lineEdit->text().toStdString();
         compose_element_2 = ui->lineEdit_2->text().toStdString();
     } else {
-        compose_element_1, compose_element_2 = "";
+        compose_element_1 = "";
+        compose_element_2 = "";
     }
     // 8, 11, 6, cft
     Compose* compose = new Compose(Chimie::findElementByName(ui->lineEdit->text().toStdString()), Chimie::findElementByName(ui->lineEdit_2->text().toStdString()));

@@ -56,7 +56,7 @@ void Chimie::loading(int millisecond) {
   long long oneMillisec = 1000000;
   for(int x = 0; x < 101; x++) {
     sleep_for(nanoseconds(millisecond * oneMillisec));
-    int result = system("clear");
+    system("clear");
     std::cout << "Chargement "<< x << "%\n";
   }
   std::cout << "Fini de charger!\n";
@@ -276,7 +276,7 @@ Compose::Compose(Element* Element1, Element* Element2) {
       charge = Element1->charge + Element2->charge;
       if (Element1->nom == "Hydrogène" || Element2->nom == "Hydrogène") {
         type = types[2];
-      } else if (Element1->metal == true && Element2->metal == false || Element2->metal == true && Element1->metal == false) {
+      } else if ((Element1->metal == true && Element2->metal == false) || (Element2->metal == true && Element1->metal == false)) {
         type = types[0];
       } else if (!Element1->metal && !Element2->metal) {
         type = types[1];
