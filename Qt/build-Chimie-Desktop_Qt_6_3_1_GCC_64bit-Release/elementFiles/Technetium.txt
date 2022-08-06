@@ -1,9 +1,0 @@
-Nom: Technetium
-Symbole: Tc
-Electrons: 36
-Protons: 43
-Neutrons: 55
-Charge: 7
-Numero atomique: 43
-Masse atomique: 98
-Electrons de valence: 7

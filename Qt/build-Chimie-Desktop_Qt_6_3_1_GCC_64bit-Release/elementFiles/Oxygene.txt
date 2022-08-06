@@ -1,9 +1,0 @@
-Nom: Oxygene
-Symbole: O
-Electrons: 10
-Protons: 8
-Neutrons: 8
-Charge: -2
-Numero atomique: 8
-Masse atomique: 16
-Electrons de valence: 6

@@ -1,9 +1,0 @@
-Nom: Cesium
-Symbole: Cs
-Electrons: 54
-Protons: 55
-Neutrons: 78
-Charge: 1
-Numero atomique: 55
-Masse atomique: 133
-Electrons de valence: 1

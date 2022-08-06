@@ -1,9 +1,0 @@
-Nom: Neon
-Symbole: Ne
-Electrons: 10
-Protons: 10
-Neutrons: 10
-Charge: 0
-Numero atomique: 10
-Masse atomique: 20
-Electrons de valence: 0

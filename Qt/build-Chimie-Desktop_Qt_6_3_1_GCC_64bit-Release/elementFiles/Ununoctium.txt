@@ -1,9 +1,0 @@
-Nom: Ununoctium
-Symbole: Uuo
-Electrons: 118
-Protons: 118
-Neutrons: 176
-Charge: 0
-Numero atomique: 118
-Masse atomique: 294
-Electrons de valence: 0

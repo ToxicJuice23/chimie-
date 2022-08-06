@@ -1,9 +1,0 @@
-Nom: Rhenium
-Symbole: Re
-Electrons: 68
-Protons: 75
-Neutrons: 111
-Charge: 7
-Numero atomique: 75
-Masse atomique: 186
-Electrons de valence: 7

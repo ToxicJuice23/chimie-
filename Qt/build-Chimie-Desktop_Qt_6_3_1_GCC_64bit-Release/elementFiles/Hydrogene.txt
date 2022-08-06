@@ -1,9 +1,0 @@
-Nom: Hydrogene
-Symbole: H
-Electrons: 2
-Protons: 1
-Neutrons: 0
-Charge: -1
-Numero atomique: 1
-Masse atomique: 1
-Electrons de valence: 1

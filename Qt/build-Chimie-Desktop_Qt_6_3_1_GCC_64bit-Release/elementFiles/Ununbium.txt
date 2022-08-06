@@ -1,9 +1,0 @@
-Nom: Ununbium
-Symbole: Uub
-Electrons: 112
-Protons: 112
-Neutrons: 173
-Charge: 0
-Numero atomique: 112
-Masse atomique: 285
-Electrons de valence: 2
