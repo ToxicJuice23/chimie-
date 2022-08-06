@@ -519,9 +519,7 @@ proche d'un élément</string>
         <item row="0" column="0" colspan="7">
          <widget class="QLabel" name="label">
           <property name="text">
-           <string>Entre deux éléments pour créer un composé stable
-
-</string>
+           <string>Entre deux éléments pour créer un composé stable</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignHCenter|Qt::AlignTop</set>
@@ -650,6 +648,73 @@ proche d'un élément</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="about_chimie">
+       <layout class="QGridLayout" name="gridLayout_10">
+        <item row="0" column="0">
+         <widget class="QLabel" name="francais">
+          <property name="text">
+           <string>Francais:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="about_chimie_text">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Chimie++ est une application en français, multiplateforme pour ordinateur compatible avec Windows, MacOS et Linux. Notre but avec Chimie++ est d'aider n'importe qui avec des travaux relié à la chimie en restant accessible pour plus de gens que possible. Chimie++ peut aussi être utiliser pour le plaisir, pour les gens passionnés de chimie. Avec Chimie++, tout est possible.</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>English:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_8">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Chimie++ is a french cross-platform application for desktop that is compatible with Window, MacOS and Linux. Our goal with Chimie++ is to help anyone with works related to chemistry while staying accessible for as many people as possible. For people that are passionate with chemistry, Chimie++ can also be used for fun. With Chimie++ anything is possible. </string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
           </property>
          </widget>
         </item>

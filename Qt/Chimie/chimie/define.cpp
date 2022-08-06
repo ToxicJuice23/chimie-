@@ -312,22 +312,22 @@ Compose::Compose(Element* Element1, Element* Element2) {
             formule = Element1->symboleAtomique + Element2->symboleAtomique;
           } else if (Element2->nom == "Hydrogène") {
             formule = Element2->symboleAtomique + Element1->symboleAtomique;
-          } else if (!Element1->metal && Element2->metal) {
+          } else if (Element1->metal && !Element2->metal) {
             formule = Element1->symboleAtomique + Element2->symboleAtomique;
-          } else if (!Element2->metal && Element1->metal) {
+          } else if (Element2->metal && !Element1->metal) {
             formule = Element2->symboleAtomique + Element1->symboleAtomique;
           } else {
             formule = Element1->symboleAtomique + Element2->symboleAtomique;
           }
-          
+        
         } else {
           if (Element1->nom == "Hydrogène") {
             formule = Element1->symboleAtomique + Element2->symboleAtomique + to_string(nEle2);
           } else if (Element2->nom == "Hydrogène") {
             formule = Element2->symboleAtomique + to_string(nEle2) + Element1->symboleAtomique;
-          } else if (!Element1->metal && Element2->metal) {
+          } else if (Element1->metal && !Element2->metal) {
             formule = Element1->symboleAtomique + Element2->symboleAtomique + to_string(nEle2);
-          } else if (!Element2->metal && Element1->metal) {
+          } else if (Element2->metal && !Element1->metal) {
             formule = Element2->symboleAtomique + to_string(nEle2) + Element1->symboleAtomique;
           } else {
             formule = Element1->symboleAtomique + Element2->symboleAtomique + to_string(nEle2);
@@ -339,9 +339,9 @@ Compose::Compose(Element* Element1, Element* Element2) {
             formule = Element1->symboleAtomique + to_string(nEle1) + Element2->symboleAtomique;
           } else if (Element2->nom == "Hydrogène") {
             formule = Element2->symboleAtomique + Element1->symboleAtomique + to_string(nEle1);
-          } else if (!Element1->metal && Element2->metal) {
+          } else if (Element1->metal && !Element2->metal) {
             formule = Element1->symboleAtomique + to_string(nEle1) + Element2->symboleAtomique;
-          } else if (!Element2->metal && Element1->metal) {
+          } else if (Element2->metal && !Element1->metal) {
             formule = Element2->symboleAtomique + Element1->symboleAtomique + to_string(nEle1);
           } else {
             formule = Element1->symboleAtomique + to_string(nEle1) + Element2->symboleAtomique;
@@ -351,9 +351,9 @@ Compose::Compose(Element* Element1, Element* Element2) {
             formule = Element1->symboleAtomique + to_string(nEle1) + Element2->symboleAtomique + to_string(nEle2);
           } else if (Element2->nom == "Hydrogène") {
             formule = Element2->symboleAtomique + to_string(nEle2) + Element1->symboleAtomique + to_string(nEle1);
-          } else if (!Element1->metal && Element2->metal) {
+          } else if (Element1->metal && !Element2->metal) {
             formule = Element1->symboleAtomique + to_string(nEle1) + Element2->symboleAtomique + to_string(nEle2);
-          } else if (!Element2->metal && Element1->metal) {
+          } else if (Element2->metal && !Element1->metal) {
             formule = Element2->symboleAtomique + to_string(nEle2) + Element1->symboleAtomique + to_string(nEle1);
           } else {
             formule = Element1->symboleAtomique + to_string(nEle1) + Element2->symboleAtomique + to_string(nEle2);

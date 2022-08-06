@@ -69,7 +69,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    exit(0);
+    exit(69);
 }
 
 
@@ -226,6 +226,20 @@ void MainWindow::on_pushButton_16_clicked()
 
 void MainWindow::on_pushButton_17_clicked()
 {
+    // error handling
+    if (ui->lineEdit->text().toStdString() == "" || ui->lineEdit_2->text().toStdString() == "") {
+        QMessageBox errorBox;
+        errorBox.critical(0,"Erreur", "Remplissez tout les boites S.V.P.");
+        errorBox.setFixedSize(500, 200);
+        return;
+    }
+    if (!Chimie::findElementByName(ui->lineEdit->text().toStdString()) && !Chimie::findElementByName(ui->lineEdit->text().toStdString())) {
+        QMessageBox errorBox;
+        errorBox.critical(0,"Erreur", "Un ou plusieurs des éléments n'existent pas.");
+        errorBox.setFixedSize(500, 200);
+        return;
+    }
+
     ui->stackedWidget->setCurrentIndex(5);
     if (ui->radioButton->isChecked()) {
         compose_element_1 = ui->lineEdit->text().toStdString();
@@ -234,15 +248,29 @@ void MainWindow::on_pushButton_17_clicked()
         compose_element_1 = "";
         compose_element_2 = "";
     }
-    // 8, 11, 6, cft
+
     Compose* compose = new Compose(Chimie::findElementByName(ui->lineEdit->text().toStdString()), Chimie::findElementByName(ui->lineEdit_2->text().toStdString()));
-    // ADD DEBUGGING RIGHT AFTER UR DONE WITH THIS (to make sure composé works so like not 2 metals and that theres something in the boxes
+    // to make sure composé works so like not 2 metals and that theres something in the boxes
     int charge = compose->charge;
     string formule = compose->formule;
     string type = compose->type;
     ui->charge_compose->setText(to_string(charge).c_str());
     ui->formule_compose->setText(formule.c_str());
     ui->type_compose->setText(type.c_str());
-    // access serial port of keyboard and add accents to elements and add a setings file that if empty open the config menu for it
+    // access serial port of keyboard and add a setings file that if empty open the config menu for it
+}
+
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(6);
+}
+
+
+
+
+void MainWindow::on_pushButton_10_clicked()
+{
+    on_pushButton_2_clicked();
 }
 

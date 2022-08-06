@@ -91,6 +91,13 @@ public:
     QLabel *type_compose;
     QLabel *label_10;
     QLabel *label_9;
+    QWidget *about_chimie;
+    QGridLayout *gridLayout_10;
+    QLabel *francais;
+    QSpacerItem *verticalSpacer_2;
+    QLabel *about_chimie_text;
+    QLabel *label_6;
+    QLabel *label_8;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -441,6 +448,41 @@ public:
         formLayout->setWidget(0, QFormLayout::SpanningRole, label_9);
 
         stackedWidget->addWidget(informations_compose);
+        about_chimie = new QWidget();
+        about_chimie->setObjectName(QString::fromUtf8("about_chimie"));
+        gridLayout_10 = new QGridLayout(about_chimie);
+        gridLayout_10->setObjectName(QString::fromUtf8("gridLayout_10"));
+        francais = new QLabel(about_chimie);
+        francais->setObjectName(QString::fromUtf8("francais"));
+
+        gridLayout_10->addWidget(francais, 0, 0, 1, 1);
+
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        gridLayout_10->addItem(verticalSpacer_2, 4, 0, 1, 1);
+
+        about_chimie_text = new QLabel(about_chimie);
+        about_chimie_text->setObjectName(QString::fromUtf8("about_chimie_text"));
+        about_chimie_text->setFont(font9);
+        about_chimie_text->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
+        about_chimie_text->setWordWrap(true);
+
+        gridLayout_10->addWidget(about_chimie_text, 1, 0, 1, 1);
+
+        label_6 = new QLabel(about_chimie);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+
+        gridLayout_10->addWidget(label_6, 2, 0, 1, 1);
+
+        label_8 = new QLabel(about_chimie);
+        label_8->setObjectName(QString::fromUtf8("label_8"));
+        label_8->setFont(font9);
+        label_8->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
+        label_8->setWordWrap(true);
+
+        gridLayout_10->addWidget(label_8, 3, 0, 1, 1);
+
+        stackedWidget->addWidget(about_chimie);
 
         gridLayout_4->addWidget(stackedWidget, 0, 2, 1, 1);
 
@@ -500,9 +542,7 @@ public:
         pushButton_9->setText(QCoreApplication::translate("MainWindow", "Chercher", nullptr));
         elementInfo_2->setText(QString());
         elementList->setText(QString());
-        label->setText(QCoreApplication::translate("MainWindow", "Entre deux \303\251l\303\251ments pour cr\303\251er un compos\303\251 stable\n"
-"\n"
-"", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "Entre deux \303\251l\303\251ments pour cr\303\251er un compos\303\251 stable", nullptr));
         pushButton_17->setText(QCoreApplication::translate("MainWindow", "Soumettre", nullptr));
         radioButton->setText(QCoreApplication::translate("MainWindow", "Sauvgarder mon choix pour le restant de ma session", nullptr));
         label_7->setText(QString());
@@ -514,6 +554,10 @@ public:
         type_compose->setText(QString());
         label_10->setText(QString());
         label_9->setText(QCoreApplication::translate("MainWindow", "Informations \303\240 propos du compos\303\251", nullptr));
+        francais->setText(QCoreApplication::translate("MainWindow", "Francais:", nullptr));
+        about_chimie_text->setText(QCoreApplication::translate("MainWindow", "Chimie++ est une application en fran\303\247ais, multiplateforme pour ordinateur compatible avec Windows, MacOS et Linux. Notre but avec Chimie++ est d'aider n'importe qui avec des travaux reli\303\251 \303\240 la chimie en restant accessible pour plus de gens que possible. Chimie++ peut aussi \303\252tre utiliser pour le plaisir, pour les gens passionn\303\251s de chimie. Avec Chimie++, tout est possible.", nullptr));
+        label_6->setText(QCoreApplication::translate("MainWindow", "English:", nullptr));
+        label_8->setText(QCoreApplication::translate("MainWindow", "Chimie++ is a french cross-platform application for desktop that is compatible with Window, MacOS and Linux. Our goal with Chimie++ is to help anyone with works related to chemistry while staying accessible for as many people as possible. For people that are passionate with chemistry, Chimie++ can also be used for fun. With Chimie++ anything is possible. ", nullptr));
     } // retranslateUi
 
 };

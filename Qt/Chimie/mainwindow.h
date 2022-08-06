@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QTabWidget>
+#include <QMessageBox>
 #include <iostream>
 using namespace std;
 
@@ -55,6 +56,10 @@ private slots:
     void on_pushButton_16_clicked();
 
     void on_pushButton_17_clicked();
+
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_10_clicked();
 
 private:
     Ui::MainWindow *ui;
